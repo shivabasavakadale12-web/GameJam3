@@ -4,10 +4,14 @@ using static UnityEngine.InputSystem.InputAction;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movespeed = 5f;
+    [SerializeField] Animator animator;
     float sprintmultiplier = 1.5f;
     Vector2 movement;
     Rigidbody2D rb;
     bool isSprint = false;
+
+    const string Runstring = "Run";
+    const string Walkstring = "Walk";
 
     void Start()
     {
@@ -25,10 +29,12 @@ public class PlayerMovement : MonoBehaviour
         isSprint = context.ReadValueAsButton();
         if (isSprint)
         {
+           animator.SetTrigger(Runstring);
             movespeed *= sprintmultiplier;
         }
         else
         {
+            animator.SetTrigger(Walkstring);
             movespeed = 5f;
         }
     }
