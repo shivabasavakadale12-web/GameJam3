@@ -10,9 +10,6 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     bool isSprint = false;
 
-    const string Runstring = "Run";
-    const string Walkstring = "Walk";
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,18 +26,27 @@ public class PlayerMovement : MonoBehaviour
         isSprint = context.ReadValueAsButton();
         if (isSprint)
         {
-           animator.SetTrigger(Runstring);
+           animator.SetBool("Run", true);
             movespeed *= sprintmultiplier;
         }
         else
         {
-            animator.SetTrigger(Walkstring);
+            animator.SetBool("Run", false);
             movespeed = 5f;
         }
     }
 
     void FixedUpdate()
     {
+        if(movement.x != 0)
+        {
+            animator.SetBool("Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
+
         Vector2 currentposition = rb.position;
         Vector2 direction = new Vector2(movement.x * movespeed , 0);
 
