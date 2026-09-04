@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     bool isSprint = false;
 
+    float currentspeed;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentspeed = movespeed;
     }
 
     public void OnPlayermovement(CallbackContext context)
@@ -24,21 +27,23 @@ public class PlayerMovement : MonoBehaviour
     public void OnSprint(CallbackContext context)
     {
         isSprint = context.ReadValueAsButton();
-        if (isSprint)
-        {
-           animator.SetBool("Run", true);
-            movespeed *= sprintmultiplier;
-        }
-        else
-        {
-            animator.SetBool("Run", false);
-            movespeed = 5f;
-        }
+        
     }
 
     void FixedUpdate()
     {
-        if(movement.x != 0)
+        if (isSprint && movement.x != 0)
+        {
+            animator.SetBool("Run", true);
+            currentspeed = movespeed * sprintmultiplier;
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+            currentspeed = movespeed;
+        }
+
+        if (movement.x != 0 && !isSprint)
         {
             animator.SetBool("Walk", true);
         }
@@ -47,8 +52,13 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
+        if (movement.x == 0 && !isSprint)
+        {
+            animator.SetBool("Walk", false);
+            animator.SetBool("Run", false);
+        }
         Vector2 currentposition = rb.position;
-        Vector2 direction = new Vector2(movement.x * movespeed , 0);
+        Vector2 direction = new Vector2(movement.x * currentspeed , 0);
 
         rb.MovePosition(currentposition + direction * Time.fixedDeltaTime);
     }
