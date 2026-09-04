@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Rigidbody2D rb;
     bool isSprint = false;
+    bool isjump = false;
+
+    float cooldown = 0f;
 
     float currentspeed;
 
@@ -28,6 +31,12 @@ public class PlayerMovement : MonoBehaviour
     {
         isSprint = context.ReadValueAsButton();
         
+    }
+
+    public void OnJump(CallbackContext context)
+    {
+        isjump = context.ReadValueAsButton();
+        Debug.Log("Jump: " + isjump);
     }
 
     void FixedUpdate()
@@ -57,6 +66,18 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Run", false);
         }
+
+        if (cooldown > 0f)
+        {
+            cooldown -= Time.fixedDeltaTime;
+        }
+
+        if (isjump && cooldown <= 0f)
+        {
+            animator.SetTrigger("Jump");
+            cooldown += 1f;
+        }
+
         Vector2 currentposition = rb.position;
         Vector2 direction = new Vector2(movement.x * currentspeed , 0);
 
