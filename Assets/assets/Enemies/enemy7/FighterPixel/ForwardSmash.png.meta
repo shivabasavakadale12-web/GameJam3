@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 81a5981e0d39d50408253073c0dc2f36
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8612971487108494330
+    second: ForwardSmash_0
+  - first:
+      213: 7153826160796492416
+    second: ForwardSmash_1
+  - first:
+      213: -6403185668392667074
+    second: ForwardSmash_2
+  - first:
+      213: -8148579954721768804
+    second: ForwardSmash_3
+  - first:
+      213: -2713450772746341062
+    second: ForwardSmash_4
+  - first:
+      213: -405685362612418190
+    second: ForwardSmash_5
+  - first:
+      213: -7869873498508346088
+    second: ForwardSmash_6
+  - first:
+      213: -284770800847401509
+    second: ForwardSmash_7
+  - first:
+      213: -2312491733075726357
+    second: ForwardSmash_8
+  - first:
+      213: 3580668322646617347
+    second: ForwardSmash_9
+  - first:
+      213: -5241732662608567385
+    second: ForwardSmash_10
+  - first:
+      213: -8230713116706407245
+    second: ForwardSmash_11
+  - first:
+      213: 8168136364372564619
+    second: ForwardSmash_12
+  - first:
+      213: 7317338876321784788
+    second: ForwardSmash_13
+  - first:
+      213: 4214290012069561711
+    second: ForwardSmash_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ForwardSmash_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 793
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af37bad1feb678770800000000000000
+      internalID: 8612971487108494330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 793
+        width: 73
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082eb2b9dfe774360800000000000000
+      internalID: 7153826160796492416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 793
+        width: 66
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3835946f805327a0800000000000000
+      internalID: -6403185668392667074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_3
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 794
+        width: 67
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ab0f644bd6aee80800000000000000
+      internalID: -8148579954721768804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 537
+        width: 63
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35f1fe06e2e75ad0800000000000000
+      internalID: -2713450772746341062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 539
+        width: 74
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27949e6ef47be5af0800000000000000
+      internalID: -405685362612418190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_6
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 539
+        width: 77
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d362edfb798c290800000000000000
+      internalID: -7869873498508346088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_7
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 539
+        width: 71
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd4615277a4c0cf0800000000000000
+      internalID: -284770800847401509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_8
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 280
+        width: 129
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef6ef7550168efd0800000000000000
+      internalID: -2312491733075726357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_9
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 282
+        width: 134
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d68d54ed611b130800000000000000
+      internalID: 3580668322646617347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_10
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 282
+        width: 135
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a367ad4aef9147b0800000000000000
+      internalID: -5241732662608567385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_11
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 282
+        width: 134
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcf09e4702a6cd80800000000000000
+      internalID: -8230713116706407245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_12
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 25
+        width: 135
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a906b2fbc0b5170800000000000000
+      internalID: 8168136364372564619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_13
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 25
+        width: 125
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3e05860f86c8560800000000000000
+      internalID: 7317338876321784788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForwardSmash_14
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 23
+        width: 93
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6502ed007a2c7a30800000000000000
+      internalID: 4214290012069561711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ForwardSmash_0: 8612971487108494330
+      ForwardSmash_1: 7153826160796492416
+      ForwardSmash_10: -5241732662608567385
+      ForwardSmash_11: -8230713116706407245
+      ForwardSmash_12: 8168136364372564619
+      ForwardSmash_13: 7317338876321784788
+      ForwardSmash_14: 4214290012069561711
+      ForwardSmash_2: -6403185668392667074
+      ForwardSmash_3: -8148579954721768804
+      ForwardSmash_4: -2713450772746341062
+      ForwardSmash_5: -405685362612418190
+      ForwardSmash_6: -7869873498508346088
+      ForwardSmash_7: -284770800847401509
+      ForwardSmash_8: -2312491733075726357
+      ForwardSmash_9: 3580668322646617347
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

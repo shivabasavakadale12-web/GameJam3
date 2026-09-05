@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 1fb1f94ebac767348a8f340fdcc1b457
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -669133723208195272
+    second: SpecialAttack2_0
+  - first:
+      213: -407387271510518391
+    second: SpecialAttack2_1
+  - first:
+      213: -4911602168407293663
+    second: SpecialAttack2_2
+  - first:
+      213: -1448285651749712443
+    second: SpecialAttack2_3
+  - first:
+      213: -8130928182461948045
+    second: SpecialAttack2_4
+  - first:
+      213: 9003209893097181838
+    second: SpecialAttack2_5
+  - first:
+      213: 1030016851632677241
+    second: SpecialAttack2_6
+  - first:
+      213: -3521719307457584885
+    second: SpecialAttack2_7
+  - first:
+      213: 1240909225160797758
+    second: SpecialAttack2_8
+  - first:
+      213: 1767395641920734721
+    second: SpecialAttack2_9
+  - first:
+      213: -8124098475180530976
+    second: SpecialAttack2_10
+  - first:
+      213: -7068272007761489263
+    second: SpecialAttack2_11
+  - first:
+      213: 9108156844139680657
+    second: SpecialAttack2_12
+  - first:
+      213: -5171154416314748981
+    second: SpecialAttack2_13
+  - first:
+      213: 2382869712137961736
+    second: SpecialAttack2_14
+  - first:
+      213: 7016807955799246125
+    second: SpecialAttack2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpecialAttack2_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 793
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833e0f88c62c6b6f0800000000000000
+      internalID: -669133723208195272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_1
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 793
+        width: 87
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985999b5f6ba85af0800000000000000
+      internalID: -407387271510518391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 793
+        width: 71
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1218b02c9db76dbb0800000000000000
+      internalID: -4911602168407293663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_3
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 793
+        width: 74
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cdc9228fd7a6ebe0800000000000000
+      internalID: -1448285651749712443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 537
+        width: 73
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f9426c5e3292f80800000000000000
+      internalID: -8130928182461948045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_5
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 537
+        width: 73
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82175c52b3d1fc70800000000000000
+      internalID: 9003209893097181838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 534
+        width: 77
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9716b3a8eda5b4e00800000000000000
+      internalID: 1030016851632677241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_7
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 536
+        width: 78
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b012b50e2f6502fc0800000000000000
+      internalID: -3521719307457584885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_8
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 282
+        width: 95
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ee63c9d58983110800000000000000
+      internalID: 1240909225160797758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 282
+        width: 96
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1064246e8fc078810800000000000000
+      internalID: 1767395641920734721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_10
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 282
+        width: 98
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2629aea77614f80800000000000000
+      internalID: -8124098475180530976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_11
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 280
+        width: 96
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1921a89ee0478ed90800000000000000
+      internalID: -7068272007761489263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 25
+        width: 97
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1931d75846ca66e70800000000000000
+      internalID: 9108156844139680657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 25
+        width: 77
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfedd0d47e5c38b0800000000000000
+      internalID: -5171154416314748981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_14
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 25
+        width: 74
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8014502d067a11120800000000000000
+      internalID: 2382869712137961736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpecialAttack2_15
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 25
+        width: 76
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d258c8eb8a5b06160800000000000000
+      internalID: 7016807955799246125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpecialAttack2_0: -669133723208195272
+      SpecialAttack2_1: -407387271510518391
+      SpecialAttack2_10: -8124098475180530976
+      SpecialAttack2_11: -7068272007761489263
+      SpecialAttack2_12: 9108156844139680657
+      SpecialAttack2_13: -5171154416314748981
+      SpecialAttack2_14: 2382869712137961736
+      SpecialAttack2_15: 7016807955799246125
+      SpecialAttack2_2: -4911602168407293663
+      SpecialAttack2_3: -1448285651749712443
+      SpecialAttack2_4: -8130928182461948045
+      SpecialAttack2_5: 9003209893097181838
+      SpecialAttack2_6: 1030016851632677241
+      SpecialAttack2_7: -3521719307457584885
+      SpecialAttack2_8: 1240909225160797758
+      SpecialAttack2_9: 1767395641920734721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

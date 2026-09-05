@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: b7a41c5c12515914e99deb44b068811f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6844513409907142860
+    second: BlockBreak_0
+  - first:
+      213: -1584167288902893745
+    second: BlockBreak_1
+  - first:
+      213: 9163293782320810930
+    second: BlockBreak_2
+  - first:
+      213: -8245595752420657287
+    second: BlockBreak_3
+  - first:
+      213: 5991176329977291413
+    second: BlockBreak_4
+  - first:
+      213: 2983346534258320420
+    second: BlockBreak_5
+  - first:
+      213: -8197705454759352861
+    second: BlockBreak_6
+  - first:
+      213: 7046777857423795289
+    second: BlockBreak_7
+  - first:
+      213: -3392410303559699492
+    second: BlockBreak_8
+  - first:
+      213: -3243195929436375225
+    second: BlockBreak_9
+  - first:
+      213: -5229582963242219260
+    second: BlockBreak_10
+  - first:
+      213: 1701806673479165932
+    second: BlockBreak_11
+  - first:
+      213: -3443126164003573608
+    second: BlockBreak_12
+  - first:
+      213: -818593976218358132
+    second: BlockBreak_13
+  - first:
+      213: 3125816649433640400
+    second: BlockBreak_14
+  - first:
+      213: 3364511641592261415
+    second: BlockBreak_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlockBreak_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 791
+        width: 71
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0b9e9bea89cfe50800000000000000
+      internalID: 6844513409907142860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_1
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 800
+        width: 105
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f36287e38e30ae0800000000000000
+      internalID: -1584167288902893745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_2
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 804
+        width: 113
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb07c3552f8a2f70800000000000000
+      internalID: 9163293782320810930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_3
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 797
+        width: 68
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9773f77a952c19d80800000000000000
+      internalID: -8245595752420657287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 539
+        width: 65
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5926607212fe42350800000000000000
+      internalID: 5991176329977291413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 536
+        width: 81
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4242c50ddd9f66920800000000000000
+      internalID: 2983346534258320420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_6
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 533
+        width: 100
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e569cb7256eb3e80800000000000000
+      internalID: -8197705454759352861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_7
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 533
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95465da302f2bc160800000000000000
+      internalID: 7046777857423795289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 276
+        width: 89
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3f2fb7dccbbe0d0800000000000000
+      internalID: -3392410303559699492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_9
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 277
+        width: 85
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747b3f04c7addf2d0800000000000000
+      internalID: -3243195929436375225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 277
+        width: 78
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4094380a00acc67b0800000000000000
+      internalID: -5229582963242219260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_11
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 279
+        width: 67
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce76d1927280e9710800000000000000
+      internalID: 1701806673479165932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 22
+        width: 68
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890b6bd0ffe8730d0800000000000000
+      internalID: -3443126164003573608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 23
+        width: 70
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8eea30ad15c3a4f0800000000000000
+      internalID: -818593976218358132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_14
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 23
+        width: 71
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd6e7e6ea1216b20800000000000000
+      internalID: 3125816649433640400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlockBreak_15
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 23
+        width: 70
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72be5c7138521be20800000000000000
+      internalID: 3364511641592261415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BlockBreak_0: 6844513409907142860
+      BlockBreak_1: -1584167288902893745
+      BlockBreak_10: -5229582963242219260
+      BlockBreak_11: 1701806673479165932
+      BlockBreak_12: -3443126164003573608
+      BlockBreak_13: -818593976218358132
+      BlockBreak_14: 3125816649433640400
+      BlockBreak_15: 3364511641592261415
+      BlockBreak_2: 9163293782320810930
+      BlockBreak_3: -8245595752420657287
+      BlockBreak_4: 5991176329977291413
+      BlockBreak_5: 2983346534258320420
+      BlockBreak_6: -8197705454759352861
+      BlockBreak_7: 7046777857423795289
+      BlockBreak_8: -3392410303559699492
+      BlockBreak_9: -3243195929436375225
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

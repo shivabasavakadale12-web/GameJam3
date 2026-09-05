@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 2b2d3e1807179c143bec60ecbe5d307f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 397551683089766243
+    second: Attack_Left_High_Kick_0
+  - first:
+      213: -930452229855059563
+    second: Attack_Left_High_Kick_1
+  - first:
+      213: -3436524474622519956
+    second: Attack_Left_High_Kick_2
+  - first:
+      213: 4422147210780751420
+    second: Attack_Left_High_Kick_3
+  - first:
+      213: 5667388708152035931
+    second: Attack_Left_High_Kick_4
+  - first:
+      213: -482948765641502771
+    second: Attack_Left_High_Kick_5
+  - first:
+      213: -4773479991808640866
+    second: Attack_Left_High_Kick_6
+  - first:
+      213: -2398624384202930518
+    second: Attack_Left_High_Kick_7
+  - first:
+      213: -8426021830057913685
+    second: Attack_Left_High_Kick_8
+  - first:
+      213: -1279958595837451684
+    second: Attack_Left_High_Kick_9
+  - first:
+      213: -737811343441364730
+    second: Attack_Left_High_Kick_10
+  - first:
+      213: 3777504580926243504
+    second: Attack_Left_High_Kick_11
+  - first:
+      213: 6488362947175192965
+    second: Attack_Left_High_Kick_12
+  - first:
+      213: 7306474149131784055
+    second: Attack_Left_High_Kick_13
+  - first:
+      213: -8221517167960640764
+    second: Attack_Left_High_Kick_14
+  - first:
+      213: -3998421984575506551
+    second: Attack_Left_High_Kick_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 786
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3679c624623648500800000000000000
+      internalID: 397551683089766243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 796
+        width: 83
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591e40f60ae5613f0800000000000000
+      internalID: -930452229855059563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 793
+        width: 77
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c655034a2330f40d0800000000000000
+      internalID: -3436524474622519956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_3
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 793
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36321b657f9e5d30800000000000000
+      internalID: 4422147210780751420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_4
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 539
+        width: 97
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a4671c00c96ae40800000000000000
+      internalID: 5667388708152035931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 540
+        width: 100
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf893b08a83c49f0800000000000000
+      internalID: -482948765641502771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_6
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 539
+        width: 100
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98bfc90d3131cdb0800000000000000
+      internalID: -4773479991808640866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_7
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 539
+        width: 91
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa68efdb4df56bed0800000000000000
+      internalID: -2398624384202930518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 282
+        width: 98
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba216bdd9c1c01b80800000000000000
+      internalID: -8426021830057913685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_9
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 284
+        width: 91
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52a6e7407cac3ee0800000000000000
+      internalID: -1279958595837451684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_10
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 279
+        width: 82
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6097ce20e74c2c5f0800000000000000
+      internalID: -737811343441364730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_11
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 276
+        width: 78
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2058bf6646c6430800000000000000
+      internalID: 3777504580926243504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 19
+        width: 81
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5891f2049bb4b0a50800000000000000
+      internalID: 6488362947175192965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 23
+        width: 84
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f039bf68fc56560800000000000000
+      internalID: 7306474149131784055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 25
+        width: 85
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4033ee8f1bd47ed80800000000000000
+      internalID: -8221517167960640764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_High_Kick_15
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 26
+        width: 88
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987b34bb360c288c0800000000000000
+      internalID: -3998421984575506551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack_Left_High_Kick_0: 397551683089766243
+      Attack_Left_High_Kick_1: -930452229855059563
+      Attack_Left_High_Kick_10: -737811343441364730
+      Attack_Left_High_Kick_11: 3777504580926243504
+      Attack_Left_High_Kick_12: 6488362947175192965
+      Attack_Left_High_Kick_13: 7306474149131784055
+      Attack_Left_High_Kick_14: -8221517167960640764
+      Attack_Left_High_Kick_15: -3998421984575506551
+      Attack_Left_High_Kick_2: -3436524474622519956
+      Attack_Left_High_Kick_3: 4422147210780751420
+      Attack_Left_High_Kick_4: 5667388708152035931
+      Attack_Left_High_Kick_5: -482948765641502771
+      Attack_Left_High_Kick_6: -4773479991808640866
+      Attack_Left_High_Kick_7: -2398624384202930518
+      Attack_Left_High_Kick_8: -8426021830057913685
+      Attack_Left_High_Kick_9: -1279958595837451684
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

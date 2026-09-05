@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: e34bf2c53b8eb6b43895328afedd612e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2398401912150014257
+    second: LowPunch_0
+  - first:
+      213: -699648940541059842
+    second: LowPunch_1
+  - first:
+      213: -8418312265653512290
+    second: LowPunch_2
+  - first:
+      213: 1331947294261093188
+    second: LowPunch_3
+  - first:
+      213: 6750957338897737196
+    second: LowPunch_4
+  - first:
+      213: 4465025857184862248
+    second: LowPunch_5
+  - first:
+      213: 2560493624573250439
+    second: LowPunch_6
+  - first:
+      213: -2266413493378114330
+    second: LowPunch_7
+  - first:
+      213: -1674861417442791547
+    second: LowPunch_8
+  - first:
+      213: 1037380732218226367
+    second: LowPunch_9
+  - first:
+      213: 3865075945636086296
+    second: LowPunch_10
+  - first:
+      213: -9081772844859253735
+    second: LowPunch_11
+  - first:
+      213: 1503993116565823524
+    second: LowPunch_12
+  - first:
+      213: 7007935328520035504
+    second: LowPunch_13
+  - first:
+      213: 3858040751604479427
+    second: LowPunch_14
+  - first:
+      213: -7963325869330978887
+    second: LowPunch_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LowPunch_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 789
+        width: 84
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc64ead0b2a27bed0800000000000000
+      internalID: -2398401912150014257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 789
+        width: 145
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efc5297def85a46f0800000000000000
+      internalID: -699648940541059842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_2
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 794
+        width: 161
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e979865b8952c2b80800000000000000
+      internalID: -8418312265653512290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_3
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 776
+        width: 135
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443a9f5d1070c7210800000000000000
+      internalID: 1331947294261093188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 541
+        width: 155
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5e0de7ee730bd50800000000000000
+      internalID: 6750957338897737196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_5
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 541
+        width: 159
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82010724c55f6fd30800000000000000
+      internalID: 4465025857184862248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_6
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 540
+        width: 162
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b475ea263b88320800000000000000
+      internalID: 2560493624573250439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_7
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 539
+        width: 163
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec9b0d8fe41c80e0800000000000000
+      internalID: -2266413493378114330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 282
+        width: 163
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fa0552a62b1c8e0800000000000000
+      internalID: -1674861417442791547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 282
+        width: 161
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6b3b89744856e00800000000000000
+      internalID: 1037380732218226367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_10
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 282
+        width: 161
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812cb81381283a530800000000000000
+      internalID: 3865075945636086296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_11
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 283
+        width: 159
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c106307bf07f180800000000000000
+      internalID: -9081772844859253735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 29
+        width: 157
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420e98165c14fd410800000000000000
+      internalID: 1503993116565823524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_13
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 29
+        width: 153
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bcd8593d00314160800000000000000
+      internalID: 7007935328520035504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_14
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 25
+        width: 127
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5bd507f938a8530800000000000000
+      internalID: 3858040751604479427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowPunch_15
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 21
+        width: 113
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b729d730559c7190800000000000000
+      internalID: -7963325869330978887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LowPunch_0: -2398401912150014257
+      LowPunch_1: -699648940541059842
+      LowPunch_10: 3865075945636086296
+      LowPunch_11: -9081772844859253735
+      LowPunch_12: 1503993116565823524
+      LowPunch_13: 7007935328520035504
+      LowPunch_14: 3858040751604479427
+      LowPunch_15: -7963325869330978887
+      LowPunch_2: -8418312265653512290
+      LowPunch_3: 1331947294261093188
+      LowPunch_4: 6750957338897737196
+      LowPunch_5: 4465025857184862248
+      LowPunch_6: 2560493624573250439
+      LowPunch_7: -2266413493378114330
+      LowPunch_8: -1674861417442791547
+      LowPunch_9: 1037380732218226367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

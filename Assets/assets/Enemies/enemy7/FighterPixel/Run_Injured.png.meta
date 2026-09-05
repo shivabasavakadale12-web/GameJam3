@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 9b209af2d05bfc34ba6dfbd59e9db7a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3479585530004986054
+    second: Run_Injured_0
+  - first:
+      213: 3068891161420632141
+    second: Run_Injured_1
+  - first:
+      213: 8259894284246144149
+    second: Run_Injured_2
+  - first:
+      213: 3450157909368472262
+    second: Run_Injured_3
+  - first:
+      213: 772100941912096697
+    second: Run_Injured_4
+  - first:
+      213: -5294991468560097289
+    second: Run_Injured_5
+  - first:
+      213: 975159430309053488
+    second: Run_Injured_6
+  - first:
+      213: 8334894068014699737
+    second: Run_Injured_7
+  - first:
+      213: 5682625790083006460
+    second: Run_Injured_8
+  - first:
+      213: 997162297130858373
+    second: Run_Injured_9
+  - first:
+      213: 412247485066344662
+    second: Run_Injured_10
+  - first:
+      213: -1206580721800890898
+    second: Run_Injured_11
+  - first:
+      213: -6464048442296398204
+    second: Run_Injured_12
+  - first:
+      213: -4968424725558134251
+    second: Run_Injured_13
+  - first:
+      213: -8758865876395721066
+    second: Run_Injured_14
+  - first:
+      213: 3151998897341807727
+    second: Run_Injured_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Run_Injured_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 794
+        width: 60
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37a676656706bfc0800000000000000
+      internalID: -3479585530004986054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 800
+        width: 66
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4010da6044e69a20800000000000000
+      internalID: 3068891161420632141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 797
+        width: 65
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59455c6b61a01a270800000000000000
+      internalID: 8259894284246144149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_3
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 794
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c289eeb65c61ef20800000000000000
+      internalID: 3450157909368472262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 536
+        width: 70
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf3a6547bd07ba00800000000000000
+      internalID: 772100941912096697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 534
+        width: 73
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff50cb30596486b0800000000000000
+      internalID: -5294991468560097289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_6
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 534
+        width: 71
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03481f2d556788d00800000000000000
+      internalID: 975159430309053488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_7
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 539
+        width: 84
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4d684aefd7ba370800000000000000
+      internalID: 8334894068014699737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 289
+        width: 98
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfffe595c0ebcde40800000000000000
+      internalID: 5682625790083006460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_9
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 287
+        width: 93
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587b5e773d1a6dd00800000000000000
+      internalID: 997162297130858373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_10
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 286
+        width: 88
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d87dea47e898b500800000000000000
+      internalID: 412247485066344662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_11
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 284
+        width: 84
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5393ce93d514fe0800000000000000
+      internalID: -1206580721800890898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_12
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 29
+        width: 76
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e810290361b46a0800000000000000
+      internalID: -6464048442296398204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_13
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 29
+        width: 64
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51af6d3390c9c0bb0800000000000000
+      internalID: -4968424725558134251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_14
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 26
+        width: 59
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e742254e1427680800000000000000
+      internalID: -8758865876395721066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run_Injured_15
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 25
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c3b701c462ebb20800000000000000
+      internalID: 3151998897341807727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Run_Injured_0: -3479585530004986054
+      Run_Injured_1: 3068891161420632141
+      Run_Injured_10: 412247485066344662
+      Run_Injured_11: -1206580721800890898
+      Run_Injured_12: -6464048442296398204
+      Run_Injured_13: -4968424725558134251
+      Run_Injured_14: -8758865876395721066
+      Run_Injured_15: 3151998897341807727
+      Run_Injured_2: 8259894284246144149
+      Run_Injured_3: 3450157909368472262
+      Run_Injured_4: 772100941912096697
+      Run_Injured_5: -5294991468560097289
+      Run_Injured_6: 975159430309053488
+      Run_Injured_7: 8334894068014699737
+      Run_Injured_8: 5682625790083006460
+      Run_Injured_9: 997162297130858373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

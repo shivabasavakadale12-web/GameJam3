@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: e55ffc9fc048fd64da6fb164895e97ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2219980311072588168
+    second: AxeKick_AxeKick_0
+  - first:
+      213: -2513213279027207104
+    second: AxeKick_AxeKick_1
+  - first:
+      213: 6023120042651526801
+    second: AxeKick_AxeKick_2
+  - first:
+      213: 3358751249798965146
+    second: AxeKick_AxeKick_3
+  - first:
+      213: 1063799832222272453
+    second: AxeKick_AxeKick_4
+  - first:
+      213: -7743007774213396130
+    second: AxeKick_AxeKick_5
+  - first:
+      213: -1731698967058809055
+    second: AxeKick_AxeKick_6
+  - first:
+      213: 4674130224990465363
+    second: AxeKick_AxeKick_7
+  - first:
+      213: 4955991843917427395
+    second: AxeKick_AxeKick_8
+  - first:
+      213: -5150033393505521
+    second: AxeKick_AxeKick_9
+  - first:
+      213: -7669418532307773667
+    second: AxeKick_AxeKick_10
+  - first:
+      213: -2985854482926608448
+    second: AxeKick_AxeKick_11
+  - first:
+      213: 8874827037988024553
+    second: AxeKick_AxeKick_12
+  - first:
+      213: -66289882822647536
+    second: AxeKick_AxeKick_13
+  - first:
+      213: -6265894124026332628
+    second: AxeKick_AxeKick_14
+  - first:
+      213: -696396609434017413
+    second: AxeKick_AxeKick_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 793
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e38264bab0131e0800000000000000
+      internalID: -2219980311072588168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 793
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044e9ca96d54f1dd0800000000000000
+      internalID: -2513213279027207104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 791
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196a7c554cb669350800000000000000
+      internalID: 6023120042651526801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_3
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 793
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97aa2d577eac9e20800000000000000
+      internalID: 3358751249798965146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 534
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb8ab7af4063ce00800000000000000
+      internalID: 1063799832222272453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_5
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 539
+        width: 71
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e592cec147f4b8490800000000000000
+      internalID: -7743007774213396130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 536
+        width: 55
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f7c82e6f4c7f7e0800000000000000
+      internalID: -1731698967058809055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_7
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 532
+        width: 96
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d297ecca8ddd040800000000000000
+      internalID: 4674130224990465363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 276
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c27e66f25837c440800000000000000
+      internalID: 4955991843917427395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_9
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 276
+        width: 95
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0baff86214bdeff0800000000000000
+      internalID: -5150033393505521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_10
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 276
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d175ffbaa70c09590800000000000000
+      internalID: -7669418532307773667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_11
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 276
+        width: 96
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfd622ea2d1096d0800000000000000
+      internalID: -2985854482926608448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 21
+        width: 95
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0fe429b28b92b70800000000000000
+      internalID: 8874827037988024553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_13
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 22
+        width: 91
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011672ae3bd741ff0800000000000000
+      internalID: -66289882822647536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_14
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 25
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2af3390e721b09a0800000000000000
+      internalID: -6265894124026332628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AxeKick_AxeKick_15
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 25
+        width: 73
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7126ef29f6e556f0800000000000000
+      internalID: -696396609434017413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AxeKick_AxeKick_0: -2219980311072588168
+      AxeKick_AxeKick_1: -2513213279027207104
+      AxeKick_AxeKick_10: -7669418532307773667
+      AxeKick_AxeKick_11: -2985854482926608448
+      AxeKick_AxeKick_12: 8874827037988024553
+      AxeKick_AxeKick_13: -66289882822647536
+      AxeKick_AxeKick_14: -6265894124026332628
+      AxeKick_AxeKick_15: -696396609434017413
+      AxeKick_AxeKick_2: 6023120042651526801
+      AxeKick_AxeKick_3: 3358751249798965146
+      AxeKick_AxeKick_4: 1063799832222272453
+      AxeKick_AxeKick_5: -7743007774213396130
+      AxeKick_AxeKick_6: -1731698967058809055
+      AxeKick_AxeKick_7: 4674130224990465363
+      AxeKick_AxeKick_8: 4955991843917427395
+      AxeKick_AxeKick_9: -5150033393505521
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

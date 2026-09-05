@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 33ad5f2f5ae6ad2409e7a645aff20c45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1400834733359445798
+    second: Attack_Right_Middle_Punch_0
+  - first:
+      213: -4476640698640445220
+    second: Attack_Right_Middle_Punch_1
+  - first:
+      213: 1759745200870935543
+    second: Attack_Right_Middle_Punch_2
+  - first:
+      213: 3283904700559554348
+    second: Attack_Right_Middle_Punch_3
+  - first:
+      213: 7030909225893593557
+    second: Attack_Right_Middle_Punch_4
+  - first:
+      213: -7824087723691248882
+    second: Attack_Right_Middle_Punch_5
+  - first:
+      213: -1487466920622784954
+    second: Attack_Right_Middle_Punch_6
+  - first:
+      213: 6951252478791421972
+    second: Attack_Right_Middle_Punch_7
+  - first:
+      213: -7082001372449742093
+    second: Attack_Right_Middle_Punch_8
+  - first:
+      213: 5171851674494690476
+    second: Attack_Right_Middle_Punch_9
+  - first:
+      213: -8523616431811740948
+    second: Attack_Right_Middle_Punch_10
+  - first:
+      213: 7847837987981857225
+    second: Attack_Right_Middle_Punch_11
+  - first:
+      213: 5467156410616777074
+    second: Attack_Right_Middle_Punch_12
+  - first:
+      213: 1935084103807414240
+    second: Attack_Right_Middle_Punch_13
+  - first:
+      213: 804288402099683121
+    second: Attack_Right_Middle_Punch_14
+  - first:
+      213: 1166133908966090130
+    second: Attack_Right_Middle_Punch_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 786
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6273bee94c3c07310800000000000000
+      internalID: 1400834733359445798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_1
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 791
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0da7ab007cfd1c0800000000000000
+      internalID: -4476640698640445220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_2
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 793
+        width: 103
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb4c19cfeedb6810800000000000000
+      internalID: 1759745200870935543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 793
+        width: 102
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2776112de5c29d20800000000000000
+      internalID: 3283904700559554348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_4
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 537
+        width: 103
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1876980bec29160800000000000000
+      internalID: 7030909225893593557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 537
+        width: 103
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0373e94ba14b6390800000000000000
+      internalID: -7824087723691248882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_6
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 534
+        width: 100
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e722577b47b5be0800000000000000
+      internalID: -1487466920622784954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_7
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 527
+        width: 116
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4109a66dc4fc77060800000000000000
+      internalID: 6951252478791421972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 280
+        width: 119
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2ed48164da7bd90800000000000000
+      internalID: -7082001372449742093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_9
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 276
+        width: 109
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4e34142bb16c740800000000000000
+      internalID: 5171851674494690476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_10
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 273
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceabd2ce30806b980800000000000000
+      internalID: -8523616431811740948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_11
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 273
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c19978021f19ec60800000000000000
+      internalID: 7847837987981857225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 16
+        width: 98
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279005a0acd3fdb40800000000000000
+      internalID: 5467156410616777074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_13
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 18
+        width: 98
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef22f96dbccada10800000000000000
+      internalID: 1935084103807414240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 18
+        width: 98
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f3e185a08692b00800000000000000
+      internalID: 804288402099683121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Right_Middle_Punch_15
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 18
+        width: 97
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295267c9c90fe2010800000000000000
+      internalID: 1166133908966090130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack_Right_Middle_Punch_0: 1400834733359445798
+      Attack_Right_Middle_Punch_1: -4476640698640445220
+      Attack_Right_Middle_Punch_10: -8523616431811740948
+      Attack_Right_Middle_Punch_11: 7847837987981857225
+      Attack_Right_Middle_Punch_12: 5467156410616777074
+      Attack_Right_Middle_Punch_13: 1935084103807414240
+      Attack_Right_Middle_Punch_14: 804288402099683121
+      Attack_Right_Middle_Punch_15: 1166133908966090130
+      Attack_Right_Middle_Punch_2: 1759745200870935543
+      Attack_Right_Middle_Punch_3: 3283904700559554348
+      Attack_Right_Middle_Punch_4: 7030909225893593557
+      Attack_Right_Middle_Punch_5: -7824087723691248882
+      Attack_Right_Middle_Punch_6: -1487466920622784954
+      Attack_Right_Middle_Punch_7: 6951252478791421972
+      Attack_Right_Middle_Punch_8: -7082001372449742093
+      Attack_Right_Middle_Punch_9: 5171851674494690476
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

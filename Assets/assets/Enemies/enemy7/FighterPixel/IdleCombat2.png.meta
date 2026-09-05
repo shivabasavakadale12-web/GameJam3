@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 3b601f9e9b70fca4cbacb26bec2c633d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4683458849507007245
+    second: IdleCombat2_0
+  - first:
+      213: 1297298827586954273
+    second: IdleCombat2_1
+  - first:
+      213: -565293326465860955
+    second: IdleCombat2_2
+  - first:
+      213: -7280157238027688357
+    second: IdleCombat2_3
+  - first:
+      213: 1283328338377530963
+    second: IdleCombat2_4
+  - first:
+      213: -3018157365944179260
+    second: IdleCombat2_5
+  - first:
+      213: -8578816769528644896
+    second: IdleCombat2_6
+  - first:
+      213: 7396724819734157028
+    second: IdleCombat2_7
+  - first:
+      213: 8575997445128463948
+    second: IdleCombat2_8
+  - first:
+      213: -2977368770094237761
+    second: IdleCombat2_9
+  - first:
+      213: 975682200021795138
+    second: IdleCombat2_10
+  - first:
+      213: -6116603814465511174
+    second: IdleCombat2_11
+  - first:
+      213: -7808674033164161392
+    second: IdleCombat2_12
+  - first:
+      213: 5063634989321849653
+    second: IdleCombat2_13
+  - first:
+      213: 5317971241995426228
+    second: IdleCombat2_14
+  - first:
+      213: 2623453839969678640
+    second: IdleCombat2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IdleCombat2_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 793
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b5605720dfef040800000000000000
+      internalID: 4683458849507007245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 793
+        width: 74
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124e9d9096ee00210800000000000000
+      internalID: 1297298827586954273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 793
+        width: 76
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa7a12f6bca728f0800000000000000
+      internalID: -565293326465860955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 793
+        width: 77
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56ee5e509fa7fa90800000000000000
+      internalID: -7280157238027688357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 536
+        width: 74
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e5f2b035c4fc110800000000000000
+      internalID: 1283328338377530963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_5
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 536
+        width: 73
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c52ba6ddd95d16d0800000000000000
+      internalID: -3018157365944179260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_6
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 536
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eab413c99be1f880800000000000000
+      internalID: -8578816769528644896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_7
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 536
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6d195b80276a660800000000000000
+      internalID: 7396724819734157028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_8
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 280
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c462a8f1d30140770800000000000000
+      internalID: 8575997445128463948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 280
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7f03dd0e24ea6d0800000000000000
+      internalID: -2977368770094237761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_10
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 280
+        width: 76
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24188f1aac15a8d00800000000000000
+      internalID: 975682200021795138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_11
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 280
+        width: 77
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0ebf6ec357d1ba0800000000000000
+      internalID: -6116603814465511174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 25
+        width: 78
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09eee66c65402a390800000000000000
+      internalID: -7808674033164161392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 23
+        width: 78
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b84cac135a54640800000000000000
+      internalID: 5063634989321849653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 25
+        width: 78
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b951e43baa3dc940800000000000000
+      internalID: 5317971241995426228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCombat2_15
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 25
+        width: 76
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035f6082e51686420800000000000000
+      internalID: 2623453839969678640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IdleCombat2_0: 4683458849507007245
+      IdleCombat2_1: 1297298827586954273
+      IdleCombat2_10: 975682200021795138
+      IdleCombat2_11: -6116603814465511174
+      IdleCombat2_12: -7808674033164161392
+      IdleCombat2_13: 5063634989321849653
+      IdleCombat2_14: 5317971241995426228
+      IdleCombat2_15: 2623453839969678640
+      IdleCombat2_2: -565293326465860955
+      IdleCombat2_3: -7280157238027688357
+      IdleCombat2_4: 1283328338377530963
+      IdleCombat2_5: -3018157365944179260
+      IdleCombat2_6: -8578816769528644896
+      IdleCombat2_7: 7396724819734157028
+      IdleCombat2_8: 8575997445128463948
+      IdleCombat2_9: -2977368770094237761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

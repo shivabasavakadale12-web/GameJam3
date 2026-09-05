@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: c6610ecd216e2a4489a1dfd39b9a330b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 483718324895312815
+    second: Casual_HandGesture01_0
+  - first:
+      213: 7295092165316970680
+    second: Casual_HandGesture01_1
+  - first:
+      213: 8289345520497967104
+    second: Casual_HandGesture01_2
+  - first:
+      213: -3006644373956806056
+    second: Casual_HandGesture01_3
+  - first:
+      213: -4678898763711207995
+    second: Casual_HandGesture01_4
+  - first:
+      213: -8026359255749820672
+    second: Casual_HandGesture01_5
+  - first:
+      213: -6819376361209285788
+    second: Casual_HandGesture01_6
+  - first:
+      213: -6338922353554745622
+    second: Casual_HandGesture01_7
+  - first:
+      213: 6708586748400274627
+    second: Casual_HandGesture01_8
+  - first:
+      213: -6957235651155322413
+    second: Casual_HandGesture01_9
+  - first:
+      213: 402467275067736633
+    second: Casual_HandGesture01_10
+  - first:
+      213: 486686869383380671
+    second: Casual_HandGesture01_11
+  - first:
+      213: -120373886450271951
+    second: Casual_HandGesture01_12
+  - first:
+      213: 273037751656564575
+    second: Casual_HandGesture01_13
+  - first:
+      213: -7400655690611442368
+    second: Casual_HandGesture01_14
+  - first:
+      213: -6347084864730557852
+    second: Casual_HandGesture01_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Casual_HandGesture01_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 796
+        width: 55
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab6bbee04386b600800000000000000
+      internalID: 483718324895312815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 796
+        width: 56
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8047d5caf5d3560800000000000000
+      internalID: 7295092165316970680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 796
+        width: 55
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000c1c105dba90370800000000000000
+      internalID: 8289345520497967104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_3
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 796
+        width: 54
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ab06c2fd04646d0800000000000000
+      internalID: -3006644373956806056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 540
+        width: 55
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5aaf04d56311fb0800000000000000
+      internalID: -4678898763711207995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 540
+        width: 57
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ffc5948c4ac9090800000000000000
+      internalID: -8026359255749820672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_6
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 539
+        width: 59
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463bc608455bc51a0800000000000000
+      internalID: -6819376361209285788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_7
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 540
+        width: 59
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6169954bf9708a0800000000000000
+      internalID: -6338922353554745622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_8
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 283
+        width: 59
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc8a43aa10b91d50800000000000000
+      internalID: 6708586748400274627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_9
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 283
+        width: 61
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9143a490fe27f90800000000000000
+      internalID: -6957235651155322413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_10
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 283
+        width: 61
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932c124bad9d59500800000000000000
+      internalID: 402467275067736633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_11
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 283
+        width: 56
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe717e012f01c600800000000000000
+      internalID: 486686869383380671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 27
+        width: 55
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139f5e98698545ef0800000000000000
+      internalID: -120373886450271951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_13
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 27
+        width: 58
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57c2c573660ac300800000000000000
+      internalID: 273037751656564575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_14
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 29
+        width: 58
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04db1281cd69b4990800000000000000
+      internalID: -7400655690611442368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual_HandGesture01_15
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 29
+        width: 56
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4621a7e91ff9ae7a0800000000000000
+      internalID: -6347084864730557852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Casual_HandGesture01_0: 483718324895312815
+      Casual_HandGesture01_1: 7295092165316970680
+      Casual_HandGesture01_10: 402467275067736633
+      Casual_HandGesture01_11: 486686869383380671
+      Casual_HandGesture01_12: -120373886450271951
+      Casual_HandGesture01_13: 273037751656564575
+      Casual_HandGesture01_14: -7400655690611442368
+      Casual_HandGesture01_15: -6347084864730557852
+      Casual_HandGesture01_2: 8289345520497967104
+      Casual_HandGesture01_3: -3006644373956806056
+      Casual_HandGesture01_4: -4678898763711207995
+      Casual_HandGesture01_5: -8026359255749820672
+      Casual_HandGesture01_6: -6819376361209285788
+      Casual_HandGesture01_7: -6338922353554745622
+      Casual_HandGesture01_8: 6708586748400274627
+      Casual_HandGesture01_9: -6957235651155322413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

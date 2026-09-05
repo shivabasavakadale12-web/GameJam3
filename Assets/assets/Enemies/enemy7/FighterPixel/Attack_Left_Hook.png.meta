@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 114f9522f501aaa42848865d00c5d428
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1980293428707983591
+    second: Attack_Left_Hook_0
+  - first:
+      213: -1174687008293502836
+    second: Attack_Left_Hook_1
+  - first:
+      213: -814533575112279905
+    second: Attack_Left_Hook_2
+  - first:
+      213: 8558488767095788627
+    second: Attack_Left_Hook_3
+  - first:
+      213: -1073842905377183090
+    second: Attack_Left_Hook_4
+  - first:
+      213: -4817461936738860084
+    second: Attack_Left_Hook_5
+  - first:
+      213: 8511071110240449301
+    second: Attack_Left_Hook_6
+  - first:
+      213: -557224842356803710
+    second: Attack_Left_Hook_7
+  - first:
+      213: 5286205484158089999
+    second: Attack_Left_Hook_8
+  - first:
+      213: 8725045138319813656
+    second: Attack_Left_Hook_9
+  - first:
+      213: 5687956060936598770
+    second: Attack_Left_Hook_10
+  - first:
+      213: 4713174927151788373
+    second: Attack_Left_Hook_11
+  - first:
+      213: -7194389520308182861
+    second: Attack_Left_Hook_12
+  - first:
+      213: -1378096023701293573
+    second: Attack_Left_Hook_13
+  - first:
+      213: 5063208563836312013
+    second: Attack_Left_Hook_14
+  - first:
+      213: -4795365770616221714
+    second: Attack_Left_Hook_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_Left_Hook_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 786
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e00e21a16a6b7b10800000000000000
+      internalID: 1980293428707983591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 787
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c804664c36ca2bfe0800000000000000
+      internalID: -1174687008293502836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_2
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 787
+        width: 100
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98bdcd670232b4f0800000000000000
+      internalID: -814533575112279905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 793
+        width: 99
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3545ae8503cd5c670800000000000000
+      internalID: 8558488767095788627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 534
+        width: 100
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a6b682191f811f0800000000000000
+      internalID: -1073842905377183090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 534
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc307bd74efe42db0800000000000000
+      internalID: -4817461936738860084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_6
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 534
+        width: 127
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513b8f7c4166d1670800000000000000
+      internalID: 8511071110240449301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_7
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 537
+        width: 125
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287bc4b45f65448f0800000000000000
+      internalID: -557224842356803710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 280
+        width: 121
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0bf6fc51ef5c5940800000000000000
+      internalID: 5286205484158089999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_9
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 280
+        width: 120
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c2dc67356951970800000000000000
+      internalID: 8725045138319813656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_10
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 279
+        width: 117
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4f72eb6edafee40800000000000000
+      internalID: 5687956060936598770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_11
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 279
+        width: 114
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551f821ff9f886140800000000000000
+      internalID: 4713174927151788373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 25
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0ec3a49d4682c90800000000000000
+      internalID: -7194389520308182861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_13
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 26
+        width: 105
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5f7e8c7f400ece0800000000000000
+      internalID: -1378096023701293573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 23
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9dd2fdc51244640800000000000000
+      internalID: 5063208563836312013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Left_Hook_15
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 21
+        width: 100
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef4a521d30737db0800000000000000
+      internalID: -4795365770616221714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack_Left_Hook_0: 1980293428707983591
+      Attack_Left_Hook_1: -1174687008293502836
+      Attack_Left_Hook_10: 5687956060936598770
+      Attack_Left_Hook_11: 4713174927151788373
+      Attack_Left_Hook_12: -7194389520308182861
+      Attack_Left_Hook_13: -1378096023701293573
+      Attack_Left_Hook_14: 5063208563836312013
+      Attack_Left_Hook_15: -4795365770616221714
+      Attack_Left_Hook_2: -814533575112279905
+      Attack_Left_Hook_3: 8558488767095788627
+      Attack_Left_Hook_4: -1073842905377183090
+      Attack_Left_Hook_5: -4817461936738860084
+      Attack_Left_Hook_6: 8511071110240449301
+      Attack_Left_Hook_7: -557224842356803710
+      Attack_Left_Hook_8: 5286205484158089999
+      Attack_Left_Hook_9: 8725045138319813656
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

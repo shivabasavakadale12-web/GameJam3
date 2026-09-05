@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 8f4009ec994985549a7e176921528966
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8045069108338878884
+    second: ToughGuy_HandGesture02_0
+  - first:
+      213: -1073045910254774932
+    second: ToughGuy_HandGesture02_1
+  - first:
+      213: -7569528872122326692
+    second: ToughGuy_HandGesture02_2
+  - first:
+      213: -2081430018332428016
+    second: ToughGuy_HandGesture02_3
+  - first:
+      213: -6563988931183241638
+    second: ToughGuy_HandGesture02_4
+  - first:
+      213: 5613322353218464941
+    second: ToughGuy_HandGesture02_5
+  - first:
+      213: -3558948691432917469
+    second: ToughGuy_HandGesture02_6
+  - first:
+      213: 1980738337692432418
+    second: ToughGuy_HandGesture02_7
+  - first:
+      213: -5385036976549869773
+    second: ToughGuy_HandGesture02_8
+  - first:
+      213: -7591280694763934827
+    second: ToughGuy_HandGesture02_9
+  - first:
+      213: 4505766200291554712
+    second: ToughGuy_HandGesture02_10
+  - first:
+      213: 6302981247093582388
+    second: ToughGuy_HandGesture02_11
+  - first:
+      213: 3650099252172613248
+    second: ToughGuy_HandGesture02_12
+  - first:
+      213: 7325682824106048615
+    second: ToughGuy_HandGesture02_13
+  - first:
+      213: -3696010732930937520
+    second: ToughGuy_HandGesture02_14
+  - first:
+      213: 8696421210130057337
+    second: ToughGuy_HandGesture02_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 796
+        width: 55
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a9e10cbab3d5af60800000000000000
+      internalID: 8045069108338878884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 796
+        width: 57
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65149b0e66cb11f0800000000000000
+      internalID: -1073045910254774932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_2
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 796
+        width: 59
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51e51c8891a3f690800000000000000
+      internalID: -7569528872122326692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_3
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 796
+        width: 59
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019f57c1d664d13e0800000000000000
+      internalID: -2081430018332428016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 540
+        width: 57
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a561a3738d608e4a0800000000000000
+      internalID: -6563988931183241638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_5
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 540
+        width: 57
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daca85980f686ed40800000000000000
+      internalID: 5613322353218464941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_6
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 540
+        width: 50
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326bc4175031c9ec0800000000000000
+      internalID: -3558948691432917469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_7
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 540
+        width: 46
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228b723160ffc7b10800000000000000
+      internalID: 1980738337692432418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_8
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 284
+        width: 46
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337c666a6618445b0800000000000000
+      internalID: -5385036976549869773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_9
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 284
+        width: 49
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ba05ead6a56a690800000000000000
+      internalID: -7591280694763934827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_10
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 284
+        width: 52
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 895f6519c72b78e30800000000000000
+      internalID: 4505766200291554712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_11
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 284
+        width: 53
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a26f2bc00b87750800000000000000
+      internalID: 6302981247093582388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_12
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 29
+        width: 55
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086eaa84ee1c7a230800000000000000
+      internalID: 3650099252172613248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_13
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 29
+        width: 57
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c750427bd0aa560800000000000000
+      internalID: 7325682824106048615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_14
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 29
+        width: 58
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dce9912d125bcc0800000000000000
+      internalID: -3696010732930937520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToughGuy_HandGesture02_15
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 29
+        width: 56
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97889f6d305efa870800000000000000
+      internalID: 8696421210130057337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ToughGuy_HandGesture02_0: 8045069108338878884
+      ToughGuy_HandGesture02_1: -1073045910254774932
+      ToughGuy_HandGesture02_10: 4505766200291554712
+      ToughGuy_HandGesture02_11: 6302981247093582388
+      ToughGuy_HandGesture02_12: 3650099252172613248
+      ToughGuy_HandGesture02_13: 7325682824106048615
+      ToughGuy_HandGesture02_14: -3696010732930937520
+      ToughGuy_HandGesture02_15: 8696421210130057337
+      ToughGuy_HandGesture02_2: -7569528872122326692
+      ToughGuy_HandGesture02_3: -2081430018332428016
+      ToughGuy_HandGesture02_4: -6563988931183241638
+      ToughGuy_HandGesture02_5: 5613322353218464941
+      ToughGuy_HandGesture02_6: -3558948691432917469
+      ToughGuy_HandGesture02_7: 1980738337692432418
+      ToughGuy_HandGesture02_8: -5385036976549869773
+      ToughGuy_HandGesture02_9: -7591280694763934827
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
