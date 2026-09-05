@@ -1,15 +1,25 @@
 using static UnityEngine.InputSystem.InputAction;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
- BoxCollider2D[] HitBox;
+    [SerializeField] float xsize;
+    [SerializeField] float ysize;
 
+    Vector2 playercolliderOGsize;
+    Vector2 playercolliderCurrentSize;
+    BoxCollider2D[] HitBox;
+    CapsuleCollider2D playercollider;
     Animator animator;
+
+    bool isDefending = false;
 
 
     void Start()
     {
+        playercollider = GetComponent<CapsuleCollider2D>();
+        playercolliderOGsize = playercollider.size;
         animator = GetComponent<Animator>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
         HitBox[0].enabled = false;
@@ -58,4 +68,24 @@ public class PlayerCombat : MonoBehaviour
         HitBox[1].enabled = false;
     }
 
+    public void OnDefend(CallbackContext context)
+    {
+        if (context.performed && !isDefending)
+        {
+            StartCoroutine(ResetColliderSize());
+            animator.SetTrigger("OnDefend");
+        }
+    }
+
+    IEnumerator ResetColliderSize()
+    {
+        isDefending = true;
+
+        playercolliderCurrentSize = playercollider.size;
+        playercollider.size = new Vector2(xsize, ysize);
+        yield return new WaitForSeconds(1f);
+        playercollider.size = playercolliderOGsize;
+
+        isDefending = false;
+    }
 }

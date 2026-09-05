@@ -491,7 +491,19 @@ MonoBehaviour:
     m_ActionId: 932d3e24-baa0-4261-b408-205d166bf238
     m_ActionName: 'Playermovement/SuperpowerAttack[/Keyboard/x]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69015943}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: OnDefend
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: def69e43-adc1-4007-b2a7-f080d9a59eaa
     m_ActionName: 'Playermovement/defend[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -525,6 +537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3704168104c7547bf18cb9c251619a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
+  xsize: 0.25
+  ysize: 0.45
 --- !u!1 &406343469
 GameObject:
   m_ObjectHideFlags: 0
