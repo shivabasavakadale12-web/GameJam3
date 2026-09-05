@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecb9a6376e799f429c01fafc4a41f12, type: 3}
   m_Name: enemy1
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  health: 0
-  moveSpeed: 0
-  attackDamage: 0
-  attackFrequency: 0
-  attackRange: 0
-  defenseTendency: 0
-  reactionTime: 0
-  dodgeTendency: 0
+  health: 100
+  moveSpeed: 1.4
+  attackDamage: 22
+  attackFrequency: 2
+  attackRange: 3
+  defenseTendency: 40
+  reactionTime: 1.8
+  dodgeTendency: 60
   superAttackTendency: 0
-  aggression: 0
+  aggression: 25
   counterAttackTendency: 0
+  HasSuperPower: 0

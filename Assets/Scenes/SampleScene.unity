@@ -994,6 +994,7 @@ GameObject:
   - component: {fileID: 680983540}
   - component: {fileID: 680983541}
   - component: {fileID: 680983542}
+  - component: {fileID: 680983543}
   m_Layer: 0
   m_Name: enemy1
   m_TagString: Untagged
@@ -1173,6 +1174,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &680983543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680983535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392171f6c83d8a14bb2a6ca3725a3a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EarlyEnemyAi
+  enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
+  playerTransform: {fileID: 69015936}
+  MoveSpeed: 20
 --- !u!1 &954030023
 GameObject:
   m_ObjectHideFlags: 0
