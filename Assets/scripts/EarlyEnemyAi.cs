@@ -27,9 +27,17 @@ public class EarlyEnemyAi : MonoBehaviour
         if (distance <= enemyData.attackRange)
         {
             isMoveing = false;
+            isRunning = false;
             rb.linearVelocity = Vector2.zero;
         }
-        else
+        else if(distance > 5f) 
+        {
+            isRunning = true;
+            isMoveing = false;
+            animator.SetBool("Isrunning", true);
+            animator.SetBool("Iswalking", false);
+        }
+        else if (distance < 3f)
         {
             isMoveing = true;
             isRunning = false;
@@ -39,11 +47,6 @@ public class EarlyEnemyAi : MonoBehaviour
         if (isMoveing)
         { 
             animator.SetBool("Iswalking", true);
-        }
-        else if(distance > 5f) 
-        {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("Iswalking", false);
         }
 
     }
