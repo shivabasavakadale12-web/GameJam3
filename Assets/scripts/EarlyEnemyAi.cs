@@ -9,6 +9,7 @@ public class EarlyEnemyAi : MonoBehaviour
     Rigidbody2D rb;
 
     bool isMoveing;
+    bool isRunning;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class EarlyEnemyAi : MonoBehaviour
         else
         {
             isMoveing = true;
+            isRunning = false;
 
         }
 
@@ -38,8 +40,9 @@ public class EarlyEnemyAi : MonoBehaviour
         { 
             animator.SetBool("Iswalking", true);
         }
-        else
+        else if(distance > 5f) 
         {
+            animator.SetBool("isRunning", true);
             animator.SetBool("Iswalking", false);
         }
 
