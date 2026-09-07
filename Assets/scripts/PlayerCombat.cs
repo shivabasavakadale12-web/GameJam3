@@ -11,6 +11,11 @@ public class PlayerCombat : MonoBehaviour
     bool isDefending = false;
     bool isAttacking = false;
 
+    const string attack1 = "OnAttack1";
+    const string attack2 = "OnAttack2";
+    const string powerAttack = "PowerAttack";
+    const string superPowerAttack = "SuperPowerAttack";
+
 
     void Start()
     {
@@ -23,18 +28,24 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
-        int randomValue = Random.Range(0, 100);
-        Debug.Log("Random Value: " + randomValue);
-        if (context.performed && randomValue < 50 && !isAttacking)
+        if (context.performed && !isAttacking)
         {
             isAttacking = true;
-            animator.SetTrigger("OnAttack1");
+
+            int randomValue = Random.Range(0, 100);
+            Debug.Log("Random Value: " + randomValue);
+
+            if (randomValue < 50)
+            {
+                animator.SetTrigger(attack1);
+            }
+            else
+            {
+                animator.SetTrigger(attack2);
+            }
+
         }
-        else if (context.performed && randomValue >= 50 && !isAttacking)
-        {
-            isAttacking = true;
-            animator.SetTrigger("OnAttack2");
-        }
+       
     }
 
     public void PowerAttack(CallbackContext context)
@@ -42,7 +53,7 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && !isAttacking)
         {
             isAttacking = true;
-            animator.SetTrigger("PowerAttack");
+            animator.SetTrigger(powerAttack);
         }
     }
     
@@ -51,7 +62,7 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && !isAttacking)
         {
             isAttacking = true;
-            animator.SetTrigger("SuperPowerAttack");
+            animator.SetTrigger(superPowerAttack);
         }
     }
 
