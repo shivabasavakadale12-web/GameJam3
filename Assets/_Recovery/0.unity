@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57cb7860db0ed84cb97faa0d17402a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBoxDetector
-  enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
+  enemyData: {fileID: 0}
 --- !u!50 &680983541
 Rigidbody2D:
   serializedVersion: 5

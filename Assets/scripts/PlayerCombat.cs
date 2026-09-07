@@ -26,27 +26,20 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Random Value: " + randomValue);
         if (context.performed && randomValue < 50)
         {
-            HitBox[0].enabled = true;
             animator.SetTrigger("OnAttack1");
         }
         else if (context.performed && randomValue >= 50)
         {
-            HitBox[0].enabled = true;
             animator.SetTrigger("OnAttack2");
         }
-        HitBox[1].enabled = false;
-        HitBox[2].enabled = false;
     }
 
     public void PowerAttack(CallbackContext context)
     {
         if (context.performed)
         {
-            HitBox[1].enabled = true;
             animator.SetTrigger("PowerAttack");
         }
-        HitBox[0].enabled = false;
-        HitBox[2].enabled = false;
     }
 
     public void SuperPowerAttack(CallbackContext context)
@@ -54,11 +47,8 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed)
         {
-            HitBox[2].enabled = true;
             animator.SetTrigger("SuperPowerAttack");
         }
-        HitBox[0].enabled = false;
-        HitBox[1].enabled = false;
     }
 
     public void OnDefend(CallbackContext context)
@@ -72,6 +62,34 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    public void EnableAttackHitbox()
+    {
+        HitBox[0].enabled = true;
+    }
+
+    public void DisableAttackHitbox()
+    {
+        HitBox[0].enabled = false;
+    }
+
+    public void EnablePowerAttackHitbox()
+    {
+        HitBox[1].enabled = true;
+    }
+    public void DisablePowerAttackHitbox()
+    {
+        HitBox[1].enabled = false;
+    }
+
+    public void EnableSuperPowerAttackHitbox()
+    {
+        HitBox[2].enabled = true;
+    }
+
+    public void DisableSuperPowerAttackHitbox()
+    {
+        HitBox[2].enabled = false;
+    }
     IEnumerator ResetColliderSize()
     {
         yield return new WaitForSeconds(1f);

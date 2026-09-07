@@ -74,7 +74,7 @@ public class EnemyHealth : MonoBehaviour
 
         else
         {
-            Invoke("hurtanimation", 0.6f);
+            hurtanimation();
         }
     }
 }
