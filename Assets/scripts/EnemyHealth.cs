@@ -44,13 +44,13 @@ public class EnemyHealth : MonoBehaviour
     void attackone()
     {
         Debug.Log("Player hit with Attack1");
-        TakeDamage(10);
+        TakeDamage(6);
     }    
 
     void attacktwo()
     {
         Debug.Log("Player hit with Attack2");
-        TakeDamage(20);
+        TakeDamage(12);
     }    
     
     void SuperPowerAttack()

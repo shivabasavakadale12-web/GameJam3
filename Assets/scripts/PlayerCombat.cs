@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     Animator animator;
 
     bool isDefending = false;
+    bool isAttacking = false;
 
 
     void Start()
@@ -24,29 +25,32 @@ public class PlayerCombat : MonoBehaviour
     {
         int randomValue = Random.Range(0, 100);
         Debug.Log("Random Value: " + randomValue);
-        if (context.performed && randomValue < 50)
+        if (context.performed && randomValue < 50 && !isAttacking)
         {
+            isAttacking = true;
             animator.SetTrigger("OnAttack1");
         }
-        else if (context.performed && randomValue >= 50)
+        else if (context.performed && randomValue >= 50 && !isAttacking)
         {
+            isAttacking = true;
             animator.SetTrigger("OnAttack2");
         }
     }
 
     public void PowerAttack(CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !isAttacking)
         {
+            isAttacking = true;
             animator.SetTrigger("PowerAttack");
         }
     }
-
+    
     public void SuperPowerAttack(CallbackContext context)
-
     {
-        if (context.performed)
+        if (context.performed && !isAttacking)
         {
+            isAttacking = true;
             animator.SetTrigger("SuperPowerAttack");
         }
     }
@@ -89,6 +93,11 @@ public class PlayerCombat : MonoBehaviour
     public void DisableSuperPowerAttackHitbox()
     {
         HitBox[2].enabled = false;
+    }
+
+    public void attackfinished()
+    {
+        isAttacking = false;
     }
     IEnumerator ResetColliderSize()
     {
