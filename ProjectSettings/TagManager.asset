@@ -9,6 +9,7 @@ TagManager:
   - superpowerattack
   - enemyattack1
   - enemyattack2
+  - enemyattack3
   layers:
   - Default
   - TransparentFX

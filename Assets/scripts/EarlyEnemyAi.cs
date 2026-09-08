@@ -12,9 +12,11 @@ public class EarlyEnemyAi : MonoBehaviour
 
     bool isMoveing;
     bool isRunning;
+    bool isAttacking = false;
     BoxCollider2D[] Hitbox;
     const string attack1 = "Attack1";
     const string attack2 = "Attack2";
+    const string attack3 = "Attack3";
 
     void Start()
     {
@@ -76,17 +78,23 @@ public class EarlyEnemyAi : MonoBehaviour
     {
         int randomAttack = Random.Range(0, 100);
 
-        if (AttackTimer <= 0f && distance <= enemyData.attackRange)
+        if (AttackTimer <= 0f && distance <= enemyData.attackRange && !isAttacking)
         {
+            isAttacking = true;
             if (randomAttack < 50)
             {
                 animator.SetTrigger(attack1);
                 Debug.Log("Enemy Attack1");
             }
-            else
+            else if (randomAttack > 50 && randomAttack < 80) 
             {
                 animator.SetTrigger(attack2);
                 Debug.Log("Enemy Attack2");
+            }
+            else
+            {
+                animator.SetTrigger(attack3);
+                Debug.Log("Enemy Attack3");
             }
 
             AttackTimer = enemyData.attackFrequency;
@@ -100,6 +108,7 @@ public class EarlyEnemyAi : MonoBehaviour
     public void DisableHitboxone()
     {
         Hitbox[0].enabled = false;
+        isAttacking = false;
     }
 
     public void Enablehitboxtwo()
@@ -110,5 +119,17 @@ public class EarlyEnemyAi : MonoBehaviour
     public void Disablehitboxtwo()
     {
         Hitbox[1].enabled = false;
+        isAttacking = false;
+    }
+
+    public void Enablehitboxthree()
+    {
+        Hitbox[2].enabled = true;
+    }
+
+    public void Disablehitboxthree()
+    {
+        Hitbox[2].enabled = false;
+        isAttacking = false;
     }
 }

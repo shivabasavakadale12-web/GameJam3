@@ -33,6 +33,11 @@ public class playerHealth : MonoBehaviour
         else if (collision.CompareTag("enemyattack2"))
         {
             animator.SetTrigger("IsHurt");
+            TakeDamage(10);
+        }
+        else if (collision.CompareTag("enemyattack3"))
+        {
+            animator.SetTrigger("IsHurt");
             TakeDamage(15);
         }
     }
