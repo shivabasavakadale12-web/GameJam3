@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnPlayermovement(CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
-        Debug.Log("PlayerMovement: " + movement);
     }
 
     public void OnSprint(CallbackContext context)
@@ -36,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnJump(CallbackContext context)
     {
         isjump = context.ReadValueAsButton();
-        Debug.Log("Jump: " + isjump);
     }
 
     void FixedUpdate()

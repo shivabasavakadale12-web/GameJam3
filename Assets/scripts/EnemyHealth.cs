@@ -19,7 +19,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag(attack1))
         {
             attackone();
@@ -33,7 +32,6 @@ public class EnemyHealth : MonoBehaviour
             SuperPowerAttack();
         }
 
-        Debug.Log("Enemy Health: " + currentHealth);
     }
 
     void hurtanimation()

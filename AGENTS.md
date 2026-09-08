@@ -4,5 +4,5 @@
 - Active game object:
   - Name: enemy1
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Enemy
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

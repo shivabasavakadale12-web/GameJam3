@@ -12,21 +12,24 @@ public class EarlyEnemyAi : MonoBehaviour
 
     bool isMoveing;
     bool isRunning;
-    BoxCollider2D Hitbox;
+    BoxCollider2D[] Hitbox;
+    const string attack1 = "Attack1";
+    const string attack2 = "Attack2";
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         AttackTimer = enemyData.attackFrequency;
-        Hitbox = GetComponentInChildren<BoxCollider2D>();
-        Hitbox.enabled = false;
+        Hitbox = GetComponentsInChildren<BoxCollider2D>();
+        Hitbox[0].enabled = false;
+        Hitbox[1].enabled = false;
     }
 
     void FixedUpdate()
     {
-       currentposition = rb.position;
-       Vector2 direction = (playerTransform.position - transform.position).normalized;
+        currentposition = rb.position;
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
         distance = Vector2.Distance(playerTransform.position, transform.position);
 
         if (distance <= enemyData.attackRange)
@@ -36,26 +39,22 @@ public class EarlyEnemyAi : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             AttackTimer -= Time.fixedDeltaTime;
         }
-        else
-        {
-            rb.linearVelocity = direction * enemyData.moveSpeed;
-        }
 
-        if(distance > enemyData.rundistance) 
+        else if (distance > enemyData.rundistance)
         {
             isRunning = true;
             isMoveing = false;
-
+            rb.linearVelocity = direction * enemyData.moveSpeed;
         }
-        else 
+        else
         {
             isMoveing = true;
             isRunning = false;
-
+            rb.linearVelocity = direction * enemyData.moveSpeed;
         }
 
         if (isMoveing)
-        { 
+        {
             animator.SetBool("Iswalking", true);
             animator.SetBool("Isrunning", false);
         }
@@ -64,25 +63,52 @@ public class EarlyEnemyAi : MonoBehaviour
             animator.SetBool("Isrunning", true);
             animator.SetBool("Iswalking", false);
         }
+        else
+        {
+            animator.SetBool("Iswalking", false);
+            animator.SetBool("Isrunning", false);
+        }
 
         Attackone();
     }
 
     void Attackone()
     {
+        int randomAttack = Random.Range(0, 100);
+
         if (AttackTimer <= 0f && distance <= enemyData.attackRange)
         {
-            animator.SetTrigger("Attack1");
+            if (randomAttack < 50)
+            {
+                animator.SetTrigger(attack1);
+                Debug.Log("Enemy Attack1");
+            }
+            else
+            {
+                animator.SetTrigger(attack2);
+                Debug.Log("Enemy Attack2");
+            }
+
             AttackTimer = enemyData.attackFrequency;
         }
     }
-    public void EnableHitbox()
+    public void EnableHitboxone()
     {
-        Hitbox.enabled = true;
+        Hitbox[0].enabled = true;
     }
 
-    public void DisableHitbox()
+    public void DisableHitboxone()
     {
-        Hitbox.enabled = false;
+        Hitbox[0].enabled = false;
+    }
+
+    public void Enablehitboxtwo()
+    {
+        Hitbox[1].enabled = true;
+    }
+
+    public void Disablehitboxtwo()
+    {
+        Hitbox[1].enabled = false;
     }
 }
