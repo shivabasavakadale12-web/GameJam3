@@ -4,6 +4,7 @@ public class EarlyEnemyAi : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] Transform playerTransform;
+
     float distance;
     float AttackTimer;
     Vector2 currentposition;

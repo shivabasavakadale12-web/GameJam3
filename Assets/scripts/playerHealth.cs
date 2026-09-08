@@ -26,19 +26,43 @@ public class playerHealth : MonoBehaviour
     {
         if (collision.CompareTag(enemyattack1))
         {
-            animator.SetTrigger("IsHurt");
-            TakeDamage(7);
+            if (playerCombat.isDefending)
+            {
+                Debug.Log("player defended the attack1");
+                return;
+            }
+            else
+            {
+               animator.SetTrigger("IsHurt");
+               TakeDamage(7);
+            }
         }
 
         else if (collision.CompareTag("enemyattack2"))
         {
-            animator.SetTrigger("IsHurt");
-            TakeDamage(10);
+            if (playerCombat.isDefending)
+            {
+                Debug.Log("player defended the attack2");
+                return;
+            }
+            else
+            {
+             animator.SetTrigger("IsHurt");
+             TakeDamage(10);
+            }
         }
         else if (collision.CompareTag("enemyattack3"))
         {
-            animator.SetTrigger("IsHurt");
-            TakeDamage(15);
+            if (playerCombat.isDefending)
+            {
+                Debug.Log("player defended the attack3");
+                return;
+            }
+            else
+            {
+                animator.SetTrigger("IsHurt");
+                TakeDamage(12);
+            }
         }
     }
 

@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float sprintmultiplier = 1.5f;
     Vector2 movement;
     Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
     bool isSprint = false;
     bool isjump = false;
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         currentspeed = movespeed;
     }
@@ -39,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(movement.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (movement.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+
         if (isSprint && movement.x != 0)
         {
             animator.SetBool("Run", true);

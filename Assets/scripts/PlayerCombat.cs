@@ -4,11 +4,9 @@ using System.Collections;
 
 public class PlayerCombat : MonoBehaviour
 {
-
     BoxCollider2D[] HitBox;
     Animator animator;
-
-    bool isDefending = false;
+    public bool isDefending = false;
     bool isAttacking = false;
 
     const string attack1 = "OnAttack1";
@@ -70,7 +68,6 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && !isDefending)
         {
-            isDefending = true;
             Debug.Log("player is defending");
             StartCoroutine(ResetColliderSize());
             animator.SetTrigger("OnDefend");
@@ -110,10 +107,21 @@ public class PlayerCombat : MonoBehaviour
     {
         isAttacking = false;
     }
+
+    public void isdefending()
+    {
+        isDefending = true;
+    }
+
+    public void defendfinished()
+    {
+        isDefending = false;
+    }
     IEnumerator ResetColliderSize()
     {
         yield return new WaitForSeconds(1f);
         isDefending = false;
 
     }
+
 }
