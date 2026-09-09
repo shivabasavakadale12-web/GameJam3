@@ -105,9 +105,53 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "77dbfc2f-5122-418b-9e23-ea3144706910",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "19df1b07-00b5-4616-be12-26bc6bc0a1c4",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f18e6702-4f94-49bc-987d-de207a4e4ee1",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "81d5870b-6544-41fd-b4c2-75ec46ac6bca",
                     "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37db1a8d-040b-4730-b9c1-8bb8a9b35b15",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -128,8 +172,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b79330b1-2d24-4ad9-9d4d-6746a71bd308",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4e634378-7ee5-4f0b-81c2-8264eff5f8f0",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69cfe1ca-d12f-4676-a383-6d131ed0e831",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -150,6 +216,17 @@
                 },
                 {
                     "name": "",
+                    "id": "96d7e459-5f60-4228-8a00-a8a65f7972be",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PoweAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ae88668c-976d-4ab7-8bde-4c9fc8fc1b60",
                     "path": "<Keyboard>/x",
                     "interactions": "Press(pressPoint=0.02)",
@@ -161,9 +238,31 @@
                 },
                 {
                     "name": "",
+                    "id": "afd3ece8-a4c3-49db-a6c2-9c7f9694a489",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SuperpowerAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ac006fac-9ad7-4939-8241-b64c874af688",
                     "path": "<Keyboard>/e",
                     "interactions": "Press(pressPoint=0.02)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "defend",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3dde59b8-8bac-4751-9a23-b5e9902e3b5e",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "defend",

@@ -4,7 +4,7 @@ public class EarlyEnemyAi : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] Transform playerTransform;
-
+    PlayerCombat playerCombat;
     float distance;
     float AttackTimer;
     Vector2 currentposition;
@@ -21,6 +21,7 @@ public class EarlyEnemyAi : MonoBehaviour
 
     void Start()
     {
+        playerCombat = playerTransform.GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         AttackTimer = enemyData.attackFrequency;
@@ -72,6 +73,13 @@ public class EarlyEnemyAi : MonoBehaviour
             animator.SetBool("Isrunning", false);
         }
 
+        if (playerCombat.IsAttacking)
+        {
+            if(playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack1)
+            {
+                Debug.Log("player attacked with 1st move");
+            }
+        }
         Attackone();
     }
 

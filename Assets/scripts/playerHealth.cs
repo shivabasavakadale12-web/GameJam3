@@ -31,12 +31,12 @@ public class playerHealth : MonoBehaviour
                 Debug.Log("player defended the attack1");
                 return;
             }
-            else
-            {
+           
+               playerCombat.CancelAttack();
                playerCombat.cancleDefending();
                animator.SetTrigger("IsHurt");
                TakeDamage(7);
-            }
+            
         }
 
         else if (collision.CompareTag("enemyattack2"))
@@ -46,12 +46,12 @@ public class playerHealth : MonoBehaviour
                 Debug.Log("player defended the attack2");
                 return;
             }
-            else
-            {
+
+                playerCombat.CancelAttack();
                 playerCombat.cancleDefending();
                 animator.SetTrigger("IsHurt");
                 TakeDamage(10);
-            }
+            
         }
         else if (collision.CompareTag("enemyattack3"))
         {
@@ -60,12 +60,12 @@ public class playerHealth : MonoBehaviour
                 Debug.Log("player defended the attack3");
                 return;
             }
-            else
-            {
+     
+                playerCombat.CancelAttack();
                 playerCombat.cancleDefending();
                 animator.SetTrigger("IsHurt");
                 TakeDamage(12);
-            }
+            
         }
     }
 

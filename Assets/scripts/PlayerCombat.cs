@@ -137,4 +137,10 @@ public class PlayerCombat : MonoBehaviour
         isDefending = false;
     }
 
+    public void CancelAttack()
+    {
+        isAttacking = false;
+        CurrentAttack = AttackType.None;
+    }
+
 }
