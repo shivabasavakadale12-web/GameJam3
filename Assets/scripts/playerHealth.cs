@@ -26,13 +26,14 @@ public class playerHealth : MonoBehaviour
     {
         if (collision.CompareTag(enemyattack1))
         {
-            if (playerCombat.isDefending)
+            if (playerCombat.IsDefending)
             {
                 Debug.Log("player defended the attack1");
                 return;
             }
             else
             {
+               playerCombat.cancleDefending();
                animator.SetTrigger("IsHurt");
                TakeDamage(7);
             }
@@ -40,26 +41,28 @@ public class playerHealth : MonoBehaviour
 
         else if (collision.CompareTag("enemyattack2"))
         {
-            if (playerCombat.isDefending)
+            if (playerCombat.IsDefending)
             {
                 Debug.Log("player defended the attack2");
                 return;
             }
             else
             {
-             animator.SetTrigger("IsHurt");
-             TakeDamage(10);
+                playerCombat.cancleDefending();
+                animator.SetTrigger("IsHurt");
+                TakeDamage(10);
             }
         }
         else if (collision.CompareTag("enemyattack3"))
         {
-            if (playerCombat.isDefending)
+            if (playerCombat.IsDefending)
             {
                 Debug.Log("player defended the attack3");
                 return;
             }
             else
             {
+                playerCombat.cancleDefending();
                 animator.SetTrigger("IsHurt");
                 TakeDamage(12);
             }

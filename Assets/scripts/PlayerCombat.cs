@@ -6,14 +6,24 @@ public class PlayerCombat : MonoBehaviour
 {
     BoxCollider2D[] HitBox;
     Animator animator;
-    public bool isDefending = false;
+    bool isDefending = false;
     bool isAttacking = false;
-
+    public bool IsDefending => isDefending;
+    public bool IsAttacking => isAttacking;
+    public AttackType CurrentAttack {  get; private set; }
     const string attack1 = "OnAttack1";
     const string attack2 = "OnAttack2";
     const string powerAttack = "PowerAttack";
     const string superPowerAttack = "SuperPowerAttack";
 
+    public enum AttackType
+    {
+        None,
+        Attack1,
+        Attack2,
+        PowerAttack,
+        SuperPowerAttack,
+    }
 
     void Start()
     {
@@ -35,10 +45,12 @@ public class PlayerCombat : MonoBehaviour
 
             if (randomValue < 50)
             {
+                CurrentAttack = AttackType.Attack1;
                 animator.SetTrigger(attack1);
             }
             else
             {
+                CurrentAttack = AttackType.Attack2;
                 animator.SetTrigger(attack2);
             }
 
@@ -50,6 +62,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && !isAttacking)
         {
+            CurrentAttack = AttackType.PowerAttack;
             isAttacking = true;
             animator.SetTrigger(powerAttack);
         }
@@ -59,6 +72,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && !isAttacking)
         {
+            CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;
             animator.SetTrigger(superPowerAttack);
         }
@@ -66,10 +80,10 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnDefend(CallbackContext context)
     {
+        Debug.Log(isDefending);
         if (context.performed && !isDefending)
         {
             Debug.Log("player is defending");
-            StartCoroutine(ResetColliderSize());
             animator.SetTrigger("OnDefend");
         }
     }
@@ -107,11 +121,20 @@ public class PlayerCombat : MonoBehaviour
     {
         isAttacking = false;
     }
-    IEnumerator ResetColliderSize()
-    {
-        yield return new WaitForSeconds(1f);
-        isDefending = false;
 
+    public void isdefending()
+    {
+        isDefending = true;
+    }
+
+    public void defendfinished()
+    {
+        isDefending = false;
+    }
+
+    public void cancleDefending()
+    {
+        isDefending = false;
     }
 
 }
