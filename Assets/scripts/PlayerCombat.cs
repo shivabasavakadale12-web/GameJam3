@@ -107,16 +107,6 @@ public class PlayerCombat : MonoBehaviour
     {
         isAttacking = false;
     }
-
-    public void isdefending()
-    {
-        isDefending = true;
-    }
-
-    public void defendfinished()
-    {
-        isDefending = false;
-    }
     IEnumerator ResetColliderSize()
     {
         yield return new WaitForSeconds(1f);
