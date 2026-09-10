@@ -17,5 +17,5 @@ public class EnemyData : ScriptableObject
     public float aggression;
     public float counterAttackTendency;
     public bool HasSuperPower;
-
+    
 }

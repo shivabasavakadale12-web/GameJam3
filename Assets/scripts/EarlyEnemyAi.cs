@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class EarlyEnemyAi : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
@@ -7,6 +7,8 @@ public class EarlyEnemyAi : MonoBehaviour
     PlayerCombat playerCombat;
     float distance;
     float AttackTimer;
+    bool ReactTOPlayer = false;
+    bool isDefending = false;
     Vector2 currentposition;
     Animator animator;
     Rigidbody2D rb;
@@ -73,12 +75,39 @@ public class EarlyEnemyAi : MonoBehaviour
             animator.SetBool("Isrunning", false);
         }
 
-        if (playerCombat.IsAttacking)
+        if (playerCombat.IsAttacking && !ReactTOPlayer)
         {
-            if(playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack1)
+            ReactTOPlayer = true;
+            if (playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack1)
             {
+                StartCoroutine(EnemyReactionToAttackOne());
                 Debug.Log("player attacked with 1st move");
             }
+
+            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack2)
+            {
+                Debug.Log("Player attacked with his 2nd move");
+            }
+
+            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
+            {
+                Debug.Log("Player used his power attack");
+            }
+
+            else if(playerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
+            {
+                Debug.Log("player used his super power attack");
+            }
+        }
+
+        if(!playerCombat.IsAttacking)
+        {
+            ReactTOPlayer = false;
+        }
+
+        else if (playerCombat.IsDefending)
+        {
+            Debug.Log("Player is defending!");
         }
         Attackone();
     }
@@ -107,6 +136,21 @@ public class EarlyEnemyAi : MonoBehaviour
             }
 
             AttackTimer = enemyData.attackFrequency;
+        }
+    }
+
+    IEnumerator EnemyReactionToAttackOne()
+    {
+        yield return new WaitForSeconds(enemyData.reactionTime);
+
+        //if(!playerCombat.IsAttacking) yield break;
+
+        float defenserandom = Random.Range(0f, 100f);
+
+        if (defenserandom <= enemyData.defenseTendency && !isDefending)
+        {
+            isDefending = true;
+            animator.SetTrigger("Defend");
         }
     }
     public void EnableHitboxone()
@@ -140,5 +184,10 @@ public class EarlyEnemyAi : MonoBehaviour
     {
         Hitbox[2].enabled = false;
         isAttacking = false;
+    }
+
+    public void DefendFinished()
+    {
+        isDefending = false;
     }
 }

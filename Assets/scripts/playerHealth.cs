@@ -61,7 +61,7 @@ public class playerHealth : MonoBehaviour
                 return;
             }
      
-                playerCombat.CancelAttack();
+                
                 playerCombat.cancleDefending();
                 animator.SetTrigger("IsHurt");
                 TakeDamage(12);
