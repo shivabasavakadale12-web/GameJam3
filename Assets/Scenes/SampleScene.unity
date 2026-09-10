@@ -1220,6 +1220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBoxDetector
   enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
+  earlyEnemyAi: {fileID: 680983543}
+  PlayerCombat: {fileID: 69015943}
 --- !u!50 &680983541
 Rigidbody2D:
   serializedVersion: 5

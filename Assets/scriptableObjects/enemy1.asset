@@ -20,7 +20,7 @@ MonoBehaviour:
   attackFrequency: 2
   attackRange: 3
   defenseTendency: 35
-  reactionTime: 0.35
+  reactionTime: 0.45
   dodgeTendency: 60
   superAttackTendency: 0
   aggression: 25

@@ -3,7 +3,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
-
+    [SerializeField] EarlyEnemyAi earlyEnemyAi;
+    [SerializeField] PlayerCombat PlayerCombat;
     int currentHealth;
     const string attack1 = "attack1";
     const string attack2 = "attack2";
@@ -63,7 +64,14 @@ public class EnemyHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
+        if(earlyEnemyAi.IsDefending && PlayerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
+        {
+             damage /= 2;
+        }
+
         currentHealth -= damage;
+        Debug.Log("Enemy health: " + currentHealth);
+
         if (currentHealth <= 0)
         {
             animator.SetTrigger("IsDead");

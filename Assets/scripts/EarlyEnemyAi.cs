@@ -16,6 +16,7 @@ public class EarlyEnemyAi : MonoBehaviour
     bool isMoveing;
     bool isRunning;
     bool isAttacking = false;
+    public bool IsDefending => isDefending;
     BoxCollider2D[] Hitbox;
     const string attack1 = "Attack1";
     const string attack2 = "Attack2";
@@ -30,6 +31,7 @@ public class EarlyEnemyAi : MonoBehaviour
         Hitbox = GetComponentsInChildren<BoxCollider2D>();
         Hitbox[0].enabled = false;
         Hitbox[1].enabled = false;
+        Hitbox[2].enabled = false;
     }
 
     void FixedUpdate()
@@ -59,6 +61,51 @@ public class EarlyEnemyAi : MonoBehaviour
             rb.linearVelocity = direction * enemyData.moveSpeed;
         }
 
+        AnimationStates();
+        AttacknDefendState();
+        Attackone();
+
+    }
+
+    private void AttacknDefendState()
+    {
+        if (playerCombat.IsAttacking && !ReactTOPlayer)
+        {
+            ReactTOPlayer = true;
+            if (playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack1 ||
+                playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack2)
+            {
+                StartCoroutine(EnemyReactionToPlayerAttack());
+                Debug.Log("player attacked with 1st move");
+            }
+
+            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
+            {
+                StartCoroutine(EnemyReactionToPlayerAttack());
+                Debug.Log("Player used his power attack");
+            }
+
+            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
+            {
+                StartCoroutine(EnemyReactionToPlayerAttack());
+                Debug.Log("player used his super power attack");
+            }
+        }
+
+        if (!playerCombat.IsAttacking)
+        {
+            ReactTOPlayer = false;
+        }
+
+        if (playerCombat.IsDefending)
+        {
+            Debug.Log("Player is defending!");
+        }
+    }
+
+    void AnimationStates()
+    {
+
         if (isMoveing)
         {
             animator.SetBool("Iswalking", true);
@@ -75,41 +122,6 @@ public class EarlyEnemyAi : MonoBehaviour
             animator.SetBool("Isrunning", false);
         }
 
-        if (playerCombat.IsAttacking && !ReactTOPlayer)
-        {
-            ReactTOPlayer = true;
-            if (playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack1)
-            {
-                StartCoroutine(EnemyReactionToAttackOne());
-                Debug.Log("player attacked with 1st move");
-            }
-
-            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack2)
-            {
-                Debug.Log("Player attacked with his 2nd move");
-            }
-
-            else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
-            {
-                Debug.Log("Player used his power attack");
-            }
-
-            else if(playerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
-            {
-                Debug.Log("player used his super power attack");
-            }
-        }
-
-        if(!playerCombat.IsAttacking)
-        {
-            ReactTOPlayer = false;
-        }
-
-        else if (playerCombat.IsDefending)
-        {
-            Debug.Log("Player is defending!");
-        }
-        Attackone();
     }
 
     void Attackone()
@@ -139,12 +151,10 @@ public class EarlyEnemyAi : MonoBehaviour
         }
     }
 
-    IEnumerator EnemyReactionToAttackOne()
+    IEnumerator EnemyReactionToPlayerAttack()
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
-
-        //if(!playerCombat.IsAttacking) yield break;
-
+       
         float defenserandom = Random.Range(0f, 100f);
 
         if (defenserandom <= enemyData.defenseTendency && !isDefending)
@@ -152,6 +162,7 @@ public class EarlyEnemyAi : MonoBehaviour
             isDefending = true;
             animator.SetTrigger("Defend");
         }
+
     }
     public void EnableHitboxone()
     {
