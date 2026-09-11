@@ -6,9 +6,10 @@ public class EarlyEnemyAi : MonoBehaviour
     [SerializeField] Transform playerTransform;
     PlayerCombat playerCombat;
     float distance;
-    float AttackTimer;
     bool ReactTOPlayer = false;
     bool isDefending = false;
+    bool iscounterattack = false;
+    public bool IScounterattack => iscounterattack;
     Vector2 currentposition;
     Animator animator;
     Rigidbody2D rb;
@@ -27,7 +28,6 @@ public class EarlyEnemyAi : MonoBehaviour
         playerCombat = playerTransform.GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        AttackTimer = enemyData.attackFrequency;
         Hitbox = GetComponentsInChildren<BoxCollider2D>();
         Hitbox[0].enabled = false;
         Hitbox[1].enabled = false;
@@ -45,7 +45,6 @@ public class EarlyEnemyAi : MonoBehaviour
             isMoveing = false;
             isRunning = false;
             rb.linearVelocity = Vector2.zero;
-            AttackTimer -= Time.fixedDeltaTime;
         }
 
         else if (distance > enemyData.rundistance)
@@ -63,7 +62,6 @@ public class EarlyEnemyAi : MonoBehaviour
 
         AnimationStates();
         AttacknDefendState();
-        Attackone();
 
     }
 
@@ -121,51 +119,53 @@ public class EarlyEnemyAi : MonoBehaviour
 
     }
 
-    void Attackone()
-    {
-        int randomAggression = Random.Range(0, 100);
-
-        if (AttackTimer <= 0f && distance <= enemyData.attackRange && !isAttacking && !isDefending)
-        {
-            if(randomAggression <= enemyData.aggression)
-            {
-                int randomAttack = Random.Range(0, 100);
-                isAttacking = true;   
-
-            
-             if (randomAttack < 50)
-             {
-                animator.SetTrigger(attack1);
-                Debug.Log("Enemy Attack1");
-             }
-             else if (randomAttack > 50 && randomAttack < 80) 
-             {
-                animator.SetTrigger(attack2);
-                Debug.Log("Enemy Attack2");
-             }
-             else
-             {
-                animator.SetTrigger(attack3);
-                Debug.Log("Enemy Attack3");
-             }
-
-            }
-            AttackTimer = enemyData.attackFrequency;
-        }
-    }
-
     IEnumerator EnemyReactionToPlayerAttack()
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
-       
-        float defenserandom = Random.Range(0f, 100f);
 
-        if (defenserandom <= enemyData.defenseTendency && !isDefending)
+        if (distance > enemyData.attackRange ||
+            isAttacking ||
+            isDefending)
+        {
+            yield break;
+        }
+
+        float defenseRoll = Random.Range(0f, 100f);
+
+        if (defenseRoll <= enemyData.defenseTendency)
         {
             isDefending = true;
             animator.SetTrigger("Defend");
+            yield break;
         }
 
+        float counterRoll = Random.Range(0f, 100f);
+
+        if (counterRoll <= enemyData.counterAttackTendency)
+        {
+            isAttacking = true;
+            iscounterattack = true;
+            animator.SetTrigger(attack3);
+            yield break;
+        }
+
+        float aggressionRoll = Random.Range(0f, 100f);
+
+        if (aggressionRoll <= enemyData.aggression)
+        {
+            isAttacking = true;
+
+            int randomAttack = Random.Range(0, 100);
+
+            if (randomAttack < 50)
+            {
+                animator.SetTrigger(attack1);
+            }
+            else
+            {
+                animator.SetTrigger(attack2);
+            }
+        }
     }
     public void EnableHitboxone()
     {
@@ -197,6 +197,7 @@ public class EarlyEnemyAi : MonoBehaviour
     public void Disablehitboxthree()
     {
         Hitbox[2].enabled = false;
+        iscounterattack = false;
         isAttacking = false;
     }
 

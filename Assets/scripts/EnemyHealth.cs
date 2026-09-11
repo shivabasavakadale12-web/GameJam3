@@ -52,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
     
     void SuperPowerAttack()
     {
-        TakeDamage(enemyData.playerpowerattack);
+        TakeDamage(enemyData.playersuperpowerattack);
     }
     void Die()
     {

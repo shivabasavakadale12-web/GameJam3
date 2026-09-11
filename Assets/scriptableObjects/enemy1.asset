@@ -25,10 +25,10 @@ MonoBehaviour:
   attackDamage: 22
   attackFrequency: 2
   attackRange: 3
-  defenseTendency: 35
+  defenseTendency: 30
   reactionTime: 0.38
-  dodgeTendency: 30
+  dodgeTendency: 0
   superAttackTendency: 0
-  aggression: 40
-  counterAttackTendency: 0
+  aggression: 50
+  counterAttackTendency: 20
   HasSuperPower: 0

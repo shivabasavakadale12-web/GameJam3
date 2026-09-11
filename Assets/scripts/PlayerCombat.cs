@@ -41,7 +41,6 @@ public class PlayerCombat : MonoBehaviour
             isAttacking = true;
 
             int randomValue = Random.Range(0, 100);
-            Debug.Log("Random Value: " + randomValue);
 
             if (randomValue < 50)
             {
