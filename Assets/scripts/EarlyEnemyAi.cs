@@ -76,19 +76,16 @@ public class EarlyEnemyAi : MonoBehaviour
                 playerCombat.CurrentAttack == PlayerCombat.AttackType.Attack2)
             {
                 StartCoroutine(EnemyReactionToPlayerAttack());
-                Debug.Log("player attacked with 1st move");
             }
 
             else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
             {
                 StartCoroutine(EnemyReactionToPlayerAttack());
-                Debug.Log("Player used his power attack");
             }
 
             else if (playerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
             {
                 StartCoroutine(EnemyReactionToPlayerAttack());
-                Debug.Log("player used his super power attack");
             }
         }
 
@@ -126,27 +123,33 @@ public class EarlyEnemyAi : MonoBehaviour
 
     void Attackone()
     {
-        int randomAttack = Random.Range(0, 100);
+        int randomAggression = Random.Range(0, 100);
 
-        if (AttackTimer <= 0f && distance <= enemyData.attackRange && !isAttacking)
+        if (AttackTimer <= 0f && distance <= enemyData.attackRange && !isAttacking && !isDefending)
         {
-            isAttacking = true;
-            if (randomAttack < 50)
+            if(randomAggression <= enemyData.aggression)
             {
+                int randomAttack = Random.Range(0, 100);
+                isAttacking = true;   
+
+            
+             if (randomAttack < 50)
+             {
                 animator.SetTrigger(attack1);
                 Debug.Log("Enemy Attack1");
-            }
-            else if (randomAttack > 50 && randomAttack < 80) 
-            {
+             }
+             else if (randomAttack > 50 && randomAttack < 80) 
+             {
                 animator.SetTrigger(attack2);
                 Debug.Log("Enemy Attack2");
-            }
-            else
-            {
+             }
+             else
+             {
                 animator.SetTrigger(attack3);
                 Debug.Log("Enemy Attack3");
-            }
+             }
 
+            }
             AttackTimer = enemyData.attackFrequency;
         }
     }

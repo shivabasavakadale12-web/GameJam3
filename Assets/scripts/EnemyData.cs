@@ -1,9 +1,16 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Scriptable Objects/EnemyData")]
 public class EnemyData : ScriptableObject
 {
     public int health;
+    public int attack1;
+    public int attack2;
+    public int attack3;
+    public int playerattack1;
+    public int playerpowerattack;
+    public int playersuperpowerattack;
     public float moveSpeed;
     public float rundistance;
     public float walkdistance;

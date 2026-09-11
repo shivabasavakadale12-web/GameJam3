@@ -42,20 +42,17 @@ public class EnemyHealth : MonoBehaviour
 
     void attackone()
     {
-        Debug.Log("Player hit with Attack1");
-        TakeDamage(6);
+        TakeDamage(enemyData.playerattack1);
     }    
 
     void attacktwo()
     {
-        Debug.Log("Player hit with Attack2");
-        TakeDamage(12);
+        TakeDamage(enemyData.playerpowerattack);
     }    
     
     void SuperPowerAttack()
     {
-        Debug.Log("Player hit with Super Power Attack");
-        TakeDamage(50);
+        TakeDamage(enemyData.playerpowerattack);
     }
     void Die()
     {
@@ -64,13 +61,24 @@ public class EnemyHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        if(earlyEnemyAi.IsDefending && PlayerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
+        if(earlyEnemyAi.IsDefending)
         {
-             damage /= 2;
+            if (PlayerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
+            {
+                damage /= 2;
+            }
+
+            else
+            {
+                damage = 0;
+            }
+
         }
 
         currentHealth -= damage;
+
         Debug.Log("Enemy health: " + currentHealth);
+        Debug.Log(damage);
 
         if (currentHealth <= 0)
         {
@@ -78,7 +86,7 @@ public class EnemyHealth : MonoBehaviour
             Invoke("Die", 1f);
         }
 
-        else
+        else if(!earlyEnemyAi.IsDefending)
         {
             hurtanimation();
         }
