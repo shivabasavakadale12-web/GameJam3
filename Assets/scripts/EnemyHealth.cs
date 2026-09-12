@@ -4,7 +4,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
     [SerializeField] EarlyEnemyAi earlyEnemyAi;
-    [SerializeField] PlayerCombat PlayerCombat;
+    PlayerCombat PlayerCombat;
     int currentHealth;
     const string attack1 = "attack1";
     const string attack2 = "attack2";
@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        PlayerCombat = FindFirstObjectByType<PlayerCombat>();
         animator = GetComponent<Animator>();
         currentHealth = enemyData.health;
     }

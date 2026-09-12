@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ecb9a6376e799f429c01fafc4a41f12, type: 3}
-  m_Name: enemy1
+  m_Name: enemy2
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
   attack1: 7
   attack2: 12
   attack3: 18
-  counterattackdamage: 0
+  counterattackdamage: 22
   playerattack1: 6
   playerpowerattack: 12
   playersuperpowerattack: 30
@@ -26,10 +26,10 @@ MonoBehaviour:
   attackDamage: 22
   attackFrequency: 2
   attackRange: 3
-  defenseTendency: 38
+  defenseTendency: 48
   reactionTime: 0.38
   dodgeTendency: 0
   superAttackTendency: 0
-  aggression: 45
-  counterAttackTendency: 20
+  aggression: 38
+  counterAttackTendency: 16
   HasSuperPower: 0

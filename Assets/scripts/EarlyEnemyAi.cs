@@ -3,7 +3,7 @@ using System.Collections;
 public class EarlyEnemyAi : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
-    [SerializeField] Transform playerTransform;
+    Transform playerTransform;
     PlayerCombat playerCombat;
     float distance;
     bool ReactTOPlayer = false;
@@ -25,6 +25,7 @@ public class EarlyEnemyAi : MonoBehaviour
 
     void Start()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerCombat = playerTransform.GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
