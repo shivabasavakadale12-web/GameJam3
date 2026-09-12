@@ -32,6 +32,7 @@ public class EarlyEnemyAi : MonoBehaviour
         Hitbox[0].enabled = false;
         Hitbox[1].enabled = false;
         Hitbox[2].enabled = false;
+        StartCoroutine(EnemyAttackLoop());
     }
 
     void FixedUpdate()
@@ -94,10 +95,25 @@ public class EarlyEnemyAi : MonoBehaviour
 
         if (playerCombat.IsDefending)
         {
-            Debug.Log("Player is defending!");
+            isAttacking = false;
         }
     }
 
+    void NormalAttack()
+    {
+        int randomAttack = Random.Range(0, 100);
+
+        isAttacking = true;
+
+        if (randomAttack < 50)
+        {
+            animator.SetTrigger(attack1);
+        }
+        else
+        {
+            animator.SetTrigger(attack2);
+        }
+    }
     void AnimationStates()
     {
 
@@ -117,6 +133,22 @@ public class EarlyEnemyAi : MonoBehaviour
             animator.SetBool("Isrunning", false);
         }
 
+    }
+
+
+    IEnumerator EnemyAttackLoop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(enemyData.attackFrequency);
+
+            if (distance <= enemyData.attackRange &&
+                !isAttacking &&
+                !isDefending)
+            {
+                NormalAttack();
+            }
+        }
     }
 
     IEnumerator EnemyReactionToPlayerAttack()
@@ -153,18 +185,7 @@ public class EarlyEnemyAi : MonoBehaviour
 
         if (aggressionRoll <= enemyData.aggression)
         {
-            isAttacking = true;
-
-            int randomAttack = Random.Range(0, 100);
-
-            if (randomAttack < 50)
-            {
-                animator.SetTrigger(attack1);
-            }
-            else
-            {
-                animator.SetTrigger(attack2);
-            }
+            NormalAttack();
         }
     }
     public void EnableHitboxone()

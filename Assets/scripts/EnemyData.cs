@@ -8,6 +8,7 @@ public class EnemyData : ScriptableObject
     public int attack1;
     public int attack2;
     public int attack3;
+    public int counterattackdamage;
     public int playerattack1;
     public int playerpowerattack;
     public int playersuperpowerattack;

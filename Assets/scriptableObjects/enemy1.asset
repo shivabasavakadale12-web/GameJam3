@@ -16,6 +16,7 @@ MonoBehaviour:
   attack1: 7
   attack2: 12
   attack3: 18
+  counterattackdamage: 0
   playerattack1: 6
   playerpowerattack: 12
   playersuperpowerattack: 30
@@ -29,6 +30,6 @@ MonoBehaviour:
   reactionTime: 0.38
   dodgeTendency: 0
   superAttackTendency: 0
-  aggression: 50
+  aggression: 100
   counterAttackTendency: 20
   HasSuperPower: 0

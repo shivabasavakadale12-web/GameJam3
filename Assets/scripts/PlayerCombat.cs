@@ -6,6 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     BoxCollider2D[] HitBox;
     Animator animator;
+    playerHealth playerHealth;
     bool isDefending = false;
     bool isAttacking = false;
     public bool IsDefending => isDefending;
@@ -27,6 +28,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        playerHealth = GetComponent<playerHealth>();
         animator = GetComponent<Animator>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
         HitBox[0].enabled = false;
@@ -79,10 +81,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnDefend(CallbackContext context)
     {
-        Debug.Log(isDefending);
-        if (context.performed && !isDefending)
+        if (context.performed && !isDefending && !playerHealth.IsHurt)
         {
-            Debug.Log("player is defending");
             animator.SetTrigger("OnDefend");
         }
     }

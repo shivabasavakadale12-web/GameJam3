@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class playerHealth : MonoBehaviour
 {
-    int health;
+    [SerializeField] EnemyData enemyData;
     const string enemyattack1 = "enemyattack1";
-
+    int health;
+    bool ishurt = false;
+    public bool IsHurt => ishurt;
     Animator animator;
     PlayerCombat playerCombat;
     PlayerMovement playerMovement;
@@ -28,14 +30,15 @@ public class playerHealth : MonoBehaviour
         {
             if (playerCombat.IsDefending)
             {
-                Debug.Log("player defended the attack1");
+                Debug.Log("player health is " +health);
                 return;
             }
            
                playerCombat.CancelAttack();
                playerCombat.cancleDefending();
+               ishurt = true;
                animator.SetTrigger("IsHurt");
-               TakeDamage(7);
+               TakeDamage(enemyData.attack1);
             
         }
 
@@ -43,30 +46,37 @@ public class playerHealth : MonoBehaviour
         {
             if (playerCombat.IsDefending)
             {
-                Debug.Log("player defended the attack2");
+                Debug.Log("player health is " +health);
                 return;
             }
 
                 playerCombat.CancelAttack();
                 playerCombat.cancleDefending();
+                ishurt = true;
                 animator.SetTrigger("IsHurt");
-                TakeDamage(10);
+                TakeDamage(enemyData.attack2);
             
         }
         else if (collision.CompareTag("enemyattack3"))
         {
             if (playerCombat.IsDefending)
             {
-                Debug.Log("player defended the attack3");
+                Debug.Log("player health is " +health);
                 return;
             }
-     
-                
+
+                playerCombat.CancelAttack();
                 playerCombat.cancleDefending();
+                ishurt = true;
                 animator.SetTrigger("IsHurt");
-                TakeDamage(12);
+                TakeDamage(enemyData.attack3);
             
         }
+    }
+
+    public void Hurtstatedone()
+    {
+        ishurt = false;
     }
 
     void TakeDamage(int damage)
