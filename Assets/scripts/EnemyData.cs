@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Scriptable Objects/EnemyData")]
@@ -25,5 +24,6 @@ public class EnemyData : ScriptableObject
     public float aggression;
     public float counterAttackTendency;
     public bool HasSuperPower;
-    
+    public EnemyAttackData[] enemyattackdata;
+
 }
