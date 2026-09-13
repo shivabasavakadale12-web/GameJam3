@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ecb9a6376e799f429c01fafc4a41f12, type: 3}
+  m_Name: enemy3
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  health: 100
+  attack1: 5
+  attack2: 8
+  attack3: 15
+  counterattackdamage: 18
+  playerattack1: 6
+  playerpowerattack: 12
+  playersuperpowerattack: 30
+  moveSpeed: 1.4
+  rundistance: 5
+  walkdistance: 2.34
+  attackDamage: 22
+  attackFrequency: 1.68
+  attackRange: 2.04
+  defenseTendency: 37
+  reactionTime: 0.72
+  dodgeTendency: 0
+  superAttackTendency: 0
+  aggression: 55
+  counterAttackTendency: 12
+  HasSuperPower: 0

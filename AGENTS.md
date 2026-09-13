@@ -2,7 +2,7 @@
 - Project name: GameJam3
 - Unity version: Unity 6000.3.10f1
 - Active game object:
-  - Name: enemy2
+  - Name: colliders
   - Tag: Untagged
-  - Layer: Enemy
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
