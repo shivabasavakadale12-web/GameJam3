@@ -510,3 +510,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAI
   MoveSpeed: 50
+  enemyData: {fileID: 11400000, guid: 61b0c2e0c09ac104f92ba0c08a4f6116, type: 2}

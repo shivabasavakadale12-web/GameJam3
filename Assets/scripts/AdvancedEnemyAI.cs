@@ -18,18 +18,20 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 currentposition = rb.position;
-        Vector2 direction = ( playerTransform.position - transform.position).normalized;
-        distance = Vector2.Distance(currentposition, direction);
+        Vector2 direction =
+         (playerTransform.position - transform.position).normalized;
+
+        distance = Vector2.Distance(transform.position, playerTransform.position);
 
         if (distance <= enemyData.attackRange)
         {
             rb.linearVelocity = Vector2.zero;
+            Debug.Log(distance.ToString() + " / " + enemyData.attackRange);
         }
-
         else
         {
             rb.linearVelocity = direction * enemyData.moveSpeed;
+            Debug.Log(distance.ToString() + " / " + enemyData.attackRange);
         }
 
     }
