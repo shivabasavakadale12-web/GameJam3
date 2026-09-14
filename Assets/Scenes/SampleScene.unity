@@ -886,6 +886,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3533472615480663669, guid: 210ceb0be6c21314cbce520c99714c9e, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533472615480663669, guid: 210ceb0be6c21314cbce520c99714c9e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9222538097970140317, guid: 210ceb0be6c21314cbce520c99714c9e, type: 3}
       propertyPath: m_Name
       value: enemy5
@@ -945,6 +953,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8685633946052172349, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163196211847516007, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163196211847516007, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -34,31 +34,50 @@ public class AdvancedEnemyAI : MonoBehaviour
 
         distance = Vector2.Distance(transform.position, playerTransform.position);
 
-        if (distance <= enemyData.attackRange)
+
+        if (isAttacking)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        else if (distance <= enemyData.attackRange)
         {
             animator.SetBool(walk, false);
             animator.SetBool(run, false);
+
             rb.linearVelocity = Vector2.zero;
+
             isAttacking = true;
+            animator.SetTrigger("Attack1");
         }
+
         else if (distance > enemyData.rundistance)
         {
             animator.SetBool(run, true);
             animator.SetBool(walk, false);
-            rb.linearVelocity = direction * enemyData.moveSpeed * runspeed;
+
+            rb.linearVelocity = direction * enemyData.runspeed;
         }
-        else if (distance > enemyData.walkdistance)
+
+        else
         {
             animator.SetBool(walk, true);
             animator.SetBool(run, false);
+
             rb.linearVelocity = direction * enemyData.moveSpeed;
         }
 
-        if (isAttacking)
-        {
-            animator.SetBool(walk, false);
-            animator.SetBool(run, false);
-        }
+        Debug.Log(distance + " / " + enemyData.attackRange);
+    }
 
+    void hitboxoneenable()
+    {
+        hitbox[0].enabled = true;
+    }
+
+    void hitboxonedisable()
+    {
+        hitbox[0].enabled = false;
+        isAttacking = false;
     }
 }

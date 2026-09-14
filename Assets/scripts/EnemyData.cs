@@ -12,6 +12,7 @@ public class EnemyData : ScriptableObject
     public int playerpowerattack;
     public int playersuperpowerattack;
     public float moveSpeed;
+    public float runspeed;
     public float rundistance;
     public float walkdistance;
     public int attackDamage;

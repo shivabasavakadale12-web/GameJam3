@@ -21,11 +21,12 @@ MonoBehaviour:
   playerpowerattack: 9
   playersuperpowerattack: 18
   moveSpeed: 2.12
+  runspeed: 2.7
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
   attackFrequency: 1.67
-  attackRange: 2.42
+  attackRange: 2.24
   defenseTendency: 13.1
   reactionTime: 0.81
   dodgeTendency: 0
