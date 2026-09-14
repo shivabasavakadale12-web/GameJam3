@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AdvancedEnemyAI : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class AdvancedEnemyAI : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
 
             isAttacking = true;
-            animator.SetTrigger("Attack1");
+            StartCoroutine(Attackroutine());
         }
 
         else if (distance > enemyData.rundistance)
@@ -67,7 +68,15 @@ public class AdvancedEnemyAI : MonoBehaviour
             rb.linearVelocity = direction * enemyData.moveSpeed;
         }
 
-        Debug.Log(distance + " / " + enemyData.attackRange);
+    }
+
+    IEnumerator Attackroutine()
+    {
+        yield return new WaitForSeconds(enemyData.attackFrequency);
+
+        int randomindex = Random.Range(0, enemyData.enemyattackdata.Length);
+        EnemyAttackData selectattack = enemyData.enemyattackdata[randomindex];
+        animator.SetTrigger(selectattack.animationTrigger);
     }
 
     void hitboxoneenable()
@@ -80,4 +89,5 @@ public class AdvancedEnemyAI : MonoBehaviour
         hitbox[0].enabled = false;
         isAttacking = false;
     }
+
 }
