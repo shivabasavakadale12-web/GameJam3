@@ -10,7 +10,7 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
     }
     public override void Enter()
     {
-        Debug.Log("Enemy entered attack range");
+        Debug.Log("Nigga Nigga Nigga Nigga!!!! HeHe nigga...");
     }
 
     public override void Update()
@@ -20,6 +20,6 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
 
     public override void Exit()
     {
-        
+        Debug.Log("Thank you attacks done les go for defense");
     }
 }

@@ -15,6 +15,7 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     AdvancedEnemyState currentstate;
     AdvabcedEnemyAttackStatee attackstate;
+    AdvancedEnemyAiDefenseState defenseState;
 
     public Animator Animator => animator;
     public Rigidbody2D Rigidbody => rb;
@@ -25,6 +26,7 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     void Start()
     {
+        defenseState = new AdvancedEnemyAiDefenseState(this);
         attackstate = new AdvabcedEnemyAttackStatee(this);
         hitbox = GetComponentsInChildren<BoxCollider2D>();
         hitbox[0].enabled = false;
@@ -43,15 +45,14 @@ public class AdvancedEnemyAI : MonoBehaviour
 
         distance = Vector2.Distance(transform.position, playerTransform.position);
 
-
          if (distance <= enemyData.attackRange)
         {
-            ChangeState(currentstate);
             animator.SetBool(walk, false);
             animator.SetBool(run, false);
 
             rb.linearVelocity = Vector2.zero;
 
+            ChangeState(attackstate);
         }
 
         else if (distance > enemyData.rundistance)
@@ -72,10 +73,22 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     }
 
-    void ChangeState(AdvancedEnemyState newstate)
+    public void ChangeState(AdvancedEnemyState newstate)
     {
-        currentstate.Exit();
+        if (currentstate == newstate)
+            return;
+
+        if(currentstate != null)
+        {
+            currentstate.Exit();
+        }
+
         currentstate = newstate;
         currentstate.Enter();
+    }
+
+    public void ChangeToDefense()
+    {
+        ChangeState(defenseState);
     }
 }
