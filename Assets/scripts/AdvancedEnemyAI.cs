@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class AdvancedEnemyAI : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
@@ -8,16 +9,23 @@ public class AdvancedEnemyAI : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     float distance;
-    float runspeed = 1.7f;
-
     BoxCollider2D[] hitbox;
-
-    bool isAttacking = false;
-    bool isDefending = false;
     const string walk = "Walk";
     const string run = "Run";
+
+    AdvancedEnemyState currentstate;
+    AdvabcedEnemyAttackStatee attackstate;
+
+    public Animator Animator => animator;
+    public Rigidbody2D Rigidbody => rb;
+    public EnemyData Enemydata => enemyData;
+    public Transform PlayerTransform => playerTransform;
+    public float Distance => distance;
+
+
     void Start()
     {
+        attackstate = new AdvabcedEnemyAttackStatee(this);
         hitbox = GetComponentsInChildren<BoxCollider2D>();
         hitbox[0].enabled = false;
         hitbox[1].enabled = false;
@@ -36,20 +44,14 @@ public class AdvancedEnemyAI : MonoBehaviour
         distance = Vector2.Distance(transform.position, playerTransform.position);
 
 
-        if (isAttacking)
+         if (distance <= enemyData.attackRange)
         {
-            rb.linearVelocity = Vector2.zero;
-        }
-
-        else if (distance <= enemyData.attackRange)
-        {
+            ChangeState(currentstate);
             animator.SetBool(walk, false);
             animator.SetBool(run, false);
 
             rb.linearVelocity = Vector2.zero;
 
-            isAttacking = true;
-            StartCoroutine(Attackroutine());
         }
 
         else if (distance > enemyData.rundistance)
@@ -70,24 +72,10 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     }
 
-    IEnumerator Attackroutine()
+    void ChangeState(AdvancedEnemyState newstate)
     {
-        yield return new WaitForSeconds(enemyData.attackFrequency);
-
-        int randomindex = Random.Range(0, enemyData.enemyattackdata.Length);
-        EnemyAttackData selectattack = enemyData.enemyattackdata[randomindex];
-        animator.SetTrigger(selectattack.animationTrigger);
+        currentstate.Exit();
+        currentstate = newstate;
+        currentstate.Enter();
     }
-
-    void hitboxoneenable()
-    {
-        hitbox[0].enabled = true;
-    }
-
-    void hitboxonedisable()
-    {
-        hitbox[0].enabled = false;
-        isAttacking = false;
-    }
-
 }

@@ -34,4 +34,20 @@ MonoBehaviour:
   aggression: 58.3
   counterAttackTendency: 13.4
   HasSuperPower: 0
-  enemyattackdata: []
+  enemyattackdata:
+  - animationTrigger: Attack1
+    damage: 8
+    attackRange: 2.4
+    isRanged: 0
+  - animationTrigger: Attack2
+    damage: 8
+    attackRange: 2.4
+    isRanged: 0
+  - animationTrigger: Attack3
+    damage: 10
+    attackRange: 2.4
+    isRanged: 0
+  - animationTrigger: Attack4
+    damage: 12
+    attackRange: 2.4
+    isRanged: 0
