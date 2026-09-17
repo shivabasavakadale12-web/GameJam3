@@ -27,9 +27,12 @@ public class AdvancedEnemyAiCounterAttackState : AdvancedEnemyState
          int randomIndex = Random.Range(enemy.Enemydata.enemyattackdata.Length - 2,
                                         enemy.Enemydata.enemyattackdata.Length);
 
+
+         EnemyAttackData attack = enemy.Enemydata.enemyattackdata[randomIndex];
          string trigger = enemy.Enemydata.enemyattackdata[randomIndex].animationTrigger;
+         enemy.SetCurrentHitbox(attack.HitboxIndex);
          enemy.Animator.SetTrigger(trigger);
-            AttackFrequency = 0f;
+         AttackFrequency = 0f;
         }
 
 

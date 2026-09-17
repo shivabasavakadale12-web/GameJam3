@@ -322,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923482245834171724}
   - component: {fileID: 5553394440689322833}
+  - component: {fileID: 3203231366430251260}
   - component: {fileID: 3533472615480663669}
   - component: {fileID: 1592750301609561407}
   - component: {fileID: 1793009093365774251}
@@ -411,6 +412,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3203231366430251260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222538097970140317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5989d08994578ce458195e74cbd8b7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyHitBox
 --- !u!50 &3533472615480663669
 Rigidbody2D:
   serializedVersion: 5
@@ -436,7 +449,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 2
 --- !u!70 &1592750301609561407
 CapsuleCollider2D:
@@ -509,5 +522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179d5e92b7318f94a9c9006154d3056a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAI
-  MoveSpeed: 50
   enemyData: {fileID: 11400000, guid: 61b0c2e0c09ac104f92ba0c08a4f6116, type: 2}
+  moveSpeed: 0
+  runspeed: 0
+  attackfrequency: 0
+  hitbox: []

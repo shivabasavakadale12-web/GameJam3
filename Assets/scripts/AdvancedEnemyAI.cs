@@ -11,9 +11,11 @@ public class AdvancedEnemyAI : MonoBehaviour
     public float moveSpeed;
     public float runspeed;
     public float attackfrequency;
-    BoxCollider2D[] hitbox;
+    public BoxCollider2D[] hitbox;
     const string walk = "Walk";
     const string run = "Run";
+
+    public int CurrentHitboxIndex { get; set; }
 
     AdvancedEnemyState currentstate;
     AdvabcedEnemyAttackStatee attackstate;
@@ -63,7 +65,7 @@ public class AdvancedEnemyAI : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
 
 
-            ChangeState(CounterAttackState);
+            ChangeState(attackstate);
 
 
         }
@@ -109,4 +111,10 @@ public class AdvancedEnemyAI : MonoBehaviour
     {
         ChangeState(defenseState);
     }
+
+    public void SetCurrentHitbox(int index)
+    {
+        CurrentHitboxIndex = index;
+    }
+
 }

@@ -7,5 +7,7 @@ public class EnemyAttackData
     public int damage;
     public float attackRange;
     public bool isRanged;
+
+    public int HitboxIndex;
     
 }

@@ -22,7 +22,9 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
         if (attacktime >= enemy.attackfrequency)
         {
             int randomindex = Random.Range(0, enemy.Enemydata.enemyattackdata.Length);
+            EnemyAttackData attack = enemy.Enemydata.enemyattackdata[randomindex];
             enemy.Animator.SetTrigger(enemy.Enemydata.enemyattackdata[randomindex].animationTrigger);
+            enemy.SetCurrentHitbox(attack.HitboxIndex);
             attacktime = 0f;
             Debug.Log(randomindex);
         }
