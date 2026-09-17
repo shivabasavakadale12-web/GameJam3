@@ -28,6 +28,8 @@ public class AdvancedEnemyAI : MonoBehaviour
     {
         defenseState = new AdvancedEnemyAiDefenseState(this);
         attackstate = new AdvabcedEnemyAttackStatee(this);
+
+
         hitbox = GetComponentsInChildren<BoxCollider2D>();
         hitbox[0].enabled = false;
         hitbox[1].enabled = false;
@@ -45,14 +47,17 @@ public class AdvancedEnemyAI : MonoBehaviour
 
         distance = Vector2.Distance(transform.position, playerTransform.position);
 
-         if (distance <= enemyData.attackRange)
+        if (distance <= enemyData.attackRange)
         {
             animator.SetBool(walk, false);
             animator.SetBool(run, false);
 
             rb.linearVelocity = Vector2.zero;
 
+
             ChangeState(attackstate);
+
+
         }
 
         else if (distance > enemyData.rundistance)
@@ -69,6 +74,11 @@ public class AdvancedEnemyAI : MonoBehaviour
             animator.SetBool(run, false);
 
             rb.linearVelocity = direction * enemyData.moveSpeed;
+        }
+
+        if (currentstate != null)
+        {
+            currentstate.Update();
         }
 
     }
