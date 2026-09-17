@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 1923482245834171724}
   - component: {fileID: 5553394440689322833}
   - component: {fileID: 3203231366430251260}
+  - component: {fileID: 4320292298147887387}
   - component: {fileID: 3533472615480663669}
   - component: {fileID: 1592750301609561407}
   - component: {fileID: 1793009093365774251}
@@ -424,6 +425,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5989d08994578ce458195e74cbd8b7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyHitBox
+--- !u!114 &4320292298147887387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222538097970140317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e256d0476468b043b1ed5d30de7e573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAiHealth
 --- !u!50 &3533472615480663669
 Rigidbody2D:
   serializedVersion: 5

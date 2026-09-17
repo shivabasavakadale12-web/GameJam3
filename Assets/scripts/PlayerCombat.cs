@@ -119,6 +119,7 @@ public class PlayerCombat : MonoBehaviour
     public void attackfinished()
     {
         isAttacking = false;
+        CurrentAttack = AttackType.None;
     }
 
     public void isdefending()
