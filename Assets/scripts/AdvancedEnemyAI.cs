@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 
 public class AdvancedEnemyAI : MonoBehaviour
@@ -9,6 +8,9 @@ public class AdvancedEnemyAI : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     float distance;
+    public float moveSpeed;
+    public float runspeed;
+    public float attackfrequency;
     BoxCollider2D[] hitbox;
     const string walk = "Walk";
     const string run = "Run";
@@ -16,6 +18,7 @@ public class AdvancedEnemyAI : MonoBehaviour
     AdvancedEnemyState currentstate;
     AdvabcedEnemyAttackStatee attackstate;
     AdvancedEnemyAiDefenseState defenseState;
+    AdvancedEnemyAiCounterAttackState CounterAttackState;
 
     public Animator Animator => animator;
     public Rigidbody2D Rigidbody => rb;
@@ -26,6 +29,11 @@ public class AdvancedEnemyAI : MonoBehaviour
 
     void Start()
     {
+        attackfrequency = enemyData.attackFrequency;
+        moveSpeed = enemyData.moveSpeed;
+        runspeed = enemyData.runspeed;
+
+        CounterAttackState = new AdvancedEnemyAiCounterAttackState(this);
         defenseState = new AdvancedEnemyAiDefenseState(this);
         attackstate = new AdvabcedEnemyAttackStatee(this);
 
@@ -55,7 +63,7 @@ public class AdvancedEnemyAI : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
 
 
-            ChangeState(attackstate);
+            ChangeState(CounterAttackState);
 
 
         }
@@ -65,7 +73,7 @@ public class AdvancedEnemyAI : MonoBehaviour
             animator.SetBool(run, true);
             animator.SetBool(walk, false);
 
-            rb.linearVelocity = direction * enemyData.runspeed;
+            rb.linearVelocity = direction * runspeed;
         }
 
         else
@@ -73,7 +81,7 @@ public class AdvancedEnemyAI : MonoBehaviour
             animator.SetBool(walk, true);
             animator.SetBool(run, false);
 
-            rb.linearVelocity = direction * enemyData.moveSpeed;
+            rb.linearVelocity = direction * moveSpeed;
         }
 
         if (currentstate != null)

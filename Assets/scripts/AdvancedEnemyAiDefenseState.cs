@@ -9,6 +9,7 @@ public class AdvancedEnemyAiDefenseState : AdvancedEnemyState
     }
     public override void Enter()
     {
+        enemy.Animator.SetTrigger("defend");
         Debug.Log("nigga defending stated nigga");
     }
 
