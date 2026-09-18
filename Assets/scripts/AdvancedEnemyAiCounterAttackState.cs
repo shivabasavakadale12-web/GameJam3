@@ -15,7 +15,6 @@ public class AdvancedEnemyAiCounterAttackState : AdvancedEnemyState
         enemy.moveSpeed += 1.7f;
         enemy.attackfrequency = 0.4f;
         AttackFrequency = 0f;
-        Debug.Log("Nigga we can counter attack");
     }
 
     public override void Update()

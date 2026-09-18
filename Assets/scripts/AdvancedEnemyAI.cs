@@ -9,6 +9,10 @@ public class AdvancedEnemyAI : MonoBehaviour
     Transform playerTransform;
     Rigidbody2D rb;
     Animator animator;
+    bool wasPlayerAttacking;
+    bool isPlayerAttacking;
+    public bool isAttacking = false;
+    public bool isDefending = false;
     float distance;
     public float moveSpeed;
     public float runspeed;
@@ -21,7 +25,6 @@ public class AdvancedEnemyAI : MonoBehaviour
     public int CurrentHitboxIndex { get; set; }
 
     AdvancedEnemyAiHealth health;
-
 
     AdvancedEnemyState currentstate;
     AdvabcedEnemyAttackStatee attackstate;
@@ -133,23 +136,49 @@ public class AdvancedEnemyAI : MonoBehaviour
         CurrentHitboxIndex = index;
     }
 
+    public void AttackingDone()
+    {
+        isAttacking = false;
+    }
 
+
+    public void DefendingDone()
+    {
+        isDefending = false;
+    }
 
 
     void DecideWhatToDo()
     {
+        if (health.IsHurt) return;
+
         reactiontime += Time.fixedDeltaTime;
-        if (!player.IsAttacking && !health.IsHurt)
+      
+        if(PlayerCombat.AttackType.None == player.CurrentAttack)
+        {
+            isPlayerAttacking = false;
+        }
+
+        else
+        {
+            isPlayerAttacking = true;
+        }
+
+
+        if (!wasPlayerAttacking && isPlayerAttacking)
+        {
+            ChangeToDefense();
+            // player JUST started attacking
+        }
+
+        if (wasPlayerAttacking && !isPlayerAttacking)
         {
             ChangeToAttack();
+            // player JUST stopped attacking
         }
-        else if (!health.IsHurt)
-        {
-            if (reactiontime == enemyData.reactionTime)
-            {
-                ChangeToDefense();
-                reactiontime = 0f;
-            }
-        }
+
+        wasPlayerAttacking = isPlayerAttacking;
+
+
     }
 }

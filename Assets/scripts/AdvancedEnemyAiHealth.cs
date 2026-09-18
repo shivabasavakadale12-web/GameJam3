@@ -6,6 +6,8 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
     int currentHealth;
     bool isHurt = false;
     bool isdead = false;
+    bool gotHit = false;
+    public int hits;
     public bool IsHurt => isHurt;
     const string attack1 = "attack1";
     const string attack2 = "attack2";
@@ -19,6 +21,7 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
      void Start()
      {
+        hits = 0;
         enemyScript = GetComponent<AdvancedEnemyAI>();
         currentHealth = enemyData.health;
         animator = GetComponent<Animator>();
@@ -26,7 +29,6 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if(collision.gameObject.CompareTag(attack1))
         {
             TakeDamage(enemyData.playerattack1);
@@ -44,24 +46,40 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
             TakeDamage(enemyData.playersuperpowerattack);  
         }
     }
+
     public void HurtDone()
     {
+        gotHit = false;
         isHurt = false;
     }
 
     void TakeDamage(int amount)
     {
+        hits += 1;
         isHurt = true;
-        currentHealth -= amount;
 
-        if(currentHealth <= 0)
+        if(!enemyScript.isDefending)
         {
-            enemyScript.enabled = false;
-            animator.SetTrigger(death);
+            currentHealth -= amount;
+            Debug.Log("Enemy Health: " + currentHealth);
         }
 
         else
         {
+            Debug.Log("Enemy is defending");
+        }
+
+        if(currentHealth <= 0 && !gotHit)
+        {
+            
+            gotHit = true;
+            enemyScript.enabled = false;
+            animator.SetTrigger(death);
+        }
+
+        else if(!gotHit && !enemyScript.isDefending)
+        {
+            gotHit = true;
             animator.SetTrigger(hurt);
         }
     }

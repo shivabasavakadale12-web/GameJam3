@@ -21,7 +21,8 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
 
         if (attacktime >= enemy.attackfrequency)
         {
-            int randomindex = Random.Range(0, enemy.Enemydata.enemyattackdata.Length);
+            enemy.isAttacking = true;
+            int randomindex = Random.Range(0, 2);
             EnemyAttackData attack = enemy.Enemydata.enemyattackdata[randomindex];
             enemy.Animator.SetTrigger(enemy.Enemydata.enemyattackdata[randomindex].animationTrigger);
             enemy.SetCurrentHitbox(attack.HitboxIndex);
@@ -29,7 +30,7 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
             Debug.Log(randomindex);
         }
 
-        Debug.Log("Nigga Nigga Nigga Nigga!!!! HeHe nigga... ");
+        
     }
 
     public override void Exit()
