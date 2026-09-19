@@ -34,6 +34,7 @@ public class AdvancedEnemyAI : MonoBehaviour
     public Animator Animator => animator;
     public Rigidbody2D Rigidbody => rb;
     public EnemyData Enemydata => enemyData;
+    public AdvancedEnemyAiHealth Health => health; 
     public Transform PlayerTransform => playerTransform;
     public float Distance => distance;
 
@@ -75,6 +76,11 @@ public class AdvancedEnemyAI : MonoBehaviour
             animator.SetBool(run, false);
 
             rb.linearVelocity = Vector2.zero;
+
+            if (currentstate == null)
+            {
+                ChangeToAttack();
+            }
 
             DecideWhatToDo();
         }
@@ -145,6 +151,12 @@ public class AdvancedEnemyAI : MonoBehaviour
     public void DefendingDone()
     {
         isDefending = false;
+        ChangeToAttack();
+    }
+
+    public void CounterDone()
+    {
+        ChangeToAttack();
     }
 
 
@@ -165,15 +177,16 @@ public class AdvancedEnemyAI : MonoBehaviour
         }
 
 
-        if (!wasPlayerAttacking && isPlayerAttacking)
+        if (!wasPlayerAttacking && isPlayerAttacking && !isDefending)
         {
             ChangeToDefense();
             // player JUST started attacking
         }
 
-        if (wasPlayerAttacking && !isPlayerAttacking)
+
+        if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking)
         {
-            ChangeToAttack();
+            ChangeToCounter();
             // player JUST stopped attacking
         }
 

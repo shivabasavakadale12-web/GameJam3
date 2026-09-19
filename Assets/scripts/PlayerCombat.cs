@@ -36,9 +36,27 @@ public class PlayerCombat : MonoBehaviour
         HitBox[2].enabled = false;
     }
 
+    public bool IsActionLocked { get; private set; }
+
+    public void LockActions(float duration)
+    {
+        StartCoroutine(ActionLockRoutine(duration));
+    }
+
+    IEnumerator ActionLockRoutine(float duration)
+    {
+        IsActionLocked = true;
+
+        yield return new WaitForSeconds(duration);
+
+        IsActionLocked = false;
+    }
+
+
+
     public void OnAttack1(CallbackContext context)
     {
-        if (context.performed && !isAttacking)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
         {
             isAttacking = true;
 
@@ -61,7 +79,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void PowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
         {
             CurrentAttack = AttackType.PowerAttack;
             isAttacking = true;
@@ -71,7 +89,7 @@ public class PlayerCombat : MonoBehaviour
     
     public void SuperPowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
         {
             CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;
@@ -81,7 +99,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnDefend(CallbackContext context)
     {
-        if (context.performed && !isDefending && !playerHealth.IsHurt)
+        if (context.performed && !isDefending && !playerHealth.IsHurt && !IsActionLocked)
         {
             animator.SetTrigger("OnDefend");
         }

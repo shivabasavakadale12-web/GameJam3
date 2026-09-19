@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class playerHealth : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class playerHealth : MonoBehaviour
 
                 playerCombat.CancelAttack();
                 playerCombat.cancleDefending();
+                playerCombat.LockActions(0.35f);
                 ishurt = true;
                 animator.SetTrigger("IsHurt");
                 TakeDamage(enemyData.attack3);
@@ -89,7 +91,14 @@ public class playerHealth : MonoBehaviour
             playerMovement.enabled = false;
             playerCombat.enabled = false;
             animator.SetTrigger("IsDead");
-
+            StartCoroutine(Deadroutine());
         }
+    }
+
+    IEnumerator Deadroutine()
+    {
+        yield return new WaitForSeconds(2f);
+
+        Destroy(gameObject);
     }
 }

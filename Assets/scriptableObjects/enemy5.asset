@@ -25,7 +25,7 @@ MonoBehaviour:
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
-  attackFrequency: 1.67
+  attackFrequency: 1.23
   attackRange: 2.24
   defenseTendency: 13.1
   reactionTime: 0.81

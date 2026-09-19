@@ -36,6 +36,5 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
     public override void Exit()
     {
 
-        Debug.Log("nigga attacks done move to something else nigga!");
     }
 }

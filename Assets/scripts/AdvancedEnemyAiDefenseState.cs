@@ -9,18 +9,23 @@ public class AdvancedEnemyAiDefenseState : AdvancedEnemyState
     }
     public override void Enter()
     {
-        enemy.isDefending = true;
-        Debug.Log("DEFENSE STATE ENTERED");
-        enemy.Animator.SetTrigger("defend");
+
     }
 
     public override void Update()
     {
-        
+        int randomRoll = Random.Range(0, 100);
+
+        if (randomRoll < enemy.Enemydata.defenseTendency && !enemy.isDefending && !enemy.Health.IsHurt)
+        {
+          enemy.isDefending = true;
+          enemy.Animator.SetTrigger("defend");
+        }
+
     }
 
     public override void Exit()
     {
-        Debug.Log("its done bitch");
+
     }
 }

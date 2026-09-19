@@ -35,7 +35,6 @@ public class AdvancedEnemyAiCounterAttackState : AdvancedEnemyState
         }
 
 
-        Debug.Log("well we are counterattacking");
     }
 
     public override void Exit()
