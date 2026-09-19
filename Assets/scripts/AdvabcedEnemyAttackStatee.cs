@@ -27,7 +27,6 @@ public class AdvabcedEnemyAttackStatee : AdvancedEnemyState
             enemy.Animator.SetTrigger(enemy.Enemydata.enemyattackdata[randomindex].animationTrigger);
             enemy.SetCurrentHitbox(attack.HitboxIndex);
             attacktime = 0f;
-            Debug.Log(randomindex);
         }
 
         

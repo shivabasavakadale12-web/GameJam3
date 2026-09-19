@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: enemy1
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
-  attack1: 7
-  attack2: 12
-  attack3: 18
-  counterattackdamage: 0
+  attack1: 3
+  attack2: 6
+  attack3: 9
+  counterattackdamage: 12
   playerattack1: 6
   playerpowerattack: 12
   playersuperpowerattack: 30
   moveSpeed: 1.4
+  runspeed: 0
   rundistance: 5
   walkdistance: 3
   attackDamage: 22
@@ -33,3 +34,4 @@ MonoBehaviour:
   aggression: 45
   counterAttackTendency: 20
   HasSuperPower: 0
+  enemyattackdata: []
