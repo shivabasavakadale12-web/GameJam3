@@ -23,8 +23,7 @@ public class AdvancedEnemyAiCounterAttackState : AdvancedEnemyState
 
         if(AttackFrequency >= enemy.attackfrequency)
         {
-         int randomIndex = Random.Range(enemy.Enemydata.enemyattackdata.Length - 2,
-                                        enemy.Enemydata.enemyattackdata.Length);
+         int randomIndex = Random.Range(0, enemy.Enemydata.enemyattackdata.Length);
 
 
          EnemyAttackData attack = enemy.Enemydata.enemyattackdata[randomIndex];

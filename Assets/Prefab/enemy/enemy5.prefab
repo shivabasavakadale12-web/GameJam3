@@ -538,6 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAI
   enemyData: {fileID: 11400000, guid: 61b0c2e0c09ac104f92ba0c08a4f6116, type: 2}
+  isAttacking: 0
+  isDefending: 0
   moveSpeed: 0
   runspeed: 0
   attackfrequency: 0

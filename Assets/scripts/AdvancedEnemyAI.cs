@@ -21,6 +21,9 @@ public class AdvancedEnemyAI : MonoBehaviour
     public BoxCollider2D[] hitbox;
     const string walk = "Walk";
     const string run = "Run";
+    const string defend = "Defend";
+    bool hasWalkParam;
+    bool hasDefendParam;
 
     public int CurrentHitboxIndex { get; set; }
 
@@ -34,7 +37,7 @@ public class AdvancedEnemyAI : MonoBehaviour
     public Animator Animator => animator;
     public Rigidbody2D Rigidbody => rb;
     public EnemyData Enemydata => enemyData;
-    public AdvancedEnemyAiHealth Health => health; 
+    public AdvancedEnemyAiHealth Health => health;
     public Transform PlayerTransform => playerTransform;
     public float Distance => distance;
 
@@ -53,14 +56,22 @@ public class AdvancedEnemyAI : MonoBehaviour
 
         health = GetComponent<AdvancedEnemyAiHealth>();
         hitbox = GetComponentsInChildren<BoxCollider2D>();
-        hitbox[0].enabled = false;
-        hitbox[1].enabled = false;
-        hitbox[2].enabled = false;
-        hitbox[3].enabled = false;
+
+        foreach (var hb in hitbox)
+        {
+            hb.enabled = false;
+        }
+
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         player = playerTransform.GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        foreach (var p in animator.parameters)
+        {
+            if (p.name == walk) hasWalkParam = true;
+            if (p.name == defend) hasDefendParam = true;
+        }
     }
 
     void FixedUpdate()
@@ -72,7 +83,7 @@ public class AdvancedEnemyAI : MonoBehaviour
 
         if (distance <= enemyData.attackRange)
         {
-            animator.SetBool(walk, false);
+            if (hasWalkParam) animator.SetBool(walk, false);
             animator.SetBool(run, false);
 
             rb.linearVelocity = Vector2.zero;
@@ -88,14 +99,14 @@ public class AdvancedEnemyAI : MonoBehaviour
         else if (distance > enemyData.rundistance)
         {
             animator.SetBool(run, true);
-            animator.SetBool(walk, false);
+            if (hasWalkParam) animator.SetBool(walk, false);
 
             rb.linearVelocity = direction * runspeed;
         }
 
         else
         {
-            animator.SetBool(walk, true);
+            if (hasWalkParam) animator.SetBool(walk, true);
             animator.SetBool(run, false);
 
             rb.linearVelocity = direction * moveSpeed;
@@ -113,7 +124,7 @@ public class AdvancedEnemyAI : MonoBehaviour
         if (currentstate == newstate)
             return;
 
-        if(currentstate != null)
+        if (currentstate != null)
         {
             currentstate.Exit();
         }
@@ -136,7 +147,7 @@ public class AdvancedEnemyAI : MonoBehaviour
     {
         ChangeState(CounterAttackState);
     }
-    
+
     public void SetCurrentHitbox(int index)
     {
         CurrentHitboxIndex = index;
@@ -165,8 +176,8 @@ public class AdvancedEnemyAI : MonoBehaviour
         if (health.IsHurt) return;
 
         reactiontime += Time.fixedDeltaTime;
-      
-        if(PlayerCombat.AttackType.None == player.CurrentAttack)
+
+        if (PlayerCombat.AttackType.None == player.CurrentAttack)
         {
             isPlayerAttacking = false;
         }
@@ -177,7 +188,7 @@ public class AdvancedEnemyAI : MonoBehaviour
         }
 
 
-        if (!wasPlayerAttacking && isPlayerAttacking && !isDefending)
+        if (!wasPlayerAttacking && isPlayerAttacking && !isDefending && hasDefendParam)
         {
             ChangeToDefense();
             // player JUST started attacking

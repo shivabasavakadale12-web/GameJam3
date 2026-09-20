@@ -14,22 +14,28 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
     const string superPowerAttack = "superpowerattack";
     const string hurt = "hurt";
     const string death = "Death";
+    bool hasDeathParam;
 
     Animator animator;
 
-    [SerializeField]  EnemyData enemyData;
+    [SerializeField] EnemyData enemyData;
 
-     void Start()
-     {
+    void Start()
+    {
         hits = 0;
         enemyScript = GetComponent<AdvancedEnemyAI>();
         currentHealth = enemyData.health;
         animator = GetComponent<Animator>();
-     }
 
-     void OnTriggerEnter2D(Collider2D collision)
+        foreach (var p in animator.parameters)
+        {
+            if (p.name == death) hasDeathParam = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag(attack1))
+        if (collision.gameObject.CompareTag(attack1))
         {
             TakeDamage(enemyData.playerattack1);
         }
@@ -43,7 +49,7 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
         else if (collision.gameObject.CompareTag(superPowerAttack))
         {
-            TakeDamage(enemyData.playersuperpowerattack);  
+            TakeDamage(enemyData.playersuperpowerattack);
         }
     }
 
@@ -55,10 +61,12 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
     void TakeDamage(int amount)
     {
+        if (!enemyScript.enabled) return; // already dead, ignore further hits
+
         hits += 1;
         isHurt = true;
 
-        if(!enemyScript.isDefending)
+        if (!enemyScript.isDefending)
         {
             currentHealth -= amount;
             Debug.Log("Enemy Health: " + currentHealth);
@@ -69,15 +77,22 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
             Debug.Log("Enemy is defending");
         }
 
-        if(currentHealth <= 0 && !gotHit)
+        if (currentHealth <= 0)
         {
-            
-            gotHit = true;
             enemyScript.enabled = false;
-            animator.SetTrigger(death);
+
+            if (hasDeathParam)
+            {
+                animator.SetTrigger(death);
+            }
+            else
+            {
+                animator.SetTrigger(hurt);
+                dead();
+            }
         }
 
-        else if(!gotHit && !enemyScript.isDefending)
+        else if (!gotHit && !enemyScript.isDefending)
         {
             gotHit = true;
             animator.SetTrigger(hurt);
