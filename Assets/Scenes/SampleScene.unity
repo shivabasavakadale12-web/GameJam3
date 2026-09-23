@@ -391,6 +391,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1467741341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &560765993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4448988617943588101, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
+  m_PrefabInstance: {fileID: 6057667647283021035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &560765994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560765993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cbf0374efb56e4dab8ac6a83cbd71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnemyAi
+  enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,10 +944,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2939027100234857604, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
+    - {fileID: 1403700741508524655, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
+    - {fileID: 4652383836868003961, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4448988617943588101, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 560765994}
   m_SourcePrefab: {fileID: 100100000, guid: 128f6b556074ffc43b07957c8bdf7926, type: 3}
 --- !u!1001 &7487420857119569652
 PrefabInstance:
