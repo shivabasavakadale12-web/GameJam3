@@ -16,6 +16,7 @@ public class BossEnemyAi : MonoBehaviour
     public float Distance => distance;
     public bool InRange => inRange;
 
+
     const string walk = "Walk";
     const string run = "Run";
     void Start()
