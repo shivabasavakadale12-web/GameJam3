@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 853552047694530709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.67669785, y: 0.01527195, z: 0}
+  m_LocalPosition: {x: 0.030999929, y: -0.023999996, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 3166092044350703949}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.67669785, y: 0.01527195, z: 0}
+  m_LocalPosition: {x: 0.030999929, y: -0.023999996, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 3424695659430057959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.67669785, y: 0.01527195, z: 0}
+  m_LocalPosition: {x: 0.031, y: -0.024, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,10 +246,8 @@ GameObject:
   - component: {fileID: 2329042150008847044}
   - component: {fileID: 7193067002075143563}
   - component: {fileID: 2229116688495636005}
-  - component: {fileID: 2939027100234857604}
-  - component: {fileID: 1403700741508524655}
-  - component: {fileID: 4652383836868003961}
   - component: {fileID: 532624981017330440}
+  - component: {fileID: 8657277072051066328}
   m_Layer: 6
   m_Name: enemy8
   m_TagString: Untagged
@@ -398,51 +396,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: -0.14}
   m_Size: {x: 0.26, y: 0.72}
   m_Direction: 0
---- !u!114 &2939027100234857604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448988617943588101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e256d0476468b043b1ed5d30de7e573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAiHealth
-  hits: 0
-  enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
---- !u!114 &1403700741508524655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448988617943588101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179d5e92b7318f94a9c9006154d3056a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAI
-  enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
-  isAttacking: 0
-  isDefending: 0
-  moveSpeed: 0
-  runspeed: 0
-  attackfrequency: 0
-  hitbox: []
---- !u!114 &4652383836868003961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448988617943588101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5989d08994578ce458195e74cbd8b7bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyHitBox
 --- !u!95 &532624981017330440
 Animator:
   serializedVersion: 7
@@ -465,3 +418,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8657277072051066328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448988617943588101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cbf0374efb56e4dab8ac6a83cbd71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnemyAi
+  enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
