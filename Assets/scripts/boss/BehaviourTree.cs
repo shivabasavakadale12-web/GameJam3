@@ -3,17 +3,23 @@ using UnityEngine;
 
 public class BehaviourTree : MonoBehaviour
 {
-    [SerializeField] EnemyData enemyData;
+    public EnemyData enemyData;
+    Health Health;
     PlayerCombat player;
     Node rootNode;
     BoxCollider2D[] HitBox;
     float coolDown;
     Animator animator;
     BossEnemyAi bossEnemy;
+    Rigidbody2D rb;
     bool defendDone = false;
-     void Start()
+    bool hurtDone = false;
+    bool deadDone = false;
+    void Start()
      {
         coolDown = 0f;
+        rb = GetComponent<Rigidbody2D>();
+        Health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
         bossEnemy = GetComponent<BossEnemyAi>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
@@ -24,6 +30,31 @@ public class BehaviourTree : MonoBehaviour
         }
 
         animator = GetComponent<Animator>();
+
+        ActionNode dead = new ActionNode(() =>
+
+        {
+            if(!deadDone)
+            {
+             rb.linearVelocity = Vector2.zero;
+             bossEnemy.enabled = false;
+             animator.SetTrigger("Death");
+             Invoke("DeadDone", 3f);
+             deadDone = true;
+            }
+            return NodeState.Success;
+        });
+
+        ActionNode hurt = new ActionNode(() =>
+
+        {
+            if (!hurtDone)
+            {
+                animator.SetTrigger("hurt");
+                hurtDone = true;
+            }
+                return NodeState.Success;
+        });
 
         ActionNode defend = new ActionNode(() =>
         {
@@ -55,16 +86,26 @@ public class BehaviourTree : MonoBehaviour
             Debug.Log("action2 is running");
             return NodeState.Success;
         });
+
+        Node DeathBranch = new SequenceNode(new List<Node>
+        {
+            new ConditionNode(() => Health.isDead), dead
+        });
+
+        Node HurtBranch = new SequenceNode(new List<Node>
+        {
+            new ConditionNode(() => Health.isHurt), hurt
+        });
     
         Node attackBranch = new SequenceNode(new List<Node> {
                             new ConditionNode(() => bossEnemy.InRange), action1});
 
         Node DefendBranch = new SequenceNode(new List<Node>
         {
-            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange), defend
+            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt), defend
         });
 
-        List<Node> children = new List<Node> { DefendBranch,  attackBranch, action2 };
+        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch,  attackBranch, action2 };
 
         rootNode = new SelectorNode(children);
      }
@@ -74,10 +115,21 @@ public class BehaviourTree : MonoBehaviour
         rootNode.Evaluate();
      }
 
+    void HurtDone()
+    {
+        Health.isHurt = false;
+        hurtDone = false;
+    }
+
 
     public void DefendDone()
     {
         defendDone = false;
+    }
+
+    void DeadDone()
+    {
+        Destroy(gameObject);
     }
 
 }
