@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 853552047694530709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030999929, y: -0.023999996, z: 0}
+  m_LocalPosition: {x: -0.06600009, y: -0.04199998, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 3166092044350703949}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030999929, y: -0.023999996, z: 0}
+  m_LocalPosition: {x: -0.06600009, y: -0.04199998, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 3424695659430057959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.031, y: -0.024, z: 0}
+  m_LocalPosition: {x: -0.066, y: -0.042, z: 0}
   m_LocalScale: {x: 0.9444627, y: 0.9444627, z: 0.9444627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 2229116688495636005}
   - component: {fileID: 532624981017330440}
   - component: {fileID: 8657277072051066328}
+  - component: {fileID: 5794613372337429565}
   m_Layer: 6
   m_Name: enemy8
   m_TagString: Untagged
@@ -430,4 +431,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cbf0374efb56e4dab8ac6a83cbd71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEnemyAi
+  enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
+--- !u!114 &5794613372337429565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448988617943588101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19a0c77d9bd6d44f907d5fe4c12367e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BehaviourTree
   enemyData: {fileID: 11400000, guid: 27fcd3c73f50ec44bb6b66af3839a440, type: 2}
