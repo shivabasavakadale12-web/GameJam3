@@ -35,15 +35,19 @@ public class Health : MonoBehaviour
     }
     void takeDamage(int amount)
     {
-        CurrentHealth -= amount;
+        if(!bt.isDefending)
+        {
 
-        if(CurrentHealth <= 0)
-        {
+         CurrentHealth -= amount;
+
+         if(CurrentHealth <= 0)
+         {
             isDead = true;
-        }
-        else
-        {
+         }
+         else
+         {
             isHurt = true;
+         }
         }
     }
 }

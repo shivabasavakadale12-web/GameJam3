@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BehaviourTree : MonoBehaviour, IEnemy
@@ -14,9 +13,9 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     Animator animator;
     BossEnemyAi bossEnemy;
     Rigidbody2D rb;
-    bool defendDone = false;
-    bool hurtDone = false;
-    bool deadDone = false;
+    public bool isDefending = false;
+    bool isHurt = false;
+    public bool deadDone = false;
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
     int isCounterAttackTrue = 100;
@@ -67,23 +66,22 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         ActionNode hurt = new ActionNode(() =>
 
         {
-            if (!hurtDone)
+            if (!isHurt)
             {
                 animator.SetTrigger("hurt");
-                hurtDone = true;
+                isHurt = true;
             }
                 return NodeState.Success;
         });
 
         ActionNode defend = new ActionNode(() =>
         {
-           if(!defendDone)
+           if(!isDefending)
            {
                 StartCoroutine(DefendWithReaction());
            }
             return NodeState.Success;
-        }
-        
+        }   
         );
 
         ActionNode action1 = new ActionNode(() =>
@@ -126,7 +124,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         Node PowerAttackBranch = new SequenceNode(new List<Node>
         {
-            new ConditionNode(() => isSuperAggressive && !defendDone && !Health.isHurt), powerAttack
+            new ConditionNode(() => bossEnemy.InRange && isSuperAggressive
+            && !isDefending && !Health.isHurt), powerAttack
         });
 
         Node DeathBranch = new SequenceNode(new List<Node>
@@ -145,10 +144,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         Node DefendBranch = new SequenceNode(new List<Node>
         {
-            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt), defend
+            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt && !isDefending), defend
         });
 
-        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch,  attackBranch, PowerAttackBranch};
+        List<Node> children = new List<Node> { DeathBranch, HurtBranch, attackBranch, PowerAttackBranch};
 
         rootNode = new SelectorNode(children);
      }
@@ -160,7 +159,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         if(WindowTimer >= 14f)
         {
-            isSuperAggressive = counterattack >= 4;
+            isSuperAggressive = counterattack >= 3;
             WindowTimer = 0f;
             counterattack = 0;
         }
@@ -196,13 +195,13 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     void HurtDone()
     {
         Health.isHurt = false;
-        hurtDone = false;
+        isHurt = false;
     }
 
 
     public void Defending()
     {
-        defendDone = false;
+        isDefending = false;
     }
 
     void DeadDone()
@@ -215,7 +214,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         yield return new WaitForSeconds(enemyData.reactionTime);
         animator.SetTrigger("defend");
         Debug.Log("Defending player attack");
-        defendDone = true;
+        isDefending = true;
     }
 
     IEnumerator Powerattacck()
