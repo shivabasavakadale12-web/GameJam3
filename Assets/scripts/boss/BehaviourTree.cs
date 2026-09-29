@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BehaviourTree : MonoBehaviour, IEnemy
@@ -15,6 +17,13 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool defendDone = false;
     bool hurtDone = false;
     bool deadDone = false;
+    bool isSuperAggressive = false;
+    bool powerAttackStarted = false;
+    int isCounterAttackTrue = 100;
+    int counterattack = 0;
+    float WindowTimer = 0f;
+
+    public bool isAttacking = false;
 
     public int CurrentHitboxIndex { get; set; }
 
@@ -23,11 +32,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     public void SetCurrentHitbox(int index)
     {
         CurrentHitboxIndex = index;
-    }
-
-    public interface IEnemy
-    {
-        EnemyData Enemydata { get; }
     }
 
     void Start()
@@ -75,9 +79,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         {
            if(!defendDone)
            {
-            animator.SetTrigger("defend");
-            Debug.Log("Defending player attack");
-            defendDone = true;
+                StartCoroutine(DefendWithReaction());
            }
             return NodeState.Success;
         }
@@ -91,6 +93,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             {
               animator.SetTrigger("Attack1");
               Debug.Log("action1 is running");
+              isAttacking = true;
               coolDown = 0f;
             }
             return NodeState.Success;
@@ -98,8 +101,32 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         ActionNode action2 = new ActionNode(() =>
         {
-            Debug.Log("action2 is running");
+            coolDown += Time.deltaTime;
+            if(coolDown >= enemyData.attackFrequency)
+            {
+             animator.SetTrigger("Attack2");
+             Debug.Log("action2 is running");
+             isAttacking = true;
+             coolDown = 0f;       
+            }
             return NodeState.Success;
+        });
+
+        ActionNode powerAttack = new ActionNode(() =>
+        {
+            coolDown += Time.deltaTime;
+            if (coolDown >= enemyData.attackFrequency && !powerAttackStarted)
+            {
+                powerAttackStarted = true;
+                StartCoroutine(Powerattacck());
+            }
+
+            return NodeState.Success;
+        });
+
+        Node PowerAttackBranch = new SequenceNode(new List<Node>
+        {
+            new ConditionNode(() => isSuperAggressive && !defendDone && !Health.isHurt), powerAttack
         });
 
         Node DeathBranch = new SequenceNode(new List<Node>
@@ -113,14 +140,15 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         });
     
         Node attackBranch = new SequenceNode(new List<Node> {
-                            new ConditionNode(() => bossEnemy.InRange), action1});
+                            new ConditionNode(() => bossEnemy.InRange && !isAttacking), action1, action2});
+
 
         Node DefendBranch = new SequenceNode(new List<Node>
         {
             new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt), defend
         });
 
-        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch,  attackBranch, action2 };
+        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch,  attackBranch, PowerAttackBranch};
 
         rootNode = new SelectorNode(children);
      }
@@ -128,7 +156,42 @@ public class BehaviourTree : MonoBehaviour, IEnemy
      void Update()
      {
         rootNode.Evaluate();
+        WindowTimer += Time.deltaTime;
+
+        if(WindowTimer >= 14f)
+        {
+            isSuperAggressive = counterattack >= 4;
+            WindowTimer = 0f;
+            counterattack = 0;
+        }
+
      }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer != LayerMask.NameToLayer("PlayerAttack"))
+            return;
+
+        counterattack++;
+
+        switch (player.CurrentAttack)
+        {
+            case PlayerCombat.AttackType.Attack1:
+                isCounterAttackTrue -= 2;
+                break;
+            case PlayerCombat.AttackType.Attack2:
+                isCounterAttackTrue -= 4;
+                break;
+            case PlayerCombat.AttackType.PowerAttack:
+                isCounterAttackTrue -= 6;
+                break;
+            case PlayerCombat.AttackType.SuperPowerAttack:
+                isCounterAttackTrue -= 10;
+                break;
+        }
+
+        isCounterAttackTrue = Mathf.Max(isCounterAttackTrue, 0);
+    }
 
     void HurtDone()
     {
@@ -137,7 +200,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     }
 
 
-    public void DefendDone()
+    public void Defending()
     {
         defendDone = false;
     }
@@ -146,5 +209,27 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         Destroy(gameObject);
     }
+
+    IEnumerator DefendWithReaction()
+    {
+        yield return new WaitForSeconds(enemyData.reactionTime);
+        animator.SetTrigger("defend");
+        Debug.Log("Defending player attack");
+        defendDone = true;
+    }
+
+    IEnumerator Powerattacck()
+    {
+        yield return new WaitForSeconds(enemyData.reactionTime);
+
+        if (isCounterAttackTrue <= enemyData.counterAttackTendency)
+            animator.SetTrigger("Attack4");
+        else
+            animator.SetTrigger("attack3");
+
+        coolDown = 0f;
+        powerAttackStarted = false;
+    }
+
 
 }

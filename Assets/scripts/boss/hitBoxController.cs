@@ -16,6 +16,7 @@ public class hitBoxController : MonoBehaviour
 
     public void DisableCurrentHitbox()
     {
+        bt.isAttacking = false;
         bt.HitBox[bt.CurrentHitboxIndex].enabled = false;
     }
 }
