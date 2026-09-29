@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-public class EarlyEnemyAi : MonoBehaviour
+public class EarlyEnemyAi : MonoBehaviour, IEnemy
 {
     [SerializeField] EnemyData enemyData;
     Transform playerTransform;
@@ -18,6 +18,9 @@ public class EarlyEnemyAi : MonoBehaviour
     bool isRunning;
     bool isAttacking = false;
     public bool IsDefending => isDefending;
+
+    public EnemyData Enemydata => enemyData;
+
     BoxCollider2D[] Hitbox;
     const string attack1 = "Attack1";
     const string attack2 = "Attack2";

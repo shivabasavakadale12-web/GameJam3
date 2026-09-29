@@ -36,7 +36,22 @@ MonoBehaviour:
   HasSuperPower: 0
   enemyattackdata:
   - animationTrigger: Attack1
-    damage: 8
+    damage: 4
     attackRange: 2.4
     isRanged: 0
     HitboxIndex: 0
+  - animationTrigger: Attack2
+    damage: 8
+    attackRange: 2.4
+    isRanged: 0
+    HitboxIndex: 1
+  - animationTrigger: Attack3
+    damage: 10
+    attackRange: 2.4
+    isRanged: 0
+    HitboxIndex: 2
+  - animationTrigger: Attack4
+    damage: 15
+    attackRange: 2.67
+    isRanged: 0
+    HitboxIndex: 3

@@ -26,10 +26,8 @@ public class playerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        AdvancedEnemyAI enemy = collision.GetComponentInParent<AdvancedEnemyAI>();
-
-        if (enemy == null)
-            return;
+        IEnemy enemy = collision.GetComponentInParent<IEnemy>();
+        if (enemy == null) return;
 
         if (playerCombat.IsDefending)
         {

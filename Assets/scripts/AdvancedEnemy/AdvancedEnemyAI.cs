@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class AdvancedEnemyAI : MonoBehaviour
+public class AdvancedEnemyAI : MonoBehaviour, IEnemy
 {
     [SerializeField] EnemyData enemyData;
 

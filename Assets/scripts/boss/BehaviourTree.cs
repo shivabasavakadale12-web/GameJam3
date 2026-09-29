@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BehaviourTree : MonoBehaviour
+public class BehaviourTree : MonoBehaviour, IEnemy
 {
+    public BoxCollider2D[] HitBox;
     public EnemyData enemyData;
     Health Health;
     PlayerCombat player;
     Node rootNode;
-    BoxCollider2D[] HitBox;
     float coolDown;
     Animator animator;
     BossEnemyAi bossEnemy;
@@ -15,6 +15,21 @@ public class BehaviourTree : MonoBehaviour
     bool defendDone = false;
     bool hurtDone = false;
     bool deadDone = false;
+
+    public int CurrentHitboxIndex { get; set; }
+
+    public EnemyData Enemydata => enemyData;
+
+    public void SetCurrentHitbox(int index)
+    {
+        CurrentHitboxIndex = index;
+    }
+
+    public interface IEnemy
+    {
+        EnemyData Enemydata { get; }
+    }
+
     void Start()
      {
         coolDown = 0f;
@@ -38,7 +53,7 @@ public class BehaviourTree : MonoBehaviour
             {
              rb.linearVelocity = Vector2.zero;
              bossEnemy.enabled = false;
-             animator.SetTrigger("Death");
+             animator.SetTrigger("dead");
              Invoke("DeadDone", 3f);
              deadDone = true;
             }
