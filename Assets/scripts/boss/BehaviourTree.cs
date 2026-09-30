@@ -14,8 +14,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     BossEnemyAi bossEnemy;
     Rigidbody2D rb;
     public bool isDefending = false;
+    bool DefendingStarted = false;
     bool isHurt = false;
     public bool deadDone = false;
+    bool HasCheckedCurrentSwing = false;
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
     int isCounterAttackTrue = 100;
@@ -76,9 +78,23 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         ActionNode defend = new ActionNode(() =>
         {
-           if(!isDefending)
+           if(!HasCheckedCurrentSwing && !isDefending && !DefendingStarted)
            {
-                StartCoroutine(DefendWithReaction());
+                HasCheckedCurrentSwing = true;
+
+                int randomRoll = Random.Range(0, 100);
+
+                if(randomRoll <= enemyData.defenseTendency)
+                {
+                 DefendingStarted = true;
+                 StartCoroutine(DefendWithReaction());
+                }
+
+                else
+                {
+                    Debug.Log("randomroll failed getting hurt soon!");
+                    return NodeState.Failure;
+                }
            }
             return NodeState.Success;
         }   
@@ -147,7 +163,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt && !isDefending), defend
         });
 
-        List<Node> children = new List<Node> { DeathBranch, HurtBranch, attackBranch, PowerAttackBranch};
+        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch, attackBranch, PowerAttackBranch};
 
         rootNode = new SelectorNode(children);
      }
@@ -164,6 +180,11 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             counterattack = 0;
         }
 
+
+        if(!player.IsAttacking)
+        {
+            HasCheckedCurrentSwing = false;
+        }
      }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -201,6 +222,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
     public void Defending()
     {
+        DefendingStarted = false;
         isDefending = false;
     }
 
@@ -213,7 +235,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
         animator.SetTrigger("defend");
-        Debug.Log("Defending player attack");
         isDefending = true;
     }
 
