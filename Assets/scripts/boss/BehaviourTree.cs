@@ -15,6 +15,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     Rigidbody2D rb;
     public bool isDefending = false;
     bool DefendingStarted = false;
+    bool defendrollPassed = false;
     bool isHurt = false;
     public bool deadDone = false;
     bool HasCheckedCurrentSwing = false;
@@ -71,6 +72,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             if (!isHurt)
             {
                 animator.SetTrigger("hurt");
+                HasCheckedCurrentSwing = true;
                 isHurt = true;
             }
                 return NodeState.Success;
@@ -86,17 +88,13 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
                 if(randomRoll <= enemyData.defenseTendency)
                 {
+                 Debug.Log("Defend firing — player.IsAttacking: " + player.IsAttacking + " HasCheckedCurrentSwing: " + HasCheckedCurrentSwing);
+                 defendrollPassed = true;
                  DefendingStarted = true;
                  StartCoroutine(DefendWithReaction());
                 }
-
-                else
-                {
-                    Debug.Log("randomroll failed getting hurt soon!");
-                    return NodeState.Failure;
-                }
            }
-            return NodeState.Success;
+            return defendrollPassed ? NodeState.Success : NodeState.Failure;
         }   
         );
 
@@ -234,6 +232,13 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     IEnumerator DefendWithReaction()
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
+
+        if (isHurt || Health.isDead)
+        {
+            DefendingStarted = false;
+            yield break;
+        }
+     
         animator.SetTrigger("defend");
         isDefending = true;
     }
@@ -245,7 +250,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         if (isCounterAttackTrue <= enemyData.counterAttackTendency)
             animator.SetTrigger("Attack4");
         else
-            animator.SetTrigger("attack3");
+            animator.SetTrigger("Attack3");
 
         coolDown = 0f;
         powerAttackStarted = false;

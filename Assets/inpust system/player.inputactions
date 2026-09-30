@@ -229,7 +229,7 @@
                     "name": "",
                     "id": "ae88668c-976d-4ab7-8bde-4c9fc8fc1b60",
                     "path": "<Keyboard>/x",
-                    "interactions": "Press(pressPoint=0.02)",
+                    "interactions": "Press(pressPoint=0.5)",
                     "processors": "",
                     "groups": "",
                     "action": "SuperpowerAttack",

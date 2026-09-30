@@ -30,6 +30,7 @@ public class BossEnemyAi : MonoBehaviour
 
     void Update()
     {
+        if (playerPosition == null) return;
         Vector2 direction = (playerPosition.position - transform.position).normalized;
         distance = Vector2.Distance(transform.position, playerPosition.position);
 

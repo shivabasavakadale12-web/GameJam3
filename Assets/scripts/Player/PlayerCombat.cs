@@ -58,6 +58,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
         {
+            Debug.Log("OnAttack1 fired at " + Time.time);
             isAttacking = true;
 
             int randomValue = Random.Range(0, 100);
@@ -81,6 +82,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
         {
+            Debug.Log("OnAttack2 fired at " + Time.time);
             CurrentAttack = AttackType.PowerAttack;
             isAttacking = true;
             animator.SetTrigger(powerAttack);
@@ -136,6 +138,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void attackfinished()
     {
+        Debug.Log("attackfinished called at " + Time.time);
         isAttacking = false;
         CurrentAttack = AttackType.None;
     }
