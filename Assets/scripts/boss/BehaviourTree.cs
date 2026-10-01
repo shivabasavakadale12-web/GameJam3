@@ -21,6 +21,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool HasCheckedCurrentSwing = false;
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
+    bool powerAttackRollPassed = false;
     int isCounterAttackTrue = 100;
     int counterattack = 0;
     float WindowTimer = 0f;
@@ -88,7 +89,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
                 if(randomRoll <= enemyData.defenseTendency)
                 {
-                 Debug.Log("Defend firing — player.IsAttacking: " + player.IsAttacking + " HasCheckedCurrentSwing: " + HasCheckedCurrentSwing);
                  defendrollPassed = true;
                  DefendingStarted = true;
                  StartCoroutine(DefendWithReaction());
@@ -129,11 +129,24 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             coolDown += Time.deltaTime;
             if (coolDown >= enemyData.attackFrequency && !powerAttackStarted)
             {
-                powerAttackStarted = true;
-                StartCoroutine(Powerattacck());
-            }
+                int randomRoll = Random.Range(0, 100);
+            
+                if(randomRoll <= enemyData.superAttackTendency)
+                {
+                  powerAttackRollPassed = true;
+                  powerAttackStarted = true;
+                  StartCoroutine(Powerattacck());
+                }
 
-            return NodeState.Success;
+                else
+                {
+                    powerAttackRollPassed = false;
+                    powerAttackStarted = true;
+                    StartCoroutine(DefaultPowerAttack());
+                }
+
+            }
+            return powerAttackRollPassed ? NodeState.Success : NodeState.Failure;
         });
 
         Node PowerAttackBranch = new SequenceNode(new List<Node>
@@ -247,14 +260,17 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
 
-        if (isCounterAttackTrue <= enemyData.counterAttackTendency)
             animator.SetTrigger("Attack4");
-        else
-            animator.SetTrigger("Attack3");
+            coolDown = 0f;
+            powerAttackStarted = false;
+    }
 
+    IEnumerator DefaultPowerAttack()
+    {
+        yield return new WaitForSeconds(enemyData.reactionTime);
+        animator.SetTrigger("Attack3");
         coolDown = 0f;
         powerAttackStarted = false;
     }
-
 
 }
