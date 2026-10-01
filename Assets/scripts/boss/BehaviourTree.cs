@@ -22,9 +22,9 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
     bool powerAttackRollPassed = false;
-    int isCounterAttackTrue = 100;
     int counterattack = 0;
     float WindowTimer = 0f;
+    int counterattackIndex = 0;
 
     public bool isAttacking = false;
 
@@ -131,7 +131,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             {
                 int randomRoll = Random.Range(0, 100);
             
-                if(randomRoll <= enemyData.superAttackTendency)
+                if(randomRoll <= enemyData.counterAttackTendency)
                 {
                   powerAttackRollPassed = true;
                   powerAttackStarted = true;
@@ -208,20 +208,20 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         switch (player.CurrentAttack)
         {
             case PlayerCombat.AttackType.Attack1:
-                isCounterAttackTrue -= 2;
+                counterattackIndex += 1;
                 break;
             case PlayerCombat.AttackType.Attack2:
-                isCounterAttackTrue -= 4;
+                counterattackIndex += 1;
                 break;
+
             case PlayerCombat.AttackType.PowerAttack:
-                isCounterAttackTrue -= 6;
+                counterattackIndex += 2;
                 break;
             case PlayerCombat.AttackType.SuperPowerAttack:
-                isCounterAttackTrue -= 10;
+                counterattackIndex += 3;
                 break;
         }
 
-        isCounterAttackTrue = Mathf.Max(isCounterAttackTrue, 0);
     }
 
     void HurtDone()
@@ -260,6 +260,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
 
+        if( counterattackIndex >= 3)
+        {
+            enemyData.counterAttackTendency = enemyData.counterAttackTendency + enemyData.SwapnaGoodGirl;
+        }
             animator.SetTrigger("Attack4");
             coolDown = 0f;
             powerAttackStarted = false;

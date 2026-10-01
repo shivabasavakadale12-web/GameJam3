@@ -30,10 +30,11 @@ MonoBehaviour:
   defenseTendency: 82
   reactionTime: 0.28
   dodgeTendency: 0
-  superAttackTendency: 0
+  superAttackTendency: 60
   aggression: 58.3
-  counterAttackTendency: 13.4
+  counterAttackTendency: 60
   HasSuperPower: 0
+  SwapnaGoodGirl: 20
   enemyattackdata:
   - animationTrigger: Attack1
     damage: 4
