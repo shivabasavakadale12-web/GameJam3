@@ -895,14 +895,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9163196211847516007, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163196211847516007, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -928,6 +920,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39146338}
     m_Modifications:
+    - target: {fileID: 1818514867845559447, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818514867845559447, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.438
+      objectReference: {fileID: 0}
     - target: {fileID: 2318676476983318999, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
       propertyPath: m_Name
       value: bossEnemy
@@ -970,6 +970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442275924047159078, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225525380531030283, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

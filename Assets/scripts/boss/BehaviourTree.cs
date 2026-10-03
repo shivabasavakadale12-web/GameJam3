@@ -68,15 +68,16 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         });
 
         ActionNode hurt = new ActionNode(() =>
-
         {
             if (!isHurt)
             {
                 animator.SetTrigger("hurt");
                 HasCheckedCurrentSwing = true;
                 isHurt = true;
+                isDefending = false;
+                DefendingStarted = false;
             }
-                return NodeState.Success;
+            return NodeState.Success;
         });
 
         ActionNode defend = new ActionNode(() =>
@@ -86,8 +87,9 @@ public class BehaviourTree : MonoBehaviour, IEnemy
                 HasCheckedCurrentSwing = true;
 
                 int randomRoll = Random.Range(0, 100);
+                Debug.Log("ROll: " + randomRoll + " Vs Defense Tendency: " + enemyData.defenseTendency);
 
-                if(randomRoll <= enemyData.defenseTendency)
+                if (randomRoll <= enemyData.defenseTendency)
                 {
                  defendrollPassed = true;
                  DefendingStarted = true;
@@ -103,7 +105,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             coolDown += Time.deltaTime;
             if(coolDown >= enemyData.attackFrequency)
             {
-              animator.SetTrigger("Attack1");
+                
+              animator.SetTrigger("Attack4");
               Debug.Log("action1 is running");
               isAttacking = true;
               coolDown = 0f;
@@ -129,6 +132,9 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             coolDown += Time.deltaTime;
             if (coolDown >= enemyData.attackFrequency && !powerAttackStarted)
             {
+                powerAttackRollPassed = false;
+
+
                 int randomRoll = Random.Range(0, 100);
             
                 if(randomRoll <= enemyData.counterAttackTendency)
@@ -233,6 +239,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
     public void Defending()
     {
+        Debug.Log("Defending() reset called at " + Time.time);
         DefendingStarted = false;
         isDefending = false;
     }
@@ -254,6 +261,11 @@ public class BehaviourTree : MonoBehaviour, IEnemy
      
         animator.SetTrigger("defend");
         isDefending = true;
+
+        yield return new WaitForSeconds(0.867f);
+
+        isDefending = false;
+        DefendingStarted = false;
     }
 
     IEnumerator Powerattacck()
@@ -264,9 +276,11 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         {
             enemyData.counterAttackTendency = enemyData.counterAttackTendency + enemyData.SwapnaGoodGirl;
         }
-            animator.SetTrigger("Attack4");
+            animator.SetTrigger("Attack1");
             coolDown = 0f;
             powerAttackStarted = false;
+            counterattackIndex = 0;
+        enemyData.counterAttackTendency = enemyData.counterAttackTendency - enemyData.SwapnaGoodGirl;
     }
 
     IEnumerator DefaultPowerAttack()

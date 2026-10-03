@@ -49,5 +49,10 @@ public class Health : MonoBehaviour
             isHurt = true;
          }
         }
+
+        else
+        {
+            Debug.Log("Damage blocked — isDefending stuck at: " + Time.time);
+        }
     }
 }

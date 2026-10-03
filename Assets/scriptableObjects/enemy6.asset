@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: enemy6
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
-  attack1: 12
+  attack1: 4
   attack2: 6
   attack3: 9
   counterattackdamage: 11
