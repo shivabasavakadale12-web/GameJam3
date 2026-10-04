@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 170251048153595963}
   - component: {fileID: 1230985226434143951}
   - component: {fileID: 9022759800061430590}
+  - component: {fileID: 7883499595981760272}
   m_Layer: 6
   m_Name: bossEnemy
   m_TagString: Untagged
@@ -290,7 +291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19a0c77d9bd6d44f907d5fe4c12367e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehaviourTree
+  HitBox: []
   enemyData: {fileID: 11400000, guid: 9760de0f45fb82a4baf91df805556e9c, type: 2}
+  isDefending: 0
+  deadDone: 0
+  isAttacking: 0
 --- !u!114 &9022759800061430590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +310,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   isHurt: 0
   isDead: 0
+--- !u!114 &7883499595981760272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318676476983318999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30010fa0c0fe7241bca099297fcaba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::hitBoxController
 --- !u!1 &7541330457959243408
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +504,7 @@ Transform:
   m_GameObject: {fileID: 9011957422811365225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05000007, y: 0.28000003, z: 0}
+  m_LocalPosition: {x: -0.219, y: 0.438, z: 0}
   m_LocalScale: {x: 1.851511, y: 1.851511, z: 1.851511}
   m_ConstrainProportionsScale: 0
   m_Children: []

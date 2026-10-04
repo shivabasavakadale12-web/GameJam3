@@ -32,8 +32,9 @@ MonoBehaviour:
   dodgeTendency: 0
   superAttackTendency: 60
   aggression: 58.3
-  counterAttackTendency: 60
+  counterAttackTendency: 100
   HasSuperPower: 0
+  SuperReactionTime: 0.18
   SwapnaGoodGirl: 20
   enemyattackdata:
   - animationTrigger: Attack1
