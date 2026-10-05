@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 5174844282051243328}
   m_Layer: 6
   m_Name: enemy1
-  m_TagString: Untagged
+  m_TagString: EarlyEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitBoxDetector
   enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
   earlyEnemyAi: {fileID: 5174844282051243328}
-  PlayerCombat: {fileID: 0}
 --- !u!50 &346025292148027406
 Rigidbody2D:
   serializedVersion: 5
@@ -369,7 +368,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarlyEnemyAi
   enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
-  playerTransform: {fileID: 0}
 --- !u!1 &4279478740882355917
 GameObject:
   m_ObjectHideFlags: 0

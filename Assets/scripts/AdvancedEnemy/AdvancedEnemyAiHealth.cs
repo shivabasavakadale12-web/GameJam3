@@ -4,6 +4,9 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 {
     AdvancedEnemyAI enemyScript;
     int currentHealth;
+    int clashCounter = 0;
+    bool stClash = false;
+    public bool StClash => stClash;
     bool isHurt = false;
     bool isdead = false;
     bool gotHit = false;
@@ -35,6 +38,21 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+        clashCounter++;
+
+        if (clashCounter >= 2)
+        {
+            stClash = true;
+            Debug.Log("Clash!");
+            clashCounter = 0;
+        }
+
+        if (clashCounter == 0)
+        {
+            stClash = false;
+        }
+
         if (collision.gameObject.CompareTag(attack1))
         {
             TakeDamage(enemyData.playerattack1);

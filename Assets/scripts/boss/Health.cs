@@ -3,10 +3,12 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     BehaviourTree bt;
-
+    bool stClash = false;
+    public bool StClash => stClash;
     public bool isHurt = false;
     public bool isDead = false;
 
+    int clashCounter = 0;
     int CurrentHealth;
      void Start()
      {
@@ -16,6 +18,20 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        clashCounter++;
+
+        if (clashCounter >= 2)
+        {
+            stClash = true;
+            Debug.Log("Clash!");
+            clashCounter = 0;
+        }
+
+        if (clashCounter == 0)
+        {
+            stClash = false;
+        }
+
         if (collision.gameObject.CompareTag("attack1"))
         {
             takeDamage(bt.enemyData.playerattack1);

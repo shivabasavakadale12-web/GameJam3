@@ -6,6 +6,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] EarlyEnemyAi earlyEnemyAi;
     PlayerCombat PlayerCombat;
     int currentHealth;
+    int clashCounter = 0;
+    bool stClash = false;
+    public bool StClash => stClash;
     const string attack1 = "attack1";
     const string attack2 = "attack2";
     const string superPowerAttack = "superpowerattack";
@@ -21,6 +24,21 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        clashCounter++;
+
+        if (clashCounter >= 2)
+        {
+            stClash = true;
+            Debug.Log("Clash!");
+            clashCounter = 0;
+        }
+
+        if (clashCounter == 0)
+        {
+            stClash = false;
+        }
+
+
         if (collision.CompareTag(attack1))
         {
             attackone();
