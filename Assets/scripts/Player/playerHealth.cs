@@ -3,6 +3,7 @@ using System.Collections;
 
 public class playerHealth : MonoBehaviour
 {
+    [SerializeField] ClashnRecover clashnRecover;
     const string enemyattack1 = "enemyattack1";
     int health;
     bool ishurt = false;
@@ -31,7 +32,7 @@ public class playerHealth : MonoBehaviour
     {
         clashCounter++;
 
-        if (clashCounter >= 2)
+        if (clashCounter >= clashnRecover.clashThreshold) 
         {
             stClash = true;
             Debug.Log("Clash!");

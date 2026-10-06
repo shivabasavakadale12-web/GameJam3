@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] ClashnRecover clashnRecover;
     [SerializeField] EnemyData enemyData;
     public EarlyEnemyAi earlyEnemyAi;
     PlayerCombat PlayerCombat;
@@ -26,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
     {
         clashCounter++;
 
-        if (clashCounter >= 2)
+        if (clashCounter >= clashnRecover.clashThreshold)
         {
             stClash = true;
             Debug.Log("Clash!");

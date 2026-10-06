@@ -5,6 +5,7 @@ public class ClashnRecover : MonoBehaviour
 {
     playerHealth player;
 
+    public int clashThreshold = 10;
     Health bossEnemy;
     AdvancedEnemyAiHealth advEnemy;
     EnemyHealth earlyEnemy;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] ClashnRecover clashnRecover;
     public BehaviourTree bt;
     public BossEnemyAi bossai;
     bool stClash = false;
@@ -22,7 +23,7 @@ public class Health : MonoBehaviour
     {
         clashCounter++;
 
-        if (clashCounter >= 2)
+        if (clashCounter >= clashnRecover.clashThreshold)
         {
             stClash = true;
             Debug.Log("Clash!");

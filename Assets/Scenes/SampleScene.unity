@@ -799,6 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967e112627fb2524c889985520fef4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClashnRecover
+  clashThreshold: 10
 --- !u!1 &1957337670
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Player '
       objectReference: {fileID: 0}
+    - target: {fileID: 7976226972690968107, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+      propertyPath: clashnRecover
+      value: 
+      objectReference: {fileID: 1575474243}
     - target: {fileID: 8685633946052172349, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.35
@@ -991,6 +996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022759800061430590, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
+      propertyPath: clashnRecover
+      value: 
+      objectReference: {fileID: 1575474243}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

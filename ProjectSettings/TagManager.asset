@@ -12,6 +12,9 @@ TagManager:
   - enemyattack3
   - enemyattack4
   - Enemy
+  - AdvancedEnemy
+  - EarlyEnemy
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

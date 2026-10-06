@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7883499595981760272}
   m_Layer: 6
   m_Name: bossEnemy
-  m_TagString: Enemy
+  m_TagString: BossEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,6 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2277673a05112de41ac38de081281b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  clashnRecover: {fileID: 0}
+  bt: {fileID: 0}
+  bossai: {fileID: 0}
   isHurt: 0
   isDead: 0
 --- !u!114 &7883499595981760272

@@ -39,8 +39,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         CurrentHitboxIndex = index;
     }
-
-
     public void LockAction(bool value)
     {
         lockaction = value;
