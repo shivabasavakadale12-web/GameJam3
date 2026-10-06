@@ -11,8 +11,8 @@ public class playerHealth : MonoBehaviour
     public bool StClash => stClash;
     public bool IsHurt => ishurt;
     Animator animator;
-    PlayerCombat playerCombat;
-    PlayerMovement playerMovement;
+    public PlayerCombat playerCombat;
+    public PlayerMovement playerMovement;
     CapsuleCollider2D playercollider;
 
     void Start()
@@ -31,18 +31,12 @@ public class playerHealth : MonoBehaviour
     {
         clashCounter++;
 
-        if(clashCounter >= 2)
+        if (clashCounter >= 2)
         {
             stClash = true;
             Debug.Log("Clash!");
-            animator.SetTrigger("IsClash");
-            playerCombat.LockActions(0.35f);
+            playerCombat.LockActions(1.35f);
             clashCounter = 0;
-        }
-
-        if (clashCounter == 0)
-        {
-            stClash = false;
         }
 
         IEnemy enemy = collision.GetComponentInParent<IEnemy>();

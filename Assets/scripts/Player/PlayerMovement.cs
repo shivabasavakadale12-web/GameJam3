@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -11,10 +12,21 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer spriteRenderer;
     bool isSprint = false;
     bool isjump = false;
-
+    bool LockAction = false;
     float cooldown = 0f;
-
     float currentspeed;
+
+    public void LockMovement(float duration)
+    {
+        StartCoroutine(LockMovementRoutine(duration));
+    }
+
+    IEnumerator LockMovementRoutine(float duration)
+    {
+        LockAction = true;
+        yield return new WaitForSeconds(duration);
+        LockAction = false;
+    }
 
     void Start()
     {
@@ -25,23 +37,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnPlayermovement(CallbackContext context)
     {
+        if (LockAction) return;
         movement = context.ReadValue<Vector2>();
     }
 
     public void OnSprint(CallbackContext context)
     {
+        if (LockAction) return;
         isSprint = context.ReadValueAsButton();
         
     }
 
     public void OnJump(CallbackContext context)
     {
+        if (LockAction) return;
         isjump = context.ReadValueAsButton();
     }
 
     void FixedUpdate()
     {
-        if(movement.x > 0)
+        if (LockAction) return;
+        if (movement.x > 0)
         {
             spriteRenderer.flipX = false;
         }

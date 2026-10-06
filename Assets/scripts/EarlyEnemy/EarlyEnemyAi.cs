@@ -13,7 +13,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     Vector2 currentposition;
     Animator animator;
     Rigidbody2D rb;
-
+    bool lockAction = false;
     bool isMoveing;
     bool isRunning;
     bool isAttacking = false;
@@ -25,6 +25,18 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     const string attack1 = "Attack1";
     const string attack2 = "Attack2";
     const string attack3 = "Attack3";
+
+    public void LockAction(float duration)
+    {
+        StartCoroutine(LockActionRoutine(duration));
+    }
+
+    IEnumerator LockActionRoutine(float duration)
+    {
+        lockAction = true;
+        yield return new WaitForSeconds(duration);
+        lockAction = false;
+    }
 
     void Start()
     {
@@ -41,6 +53,8 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
 
     void FixedUpdate()
     {
+        if (lockAction) return;
+
         currentposition = rb.position;
         Vector2 direction = (playerTransform.position - transform.position).normalized;
         distance = Vector2.Distance(playerTransform.position, transform.position);

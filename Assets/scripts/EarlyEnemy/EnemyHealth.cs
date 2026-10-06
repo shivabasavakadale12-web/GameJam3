@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
-    [SerializeField] EarlyEnemyAi earlyEnemyAi;
+    public EarlyEnemyAi earlyEnemyAi;
     PlayerCombat PlayerCombat;
     int currentHealth;
     int clashCounter = 0;

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -25,6 +26,8 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     bool hasWalkParam;
     bool hasDefendParam;
 
+    bool lockAction = false;
+
     public int CurrentHitboxIndex { get; set; }
 
     AdvancedEnemyAiHealth health;
@@ -42,8 +45,27 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public float Distance => distance;
 
 
+
+    public void LockAction(float duration)
+    {
+       
+        StartCoroutine(LockActionRoutine(duration));
+    }
+
+    IEnumerator LockActionRoutine(float duration)
+    {
+        lockAction = true;
+        yield return new WaitForSeconds(duration);
+        lockAction = false;
+    }   
+
+
     void Start()
     {
+        if(lockAction)
+        {
+            return;
+        }
         reactiontime = 0f;
         attackfrequency = enemyData.attackFrequency;
         moveSpeed = enemyData.moveSpeed;

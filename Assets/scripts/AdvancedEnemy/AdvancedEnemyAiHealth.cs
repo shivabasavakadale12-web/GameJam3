@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AdvancedEnemyAiHealth : MonoBehaviour
 {
-    AdvancedEnemyAI enemyScript;
+    public AdvancedEnemyAI enemyScript;
     int currentHealth;
     int clashCounter = 0;
     bool stClash = false;

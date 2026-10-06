@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BossEnemyAi : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class BossEnemyAi : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     bool inRange = false;
+    bool LockAction = false;
 
     public float Distance => distance;
     public bool InRange => inRange;
@@ -19,6 +21,19 @@ public class BossEnemyAi : MonoBehaviour
 
     const string walk = "Walk";
     const string run = "Run";
+
+    public void LockMovement(float duration)
+    {
+        StartCoroutine(LockMovementRoutine(duration));
+    }
+
+    IEnumerator LockMovementRoutine(float duration)
+    {
+        LockAction = true;
+        yield return new WaitForSeconds(duration);
+        LockAction = false;
+    }
+
     void Start()
     {
         runspeed = enemyData.runspeed;
@@ -30,6 +45,8 @@ public class BossEnemyAi : MonoBehaviour
 
     void Update()
     {
+        if (LockAction) return;
+
         if (playerPosition == null) return;
         Vector2 direction = (playerPosition.position - transform.position).normalized;
         distance = Vector2.Distance(transform.position, playerPosition.position);
@@ -60,17 +77,7 @@ public class BossEnemyAi : MonoBehaviour
         else if (distance > enemyData.attackRange && inRange)
         {
             inRange = false;
-        }
-
-        if (inRange)
-        {
-            DecideToDo();
-        }    
-
-    }
-
-    void DecideToDo()
-    {
+        }   
 
     }
 }

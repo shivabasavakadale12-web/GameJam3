@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    BehaviourTree bt;
+    public BehaviourTree bt;
+    public BossEnemyAi bossai;
     bool stClash = false;
     public bool StClash => stClash;
     public bool isHurt = false;
@@ -12,6 +13,7 @@ public class Health : MonoBehaviour
     int CurrentHealth;
      void Start()
      {
+        bossai = GetComponent<BossEnemyAi>();
         bt = GetComponent<BehaviourTree>();
         CurrentHealth = bt.enemyData.health;
      }
@@ -25,11 +27,6 @@ public class Health : MonoBehaviour
             stClash = true;
             Debug.Log("Clash!");
             clashCounter = 0;
-        }
-
-        if (clashCounter == 0)
-        {
-            stClash = false;
         }
 
         if (collision.gameObject.CompareTag("attack1"))

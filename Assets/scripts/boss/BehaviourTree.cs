@@ -23,6 +23,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
     bool powerAttackRollPassed = false;
+    bool lockaction = false;
     int counterattack = 0;
     float WindowTimer = 0f;
     float counterTendencyBonus = 0f;
@@ -37,6 +38,12 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     public void SetCurrentHitbox(int index)
     {
         CurrentHitboxIndex = index;
+    }
+
+
+    public void LockAction(bool value)
+    {
+        lockaction = value;
     }
 
     void Start()
@@ -58,7 +65,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         ActionNode dead = new ActionNode(() =>
 
         {
-            if(!deadDone)
+            if(!deadDone && !lockaction)
             {
              rb.linearVelocity = Vector2.zero;
              bossEnemy.enabled = false;
@@ -71,7 +78,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         ActionNode hurt = new ActionNode(() =>
         {
-            if (!isHurt)
+            if (!isHurt && !lockaction)
             {
                 animator.SetTrigger("hurt");
                 HasCheckedCurrentSwing = true;
@@ -84,7 +91,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         ActionNode defend = new ActionNode(() =>
         {
-           if(!HasCheckedCurrentSwing && !isDefending && !DefendingStarted)
+           if(!HasCheckedCurrentSwing && !isDefending && !DefendingStarted && !lockaction)
            {
                 HasCheckedCurrentSwing = true;
 
@@ -115,7 +122,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         {
             coolDown += Time.deltaTime;
 
-            if (coolDown >= enemyData.attackFrequency)
+            if (coolDown >= enemyData.attackFrequency && !lockaction)
             {
               int randomRoll = Random.Range(0, 100);
 
@@ -145,7 +152,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
 
             powerAttackCoolDown += Time.deltaTime;
-            if (powerAttackCoolDown >= enemyData.attackFrequency && !powerAttackStarted)
+            if (powerAttackCoolDown >= enemyData.attackFrequency && !powerAttackStarted && !lockaction)
             {
                 powerAttackRollPassed = false;
                 int randomRoll = Random.Range(0, 100);
@@ -199,6 +206,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
      void Update()
      {
+        if(lockaction)
+        {
+            return;
+        }
         rootNode.Evaluate();
         WindowTimer += Time.deltaTime;
 
