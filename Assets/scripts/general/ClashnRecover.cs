@@ -3,105 +3,80 @@ using UnityEngine;
 
 public class ClashnRecover : MonoBehaviour
 {
-    playerHealth player;
-
     public int clashThreshold = 10;
-    Health bossEnemy;
-    AdvancedEnemyAiHealth advEnemy;
-    EnemyHealth earlyEnemy;
+    [SerializeField] float clashDuration = 1.5f;
+    [SerializeField] float hitWindow = 3f;      
+    [SerializeField] float pushDistance = 1f;
+    [SerializeField] float pushTime = 0.2f;
+    [SerializeField] playerHealth player;
 
-    bool isClash = false;
+    int playerCount, enemyCount;
+    float lastHitTime;
+    bool isClash;
 
-    GameObject currentEnemy;
-
-    void Start()
+    public void ReportHit(bool fromPlayer, GameObject enemyObj)
     {
-        player = GameObject.FindGameObjectWithTag("Player")
-            .GetComponent<playerHealth>();
+        if (isClash || enemyObj == null) return;
 
-        var bossObj = GameObject.FindGameObjectsWithTag("BossEnemy");
-        if (bossObj.Length > 0)
-            bossEnemy = bossObj[0].GetComponent<Health>();
+        if (Time.time - lastHitTime > hitWindow)
+        {
+            playerCount = 0;
+            enemyCount = 0;
+        }
+        lastHitTime = Time.time;
 
-        var advObj = GameObject.FindGameObjectsWithTag("AdvancedEnemy");
-        if (advObj.Length > 0)
-            advEnemy = advObj[0].GetComponent<AdvancedEnemyAiHealth>();
+        if (fromPlayer) playerCount++;
+        else enemyCount++;
 
-        var earlyObj = GameObject.FindGameObjectsWithTag("EarlyEnemy");
-        if (earlyObj.Length > 0)
-            earlyEnemy = earlyObj[0].GetComponent<EnemyHealth>();
+        if (playerCount + enemyCount >= clashThreshold)
+            StartCoroutine(HandleClash(enemyObj));
     }
 
-    void Update()
-    {
-        if (isClash)
-            return;
-
-        if (player.StClash)
-        {
-            currentEnemy = player.gameObject;
-            StartCoroutine(HandleClash());
-        }
-        else if (bossEnemy != null && bossEnemy.StClash)
-        {
-            currentEnemy = bossEnemy.gameObject;
-            StartCoroutine(HandleClash());
-        }
-        else if (advEnemy != null && advEnemy.StClash)
-        {
-            currentEnemy = advEnemy.gameObject;
-            StartCoroutine(HandleClash());
-        }
-        else if (earlyEnemy != null && earlyEnemy.StClash)
-        {
-            currentEnemy = earlyEnemy.gameObject;
-            StartCoroutine(HandleClash());
-        }
-    }
-
-    IEnumerator HandleClash()
+    IEnumerator HandleClash(GameObject enemyObj)
     {
         isClash = true;
 
-        // Lock player
-        player.playerCombat.LockActions(1.5f);
-        player.playerMovement.LockMovement(1.5f);
+        Health boss = enemyObj.GetComponentInParent<Health>();
+        AdvancedEnemyAiHealth adv = enemyObj.GetComponentInParent<AdvancedEnemyAiHealth>();
+        EnemyHealth early = enemyObj.GetComponentInParent<EnemyHealth>();
 
-        // Lock current enemy
-        if (currentEnemy == bossEnemy?.gameObject)
+        player.playerCombat.LockActions(clashDuration);
+        player.playerMovement.LockMovement(clashDuration);
+
+        if (boss != null)
         {
-            bossEnemy.bt.LockAction(true);
-            bossEnemy.bossai.LockMovement(1.5f);
+            boss.bt.LockAction(true);
+            boss.bossai.LockMovement(clashDuration);
         }
-        else if (currentEnemy == advEnemy?.gameObject)
+        else if (adv != null) adv.enemyScript.LockAction(clashDuration);
+        else if (early != null) early.earlyEnemyAi.LockAction(clashDuration);
+
+        bool playerDominant = playerCount > enemyCount;
+        bool enemyDominant = enemyCount > playerCount;
+
+        float side = Mathf.Sign(enemyObj.transform.position.x - player.transform.position.x);
+        Vector2 dir = new Vector2(side, 0f);
+        Vector3 playerMove = (!enemyDominant) ? (Vector3)(-dir * pushDistance) : Vector3.zero;
+        Vector3 enemyMove = (!playerDominant) ? (Vector3)(dir * pushDistance) : Vector3.zero;
+
+        float t = 0f;
+        Vector3 pStart = player.transform.position;
+        Vector3 eStart = enemyObj.transform.position;
+        while (t < pushTime)
         {
-            advEnemy.enemyScript.LockAction(1.5f);
-        }
-        else if (currentEnemy == earlyEnemy?.gameObject)
-        {
-            earlyEnemy.earlyEnemyAi.LockAction(1.5f);
-        }
-
-        Vector2 direction = currentEnemy.transform.position - player.transform.position;
-        direction.Normalize();
-
-        float pushDistance = 1f;
-
-        player.transform.position -= (Vector3)(direction * pushDistance);
-        currentEnemy.transform.position += (Vector3)(direction * pushDistance);
-
-        yield return new WaitForSeconds(1.5f);
-
-        if (currentEnemy == bossEnemy?.gameObject)
-        {
-            bossEnemy.bt.LockAction(false);
-        }
-        else if (currentEnemy == advEnemy?.gameObject)
-        {
-            advEnemy.enemyScript.LockAction(1.5f);
+            t += Time.deltaTime;
+            float k = Mathf.Clamp01(t / pushTime);
+            if (player != null) player.transform.position = pStart + playerMove * k;
+            if (enemyObj != null) enemyObj.transform.position = eStart + enemyMove * k;
+            yield return null;
         }
 
-        currentEnemy = null;
+        yield return new WaitForSeconds(Mathf.Max(0f, clashDuration - pushTime));
+
+        if (boss != null) boss.bt.LockAction(false);
+
+        playerCount = 0;
+        enemyCount = 0;
         isClash = false;
     }
 }

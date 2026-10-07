@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] ClashnRecover clashnRecover;
     [SerializeField] EnemyData enemyData;
     public EarlyEnemyAi earlyEnemyAi;
+    ClashnRecover clashnRecover;
     PlayerCombat PlayerCombat;
     int currentHealth;
-    int clashCounter = 0;
-    bool stClash = false;
-    public bool StClash => stClash;
     const string attack1 = "attack1";
     const string attack2 = "attack2";
     const string superPowerAttack = "superpowerattack";
     Animator animator;
+
+    void Awake()
+    {
+        clashnRecover = FindFirstObjectByType<ClashnRecover>();
+    }
 
     void Start()
     {
@@ -22,37 +24,24 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = enemyData.health;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        clashCounter++;
+        bool isPlayerAttack =
+            collision.CompareTag(attack1) ||
+            collision.CompareTag(attack2) ||
+            collision.CompareTag(superPowerAttack);
 
-        if (clashCounter >= clashnRecover.clashThreshold)
-        {
-            stClash = true;
-            Debug.Log("Clash!");
-            clashCounter = 0;
-        }
+        if (!isPlayerAttack) return;
 
-        if (clashCounter == 0)
-        {
-            stClash = false;
-        }
-
+        if (clashnRecover != null)
+            clashnRecover.ReportHit(true, gameObject);
 
         if (collision.CompareTag(attack1))
-        {
             attackone();
-        }
         else if (collision.CompareTag(attack2))
-        {
             attacktwo();
-        }
         else if (collision.CompareTag(superPowerAttack))
-        {
             SuperPowerAttack();
-        }
-
     }
 
     void hurtanimation()
@@ -63,17 +52,18 @@ public class EnemyHealth : MonoBehaviour
     void attackone()
     {
         TakeDamage(enemyData.playerattack1);
-    }    
+    }
 
     void attacktwo()
     {
         TakeDamage(enemyData.playerpowerattack);
-    }    
-    
+    }
+
     void SuperPowerAttack()
     {
         TakeDamage(enemyData.playersuperpowerattack);
     }
+
     void Die()
     {
         Destroy(gameObject);
@@ -81,18 +71,16 @@ public class EnemyHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        if(earlyEnemyAi.IsDefending)
+        if (earlyEnemyAi.IsDefending)
         {
             if (PlayerCombat.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack)
             {
                 damage /= 2;
             }
-
             else
             {
                 damage = 0;
             }
-
         }
 
         currentHealth -= damage;
@@ -104,8 +92,7 @@ public class EnemyHealth : MonoBehaviour
             animator.SetTrigger("IsDead");
             Invoke("Die", 1f);
         }
-
-        else if(!earlyEnemyAi.IsDefending)
+        else if (!earlyEnemyAi.IsDefending)
         {
             hurtanimation();
         }

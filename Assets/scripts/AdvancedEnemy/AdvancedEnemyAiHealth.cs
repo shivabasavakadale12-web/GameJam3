@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class AdvancedEnemyAiHealth : MonoBehaviour
 {
-    [SerializeField] ClashnRecover clashnRecover;
+    ClashnRecover clashnRecover;
     public AdvancedEnemyAI enemyScript;
     int currentHealth;
-    int clashCounter = 0;
-    bool stClash = false;
-    public bool StClash => stClash;
     bool isHurt = false;
     bool isdead = false;
     bool gotHit = false;
@@ -24,6 +21,11 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
     [SerializeField] EnemyData enemyData;
 
+    void Awake()
+    {
+        clashnRecover = FindFirstObjectByType<ClashnRecover>();
+    }
+
     void Start()
     {
         hits = 0;
@@ -39,37 +41,22 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        bool isPlayerAttack =
+            collision.gameObject.CompareTag(attack1) ||
+            collision.gameObject.CompareTag(attack2) ||
+            collision.gameObject.CompareTag(superPowerAttack);
 
-        clashCounter++;
+        if (!isPlayerAttack) return;
 
-        if (clashCounter >= clashnRecover.clashThreshold)
-        {
-            stClash = true;
-            Debug.Log("Clash!");
-            clashCounter = 0;
-        }
-
-        if (clashCounter == 0)
-        {
-            stClash = false;
-        }
+        if (clashnRecover != null)
+            clashnRecover.ReportHit(true, gameObject);
 
         if (collision.gameObject.CompareTag(attack1))
-        {
             TakeDamage(enemyData.playerattack1);
-        }
-
-
         else if (collision.gameObject.CompareTag(attack2))
-        {
             TakeDamage(enemyData.playerpowerattack);
-        }
-
-
         else if (collision.gameObject.CompareTag(superPowerAttack))
-        {
             TakeDamage(enemyData.playersuperpowerattack);
-        }
     }
 
     public void HurtDone()
@@ -80,7 +67,7 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
 
     void TakeDamage(int amount)
     {
-        if (!enemyScript.enabled) return; // already dead, ignore further hits
+        if (!enemyScript.enabled) return; 
 
         hits += 1;
         isHurt = true;
@@ -90,7 +77,6 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
             currentHealth -= amount;
             Debug.Log("Enemy Health: " + currentHealth);
         }
-
         else
         {
             Debug.Log("Enemy is defending");
@@ -110,7 +96,6 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
                 dead();
             }
         }
-
         else if (!gotHit && !enemyScript.isDefending)
         {
             gotHit = true;
@@ -127,6 +112,7 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
     {
         isdead = true;
     }
+
     void dead()
     {
         Destroy(gameObject);

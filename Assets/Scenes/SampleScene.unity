@@ -183,6 +183,17 @@ Transform:
   - {fileID: 1557612981}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &380430623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7976226972690968107, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+  m_PrefabInstance: {fileID: 7487420857119569652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2920a78bc0014ba8dc7e7f4a06e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &417104498
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +811,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClashnRecover
   clashThreshold: 10
+  clashDuration: 1.5
+  hitWindow: 3
+  pushDistance: 1
+  pushTime: 0.2
+  player: {fileID: 380430623}
 --- !u!1 &1957337670
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1011,10 @@ PrefabInstance:
     - target: {fileID: 5442275924047159078, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846006822388405779, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
+      propertyPath: m_Constraints
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9022759800061430590, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
       propertyPath: clashnRecover

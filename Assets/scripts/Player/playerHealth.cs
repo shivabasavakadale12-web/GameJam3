@@ -7,9 +7,6 @@ public class playerHealth : MonoBehaviour
     const string enemyattack1 = "enemyattack1";
     int health;
     bool ishurt = false;
-    int clashCounter = 0;
-    bool stClash = false;
-    public bool StClash => stClash;
     public bool IsHurt => ishurt;
     Animator animator;
     public PlayerCombat playerCombat;
@@ -30,18 +27,12 @@ public class playerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        clashCounter++;
-
-        if (clashCounter >= clashnRecover.clashThreshold) 
-        {
-            stClash = true;
-            Debug.Log("Clash!");
-            playerCombat.LockActions(1.35f);
-            clashCounter = 0;
-        }
-
         IEnemy enemy = collision.GetComponentInParent<IEnemy>();
         if (enemy == null) return;
+
+        Component enemyComp = enemy as Component;
+        if (clashnRecover != null && enemyComp != null)
+            clashnRecover.ReportHit(false, enemyComp.gameObject);
 
         if (playerCombat.IsDefending)
         {
@@ -50,52 +41,25 @@ public class playerHealth : MonoBehaviour
         }
 
         if (collision.CompareTag(enemyattack1))
-        {
-            playerCombat.CancelAttack();
-            playerCombat.cancleDefending();
-            playerCombat.LockActions(0.35f);
-
-            ishurt = true;
-            animator.SetTrigger("IsHurt");
-
-            TakeDamage(enemy.Enemydata.attack1);
-        }
-
+            HandleHit(enemy.Enemydata.attack1);
         else if (collision.CompareTag("enemyattack2"))
-        {
-            playerCombat.CancelAttack();
-            playerCombat.cancleDefending();
-            playerCombat.LockActions(0.35f);
-
-            ishurt = true;
-            animator.SetTrigger("IsHurt");
-
-            TakeDamage(enemy.Enemydata.attack2);
-        }
-
+            HandleHit(enemy.Enemydata.attack2);
         else if (collision.CompareTag("enemyattack3"))
-        {
-            playerCombat.CancelAttack();
-            playerCombat.cancleDefending();
-            playerCombat.LockActions(0.35f);
-
-            ishurt = true;
-            animator.SetTrigger("IsHurt");
-
-            TakeDamage(enemy.Enemydata.attack3);
-        }
-
+            HandleHit(enemy.Enemydata.attack3);
         else if (collision.CompareTag("enemyattack4"))
-        {
-            playerCombat.CancelAttack();
-            playerCombat.cancleDefending();
-            playerCombat.LockActions(0.35f);
+            HandleHit(enemy.Enemydata.counterattackdamage);
+    }
 
-            ishurt = true;
-            animator.SetTrigger("IsHurt");
+    void HandleHit(int damage)
+    {
+        playerCombat.CancelAttack();
+        playerCombat.cancleDefending();
+        playerCombat.LockActions(0.35f);
 
-            TakeDamage(enemy.Enemydata.counterattackdamage);
-        }
+        ishurt = true;
+        animator.SetTrigger("IsHurt");
+
+        TakeDamage(damage);
     }
 
     public void Hurtstatedone()
