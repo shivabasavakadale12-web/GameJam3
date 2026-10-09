@@ -35,6 +35,14 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
     public EnemyData Enemydata => enemyData;
 
+    public void SetColliderOff()
+    {
+        foreach (var hitbox in HitBox)
+        {
+            hitbox.enabled = false;
+        }
+    }
+
     public void SetCurrentHitbox(int index)
     {
         CurrentHitboxIndex = index;

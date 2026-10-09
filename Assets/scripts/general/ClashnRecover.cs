@@ -65,6 +65,7 @@ public class ClashnRecover : MonoBehaviour
         while (t < pushTime)
         {
             t += Time.deltaTime;
+            boss.bt.SetColliderOff();
             float k = Mathf.Clamp01(t / pushTime);
             if (player != null) player.transform.position = pStart + playerMove * k;
             if (enemyObj != null) enemyObj.transform.position = eStart + enemyMove * k;

@@ -31,9 +31,11 @@ public class PlayerCombat : MonoBehaviour
         playerHealth = GetComponent<playerHealth>();
         animator = GetComponent<Animator>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
-        HitBox[0].enabled = false;
-        HitBox[1].enabled = false;
-        HitBox[2].enabled = false;
+
+        foreach (var hitbox in HitBox)
+        {
+            hitbox.enabled = false;
+        }
     }
 
     public bool IsActionLocked { get; private set; }
@@ -45,6 +47,11 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator ActionLockRoutine(float duration)
     {
+        foreach (var hitbox in HitBox)
+        {
+            hitbox.enabled = false;
+        }
+
         IsActionLocked = true;
         CancelAttack();
         cancleDefending();
