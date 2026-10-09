@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2277673a05112de41ac38de081281b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  clashnRecover: {fileID: 0}
   bt: {fileID: 0}
   bossai: {fileID: 0}
   isHurt: 0

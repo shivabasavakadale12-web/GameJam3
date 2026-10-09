@@ -26,7 +26,7 @@ public class EnemyData : ScriptableObject
     public float counterAttackTendency;
     public bool HasSuperPower;
     public float SuperReactionTime;
-    public float SwapnaGoodGirl;
+    public float ExtraTendency;
     public EnemyAttackData[] enemyattackdata;
 
 }

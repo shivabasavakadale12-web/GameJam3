@@ -1012,14 +1012,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8846006822388405779, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
-      propertyPath: m_Constraints
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9022759800061430590, guid: 392377942c3a52546b4f6199e56c6838, type: 3}
-      propertyPath: clashnRecover
-      value: 
-      objectReference: {fileID: 1575474243}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

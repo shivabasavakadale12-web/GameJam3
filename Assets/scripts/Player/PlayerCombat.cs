@@ -46,9 +46,12 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator ActionLockRoutine(float duration)
     {
         IsActionLocked = true;
-
+        CancelAttack();
+        cancleDefending();
+        animator.Play("Hurt", 0, 0f);
         yield return new WaitForSeconds(duration);
 
+        defendfinished();
         IsActionLocked = false;
     }
 

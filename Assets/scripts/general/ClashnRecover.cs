@@ -45,7 +45,7 @@ public class ClashnRecover : MonoBehaviour
 
         if (boss != null)
         {
-            boss.bt.LockAction(true);
+            boss.bt.LockAction(true);  
             boss.bossai.LockMovement(clashDuration);
         }
         else if (adv != null) adv.enemyScript.LockAction(clashDuration);

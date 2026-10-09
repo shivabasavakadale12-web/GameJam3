@@ -296,7 +296,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         if (counterattackIndex >= 3)
         {
-            counterTendencyBonus = Mathf.Min(counterTendencyBonus + enemyData.SwapnaGoodGirl, 50f); 
+            counterTendencyBonus = Mathf.Min(counterTendencyBonus + enemyData.ExtraTendency, 50f); 
         }
 
         animator.SetTrigger("Attack4");
