@@ -12,7 +12,7 @@ public class ClashnRecover : MonoBehaviour
 
     int playerCount, enemyCount;
     float lastHitTime;
-    bool isClash;
+    public bool isClash;
 
     public void ReportHit(bool fromPlayer, GameObject enemyObj)
     {

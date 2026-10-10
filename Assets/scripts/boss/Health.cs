@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -45,18 +46,27 @@ public class Health : MonoBehaviour
 
     void takeDamage(int amount)
     {
-        if (!bt.isDefending)
+        if (!bt.isDefending && !isHurt)
         {
             CurrentHealth -= amount;
 
             if (CurrentHealth <= 0)
                 isDead = true;
             else
+            {
                 isHurt = true;
+                StartCoroutine(HurtOff());
+            }
+
         }
         else
         {
             Debug.Log("Damage blocked — isDefending stuck at: " + Time.time);
         }
+    }
+    IEnumerator HurtOff()
+    {
+        yield return new WaitForSeconds(0.64f);
+        isHurt = false;
     }
 }

@@ -84,7 +84,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         ActionNode hurt = new ActionNode(() =>
         {
-            if (!isHurt && !lockaction)
+            if (!isHurt)
             {
                 animator.SetTrigger("hurt");
                 HasCheckedCurrentSwing = true;
@@ -193,7 +193,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         Node HurtBranch = new SequenceNode(new List<Node>
         {
-            new ConditionNode(() => Health.isHurt), hurt
+            new ConditionNode(() => Health.isHurt && !lockaction), hurt
         });
     
         Node attackBranch = new SequenceNode(new List<Node> {
