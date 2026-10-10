@@ -24,6 +24,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool powerAttackStarted = false;
     bool powerAttackRollPassed = false;
     bool lockaction = false;
+    bool isattack = false;
+    public bool isAttack => isattack;
     int counterattack = 0;
     float WindowTimer = 0f;
     float counterTendencyBonus = 0f;
@@ -205,7 +207,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt && !isDefending), defend
         });
 
-        List<Node> children = new List<Node> { DeathBranch, HurtBranch, DefendBranch, PowerAttackBranch, attackBranch };
+        List<Node> children = new List<Node> { DeathBranch, HurtBranch, PowerAttackBranch, attackBranch, DefendBranch};
 
         rootNode = new SelectorNode(children);
      }
@@ -335,4 +337,13 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         powerAttackStarted = false;
     }
 
+    public void attackOn()
+    {
+        isattack = true;
+    }
+    
+    public void attackOff()
+    {
+        isattack = false;
+    }
 }

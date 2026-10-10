@@ -115,6 +115,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: attackOn
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.45
     functionName: EnableCurrentHitbox
     data: 
@@ -124,6 +131,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.85
     functionName: DisableCurrentHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.05
+    functionName: attackOff
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

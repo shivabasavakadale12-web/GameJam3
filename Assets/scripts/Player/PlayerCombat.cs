@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     BoxCollider2D[] HitBox;
     Animator animator;
     playerHealth playerHealth;
+    BehaviourTree enemyBT;
     bool isDefending = false;
     bool isAttacking = false;
     public bool IsDefending => isDefending;
@@ -28,6 +29,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
+        enemyBT = FindFirstObjectByType<BehaviourTree>();
         playerHealth = GetComponent<playerHealth>();
         animator = GetComponent<Animator>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
@@ -66,9 +68,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
         {
-            Debug.Log("OnAttack1 fired at " + Time.time);
             isAttacking = true;
 
             int randomValue = Random.Range(0, 100);
@@ -90,7 +91,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void PowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
         {
             Debug.Log("OnAttack2 fired at " + Time.time);
             CurrentAttack = AttackType.PowerAttack;
@@ -101,7 +102,7 @@ public class PlayerCombat : MonoBehaviour
     
     public void SuperPowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
         {
             CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;
