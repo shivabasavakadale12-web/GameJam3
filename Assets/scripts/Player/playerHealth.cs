@@ -52,11 +52,13 @@ public class playerHealth : MonoBehaviour
 
     void HandleHit(int damage)
     {
+       // if (ishurt) return;
+
+        ishurt = true;
         playerCombat.CancelAttack();
         playerCombat.cancleDefending();
         playerCombat.LockActions(0.35f);
 
-        ishurt = true;
         animator.SetTrigger("IsHurt");
 
         TakeDamage(damage);

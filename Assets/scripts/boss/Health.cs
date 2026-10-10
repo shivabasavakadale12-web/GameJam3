@@ -8,7 +8,12 @@ public class Health : MonoBehaviour
     public bool isHurt = false;
     public bool isDead = false;
 
+    // Keep this slightly longer than the hurt clip length
+    [SerializeField] float hurtDuration = 0.64f;
+
     int CurrentHealth;
+    Animator animator;
+    Coroutine hurtRoutine;
 
     ClashnRecover clashnRecover;
 
@@ -21,6 +26,7 @@ public class Health : MonoBehaviour
     {
         bossai = GetComponent<BossEnemyAi>();
         bt = GetComponent<BehaviourTree>();
+        animator = GetComponent<Animator>();
         CurrentHealth = bt.enemyData.health;
     }
 
@@ -46,27 +52,47 @@ public class Health : MonoBehaviour
 
     void takeDamage(int amount)
     {
-        if (!bt.isDefending && !isHurt)
-        {
-            CurrentHealth -= amount;
+        if (isDead) return;
 
-            if (CurrentHealth <= 0)
-                isDead = true;
-            else
-            {
-                isHurt = true;
-                StartCoroutine(HurtOff());
-            }
-
-        }
-        else
+        if (bt.isDefending)
         {
-            Debug.Log("Damage blocked — isDefending stuck at: " + Time.time);
+            Debug.Log("Damage blocked (defending) at: " + Time.time);
+            return;
         }
+
+        bool lethal = amount >= CurrentHealth;
+
+        // Hurt window protects against follow-up hits, but a killing blow always lands
+        if (isHurt && !lethal)
+        {
+            Debug.Log("Hit ignored (hurt window) at: " + Time.time);
+            return;
+        }
+
+        CurrentHealth -= amount;
+
+        if (CurrentHealth <= 0)
+        {
+            isDead = true;
+            bt.InterruptAction();
+            return;
+        }
+
+        if (clashnRecover != null && clashnRecover.isClash) return;
+
+        bt.InterruptAction();
+
+        isHurt = true;
+        animator.SetTrigger("hurt");
+
+        if (hurtRoutine != null) StopCoroutine(hurtRoutine);
+        hurtRoutine = StartCoroutine(HurtOff());
     }
+
     IEnumerator HurtOff()
     {
-        yield return new WaitForSeconds(0.64f);
+        yield return new WaitForSeconds(hurtDuration);
         isHurt = false;
+        hurtRoutine = null;
     }
 }

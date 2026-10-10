@@ -16,13 +16,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     Rigidbody2D rb;
     public bool isDefending = false;
     bool DefendingStarted = false;
-    bool defendrollPassed = false;
-    bool isHurt = false;
     public bool deadDone = false;
     bool HasCheckedCurrentSwing = false;
     bool isSuperAggressive = false;
     bool powerAttackStarted = false;
-    bool powerAttackRollPassed = false;
     bool lockaction = false;
     bool isattack = false;
     public bool isAttack => isattack;
@@ -49,13 +46,35 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         CurrentHitboxIndex = index;
     }
+
     public void LockAction(bool value)
     {
         lockaction = value;
     }
 
+    public void InterruptAction()
+    {
+        StopAllCoroutines();
+
+        isDefending = false;
+        DefendingStarted = false;
+        powerAttackStarted = false;
+        isAttacking = false;
+        isattack = false;
+
+        SetColliderOff();
+
+        if (animator != null)
+        {
+            animator.ResetTrigger("Attack2");
+            animator.ResetTrigger("Attack3");
+            animator.ResetTrigger("Attack4");
+            animator.ResetTrigger("defend");
+        }
+    }
+
     void Start()
-     {
+    {
         coolDown = 0f;
         rb = GetComponent<Rigidbody2D>();
         Health = GetComponent<Health>();
@@ -71,36 +90,26 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         animator = GetComponent<Animator>();
 
         ActionNode dead = new ActionNode(() =>
-
         {
-            if(!deadDone && !lockaction)
+            if (!deadDone && !lockaction)
             {
-             rb.linearVelocity = Vector2.zero;
-             bossEnemy.enabled = false;
-             animator.SetTrigger("dead");
-             Invoke("DeadDone", 3f);
-             deadDone = true;
+                rb.linearVelocity = Vector2.zero;
+                bossEnemy.enabled = false;
+                animator.SetTrigger("dead");
+                Invoke("DeadDone", 3f);
+                deadDone = true;
             }
             return NodeState.Success;
         });
 
-        ActionNode hurt = new ActionNode(() =>
-        {
-            if (!isHurt)
-            {
-                animator.SetTrigger("hurt");
-                HasCheckedCurrentSwing = true;
-                isHurt = true;
-                isDefending = false;
-                DefendingStarted = false;
-            }
-            return NodeState.Success;
-        });
 
         ActionNode defend = new ActionNode(() =>
         {
-           if(!HasCheckedCurrentSwing && !isDefending && !DefendingStarted && !lockaction)
-           {
+            if (DefendingStarted || isDefending)
+                return NodeState.Success;
+
+            if (!HasCheckedCurrentSwing && !lockaction)
+            {
                 HasCheckedCurrentSwing = true;
 
                 int randomRoll = Random.Range(0, 100);
@@ -108,84 +117,74 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
                 if (randomRoll <= enemyData.defenseTendency)
                 {
-                    defendrollPassed = true;
                     DefendingStarted = true;
 
-                    if (player.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack || player.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
+                    if (player.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack ||
+                        player.CurrentAttack == PlayerCombat.AttackType.PowerAttack)
                     {
                         StartCoroutine(SuperDefending());
                     }
                     else
                     {
-                        
                         StartCoroutine(DefendWithReaction());
                     }
+                    return NodeState.Success;
                 }
-           }
-            return defendrollPassed ? NodeState.Success : NodeState.Failure;
-        }   
-        );
+            }
+
+            return NodeState.Failure;
+        });
 
         ActionNode action1 = new ActionNode(() =>
         {
-            coolDown += Time.deltaTime;
-
             if (coolDown >= enemyData.attackFrequency && !lockaction)
             {
-              int randomRoll = Random.Range(0, 100);
+                int randomRoll = Random.Range(0, 100);
 
-
-
-                if(randomRoll <= 50)
-                {               
-                 animator.SetTrigger("Attack4");
-                 Debug.Log("action1 is running");
-                 isAttacking = true;
-                 coolDown = 0f;
+                if (randomRoll <= 50)
+                {
+                    animator.SetTrigger("Attack4");
+                    Debug.Log("action1 is running");
                 }
-
                 else
                 {
                     animator.SetTrigger("Attack2");
                     Debug.Log("action2 is running");
-                    isAttacking = true;
-                    coolDown = 0f;
                 }
+
+                isAttacking = true;
+                coolDown = 0f;
+                return NodeState.Success;
             }
-            return NodeState.Success;
+            return NodeState.Failure;
         });
 
         ActionNode powerAttack = new ActionNode(() =>
         {
-
-
-            powerAttackCoolDown += Time.deltaTime;
             if (powerAttackCoolDown >= enemyData.attackFrequency && !powerAttackStarted && !lockaction)
             {
-                powerAttackRollPassed = false;
                 int randomRoll = Random.Range(0, 100);
                 float effectiveTendency = Mathf.Clamp(enemyData.counterAttackTendency + counterTendencyBonus, 0, 100);
 
+                powerAttackStarted = true;
+
                 if (randomRoll <= effectiveTendency)
                 {
-                    powerAttackRollPassed = true;
-                    powerAttackStarted = true;
                     StartCoroutine(Powerattacck());
                 }
                 else
                 {
-                    powerAttackRollPassed = false;
-                    powerAttackStarted = true;
                     StartCoroutine(DefaultPowerAttack());
                 }
+                return NodeState.Success;
             }
-            return powerAttackRollPassed ? NodeState.Success : NodeState.Failure;
+            return NodeState.Failure;
         });
 
         Node PowerAttackBranch = new SequenceNode(new List<Node>
         {
             new ConditionNode(() => bossEnemy.InRange && isSuperAggressive
-            && !isDefending && !Health.isHurt), powerAttack
+                && !isDefending && !DefendingStarted && !Health.isHurt), powerAttack
         });
 
         Node DeathBranch = new SequenceNode(new List<Node>
@@ -193,35 +192,36 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             new ConditionNode(() => Health.isDead), dead
         });
 
-        Node HurtBranch = new SequenceNode(new List<Node>
-        {
-            new ConditionNode(() => Health.isHurt && !lockaction), hurt
-        });
-    
-        Node attackBranch = new SequenceNode(new List<Node> {
-                            new ConditionNode(() => bossEnemy.InRange && !isAttacking), action1});
-
-
         Node DefendBranch = new SequenceNode(new List<Node>
         {
-            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt && !isDefending), defend
+            new ConditionNode(() => player.IsAttacking && bossEnemy.InRange && !Health.isHurt), defend
         });
 
-        List<Node> children = new List<Node> { DeathBranch, HurtBranch, PowerAttackBranch, attackBranch, DefendBranch};
+        Node attackBranch = new SequenceNode(new List<Node>
+        {
+            new ConditionNode(() => bossEnemy.InRange && !isAttacking && !isDefending
+                && !DefendingStarted && !Health.isHurt), action1
+        });
+
+        List<Node> children = new List<Node> { DeathBranch, PowerAttackBranch, DefendBranch, attackBranch };
 
         rootNode = new SelectorNode(children);
-     }
+    }
 
-     void Update()
-     {
-        if(lockaction)
+    void Update()
+    {
+        if (lockaction)
         {
             return;
         }
+
+        coolDown += Time.deltaTime;
+        powerAttackCoolDown += Time.deltaTime;
+
         rootNode.Evaluate();
         WindowTimer += Time.deltaTime;
 
-        if(WindowTimer >= 14f)
+        if (WindowTimer >= 14f)
         {
             isSuperAggressive = counterattack >= 3;
             Debug.Log("Aggression window closed — counterattack: " + counterattack + " isSuperAggressive: " + isSuperAggressive);
@@ -229,12 +229,11 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             counterattack = 0;
         }
 
-
-        if(!player.IsAttacking)
+        if (!player.IsAttacking)
         {
             HasCheckedCurrentSwing = false;
         }
-     }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -251,7 +250,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             case PlayerCombat.AttackType.Attack2:
                 counterattackIndex += 1;
                 break;
-
             case PlayerCombat.AttackType.PowerAttack:
                 counterattackIndex += 2;
                 break;
@@ -259,15 +257,12 @@ public class BehaviourTree : MonoBehaviour, IEnemy
                 counterattackIndex += 3;
                 break;
         }
-
     }
 
     void HurtDone()
     {
         Health.isHurt = false;
-        isHurt = false;
     }
-
 
     public void Defending()
     {
@@ -285,12 +280,12 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
 
-        if (isHurt || Health.isDead)
+        if (Health.isHurt || Health.isDead)
         {
             DefendingStarted = false;
             yield break;
         }
-     
+
         animator.SetTrigger("defend");
         isDefending = true;
 
@@ -304,12 +299,19 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(enemyData.SuperReactionTime);
 
+        if (Health.isHurt || Health.isDead)
+        {
+            powerAttackStarted = false;
+            yield break;
+        }
+
         if (counterattackIndex >= 3)
         {
-            counterTendencyBonus = Mathf.Min(counterTendencyBonus + enemyData.ExtraTendency, 50f); 
+            counterTendencyBonus = Mathf.Min(counterTendencyBonus + enemyData.ExtraTendency, 50f);
         }
 
         animator.SetTrigger("Attack4");
+        isAttacking = true;
         powerAttackCoolDown = 0f;
         powerAttackStarted = false;
         counterattackIndex = 0;
@@ -318,21 +320,32 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     IEnumerator SuperDefending()
     {
         yield return new WaitForSeconds(enemyData.SuperReactionTime);
-        if (isHurt || Health.isDead)
+
+        if (Health.isHurt || Health.isDead)
         {
             DefendingStarted = false;
             yield break;
         }
+
         animator.SetTrigger("defend");
         isDefending = true;
         yield return new WaitForSeconds(0.867f);
         isDefending = false;
         DefendingStarted = false;
     }
+
     IEnumerator DefaultPowerAttack()
     {
         yield return new WaitForSeconds(enemyData.reactionTime);
+
+        if (Health.isHurt || Health.isDead)
+        {
+            powerAttackStarted = false;
+            yield break;
+        }
+
         animator.SetTrigger("Attack3");
+        isAttacking = true;
         powerAttackCoolDown = 0f;
         powerAttackStarted = false;
     }
@@ -340,8 +353,16 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     public void attackOn()
     {
         isattack = true;
+
+        StartCoroutine(AttackOffRountine());
     }
-    
+
+    IEnumerator AttackOffRountine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isattack = false;
+    }
+
     public void attackOff()
     {
         isattack = false;
