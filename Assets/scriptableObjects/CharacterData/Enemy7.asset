@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9dab30da21a094ea0e96be244f0b42, type: 3}
+  m_Name: Enemy7
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  characterName: 7
+  characterSprite: {fileID: -7356969958810384157, guid: 3dc0897fc96cde54596dddd91fed96dc, type: 3}
+  Character: {fileID: 8659781045606829627, guid: 316cc044d3074904fa8a1028fed60d12, type: 3}
+  enemyData: {fileID: 11400000, guid: 03d4c398295278a4e8febb46f48f4784, type: 2}

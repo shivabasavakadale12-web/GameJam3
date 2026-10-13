@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911c1a108004655458b5cdc0f95cdd79, type: 3}
+  m_Name: Character Roster
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterRoster
+  characters:
+  - {fileID: 11400000, guid: a594b1de0564a9c43a76fdef603907bf, type: 2}
+  - {fileID: 11400000, guid: c9d8a22fff9087c419cccffa8c765d8d, type: 2}
+  - {fileID: 11400000, guid: 7bf4d0ec468268847ae4fc262786b5be, type: 2}
+  - {fileID: 11400000, guid: 4868e0597e6bd8e46bf44d7961ff794b, type: 2}
+  - {fileID: 11400000, guid: 246ddc7519eedcb4a93a5c0799415add, type: 2}
+  - {fileID: 11400000, guid: 9fd385996e28bc647bda3ff96c1a9a4b, type: 2}
+  - {fileID: 11400000, guid: 4009fc19a1e27d144b07f17bd8bedd6e, type: 2}
+  - {fileID: 11400000, guid: ba5499cdaa09889478a8e6dee62c447e, type: 2}

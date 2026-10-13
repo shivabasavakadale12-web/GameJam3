@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 2491706184980898484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 0, z: 0}
-  m_LocalScale: {x: 3.6, y: 1, z: 1}
+  m_LocalPosition: {x: 0.11985998, y: 0.05885618, z: 0}
+  m_LocalScale: {x: 2.6453881, y: 0.73483, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284403865737069062}
@@ -104,8 +104,8 @@ Transform:
   m_GameObject: {fileID: 3495790515298301931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.218, y: 0, z: 0}
-  m_LocalScale: {x: 3.6550002, y: 1, z: 1}
+  m_LocalPosition: {x: 0.14042999, y: 0.05885618, z: 0}
+  m_LocalScale: {x: 2.685804, y: 0.73483, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284403865737069062}
@@ -587,6 +587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd2920a78bc0014ba8dc7e7f4a06e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  clashnRecover: {fileID: 0}
+  playerCombat: {fileID: 0}
+  playerMovement: {fileID: 0}
 --- !u!1 &6338864984694266029
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,8 +616,8 @@ Transform:
   m_GameObject: {fileID: 6338864984694266029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.197, y: 0.007, z: 0}
-  m_LocalScale: {x: 3.1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.125, y: 0.064, z: 0}
+  m_LocalScale: {x: 2.277973, y: 0.73483, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284403865737069062}

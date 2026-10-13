@@ -223,7 +223,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         if (WindowTimer >= 14f)
         {
-            isSuperAggressive = counterattack >= 3;
+            isSuperAggressive = counterattack >= 2;
             Debug.Log("Aggression window closed — counterattack: " + counterattack + " isSuperAggressive: " + isSuperAggressive);
             WindowTimer = 0f;
             counterattack = 0;
@@ -305,7 +305,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             yield break;
         }
 
-        if (counterattackIndex >= 3)
+        if (counterattackIndex >= 2)
         {
             counterTendencyBonus = Mathf.Min(counterTendencyBonus + enemyData.ExtraTendency, 50f);
         }
