@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TournamentScene.unity
     guid: 12ddc20d4e839fb4eb24e0d267a4e64e
   - enabled: 1
-    path: Assets/Scenes/Fight arena.unity
+    path: Assets/Scenes/FightArena.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

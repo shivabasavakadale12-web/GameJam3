@@ -29,7 +29,6 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
-        enemyBT = FindFirstObjectByType<BehaviourTree>();
         playerHealth = GetComponent<playerHealth>();
         animator = GetComponent<Animator>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
@@ -38,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
         {
             hitbox.enabled = false;
         }
+        enemyBT = FindFirstObjectByType<BehaviourTree>();
     }
 
     public bool IsActionLocked { get; private set; }
