@@ -4,10 +4,10 @@ public class MatchManager : MonoBehaviour
 {
     [SerializeField] Transform EnemySpawn; 
     [SerializeField]  CharacterData defaultEnemy;
-
+    [SerializeField] PlayerCombat player;
     CharacterData chosen;
 
-    void Start()
+    void Awake()
     {
         if(MatchSettings.isValid())
         {
@@ -21,5 +21,13 @@ public class MatchManager : MonoBehaviour
         }
 
         GameObject enemy = Instantiate(chosen.Character, EnemySpawn.position, Quaternion.identity);
+        IEnemy ai = enemy.GetComponent<IEnemy>();
+
+        if(ai == null)
+        {
+            Debug.LogWarning("this enemy has no Ienemy " + chosen.name );
+            return;
+        }
+        player.SetEnemy(ai);
     }
 }

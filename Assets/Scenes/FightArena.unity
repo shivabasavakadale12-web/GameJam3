@@ -526,6 +526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MatchManager
   EnemySpawn: {fileID: 39146338}
   defaultEnemy: {fileID: 11400000, guid: ba5499cdaa09889478a8e6dee62c447e, type: 2}
+  player: {fileID: 7487420857119569653}
 --- !u!1 &1131912797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1002,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+--- !u!114 &7487420857119569653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4876830473720069995, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
+  m_PrefabInstance: {fileID: 7487420857119569652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3704168104c7547bf18cb9c251619a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -25,7 +25,21 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     const string attack1 = "Attack1";
     const string attack2 = "Attack2";
     const string attack3 = "Attack3";
+    public bool IsAttacking => isAttacking;
 
+    public bool IsStrikeActive
+    {
+        get
+        {
+            if (Hitbox == null) return false;
+
+            foreach (var hb in Hitbox)
+            {
+                if (hb.enabled) return true;
+            }
+            return false;
+        }
+    }
     public void LockAction(float duration)
     {
         StartCoroutine(LockActionRoutine(duration));

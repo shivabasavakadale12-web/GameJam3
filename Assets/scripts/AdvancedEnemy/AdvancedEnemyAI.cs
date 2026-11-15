@@ -44,7 +44,20 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public Transform PlayerTransform => playerTransform;
     public float Distance => distance;
 
+    public bool IsAttacking => isAttacking;
+    public bool IsStrikeActive
+    {
+        get
+        {
+            if (hitbox == null) return false;
 
+            foreach (var hb in hitbox)
+            {
+                if (hb.enabled) return true;
+            }
+            return false;
+        }
+    }
 
     public void LockAction(float duration)
     {

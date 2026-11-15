@@ -7,7 +7,7 @@ public class PlayerCombat : MonoBehaviour
     BoxCollider2D[] HitBox;
     Animator animator;
     playerHealth playerHealth;
-    BehaviourTree enemyBT;
+    IEnemy Enemy;
     bool isDefending = false;
     bool isAttacking = false;
     public bool IsDefending => isDefending;
@@ -37,10 +37,13 @@ public class PlayerCombat : MonoBehaviour
         {
             hitbox.enabled = false;
         }
-        enemyBT = FindFirstObjectByType<BehaviourTree>();
     }
 
     public bool IsActionLocked { get; private set; }
+    public void SetEnemy(IEnemy inComing)
+    {
+        Enemy = inComing;
+    }
 
     public void LockActions(float duration)
     {
@@ -68,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
         {
             isAttacking = true;
 
@@ -91,7 +94,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void PowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
+        
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
         {
             Debug.Log("OnAttack2 fired at " + Time.time);
             CurrentAttack = AttackType.PowerAttack;
@@ -100,9 +104,11 @@ public class PlayerCombat : MonoBehaviour
         }
     }
     
+
     public void SuperPowerAttack(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && !enemyBT.isAttack)
+        
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
         {
             CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;

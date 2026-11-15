@@ -29,7 +29,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     int counterattackIndex = 0;
 
     public bool isAttacking = false;
-
+    public bool IsAttacking => isAttacking;
+    public bool IsStrikeActive => isattack;
     public int CurrentHitboxIndex { get; set; }
 
     public EnemyData Enemydata => enemyData;
