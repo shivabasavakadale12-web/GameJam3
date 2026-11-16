@@ -71,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             isAttacking = true;
 
@@ -95,7 +95,7 @@ public class PlayerCombat : MonoBehaviour
     public void PowerAttack(CallbackContext context)
     {
         
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             Debug.Log("OnAttack2 fired at " + Time.time);
             CurrentAttack = AttackType.PowerAttack;
@@ -108,7 +108,7 @@ public class PlayerCombat : MonoBehaviour
     public void SuperPowerAttack(CallbackContext context)
     {
         
-        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && Enemy == null || !Enemy.IsStrikeActive)
+        if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;
