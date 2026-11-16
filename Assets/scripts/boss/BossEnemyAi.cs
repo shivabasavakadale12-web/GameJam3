@@ -17,7 +17,7 @@ public class BossEnemyAi : MonoBehaviour
 
     public float Distance => distance;
     public bool InRange => inRange;
-
+    Vector2 direction;
 
     const string walk = "Walk";
     const string run = "Run";
@@ -48,14 +48,12 @@ public class BossEnemyAi : MonoBehaviour
         if (LockAction) return;
 
         if (playerPosition == null) return;
-        Vector2 direction = (playerPosition.position - transform.position).normalized;
+         direction = (playerPosition.position - transform.position).normalized;
         distance = Vector2.Distance(transform.position, playerPosition.position);
 
         if (distance <= enemyData.attackRange)
         {
-            animator.SetBool(walk, false);
-            animator.SetBool(run, false);
-            rb.linearVelocity = Vector2.zero;
+            KeepDistance();
         }
         else if (distance > enemyData.rundistance)
         {
@@ -80,4 +78,23 @@ public class BossEnemyAi : MonoBehaviour
         }   
 
     }
+
+    void KeepDistance()
+    {
+        if(distance < enemyData.keepDistance)
+        {
+            animator.SetBool(walk, true);
+            animator.SetBool(run, false);
+            rb.linearVelocity = -direction * moveSpeed;
+
+        }
+
+        else
+        {
+
+        animator.SetBool(walk, false);
+        animator.SetBool(run, false);
+        rb.linearVelocity = Vector2.zero;
+        }
+    }    
 }

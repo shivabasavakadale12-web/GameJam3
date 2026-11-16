@@ -344,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 9222538097970140317}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.79, y: 0.34, z: 0}
+  m_LocalPosition: {x: -1.37, y: 0.4, z: 0}
   m_LocalScale: {x: 6.4624, y: 6.4624, z: 6.4624}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e256d0476468b043b1ed5d30de7e573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdvancedEnemyAiHealth
+  enemyScript: {fileID: 0}
   hits: 0
   enemyData: {fileID: 11400000, guid: 61b0c2e0c09ac104f92ba0c08a4f6116, type: 2}
 --- !u!50 &3533472615480663669

@@ -65,7 +65,12 @@ public class ClashnRecover : MonoBehaviour
         while (t < pushTime)
         {
             t += Time.deltaTime;
-            boss.bt.SetColliderOff();
+
+            if (boss != null && boss.bt != null)
+            {
+                boss.bt.SetColliderOff();
+            }
+
             float k = Mathf.Clamp01(t / pushTime);
             if (player != null) player.transform.position = pStart + playerMove * k;
             if (enemyObj != null) enemyObj.transform.position = eStart + enemyMove * k;
@@ -74,7 +79,10 @@ public class ClashnRecover : MonoBehaviour
 
         yield return new WaitForSeconds(Mathf.Max(0f, clashDuration - pushTime));
 
-        if (boss != null) boss.bt.LockAction(false);
+        if (boss != null && boss.bt != null)
+        {
+            boss.bt.LockAction(false);
+        }
 
         playerCount = 0;
         enemyCount = 0;

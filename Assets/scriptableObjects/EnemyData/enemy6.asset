@@ -14,19 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
   attack1: 4
+  attack1Range: 0
   attack2: 6
+  attack2Range: 0
   attack3: 9
+  attack3Range: 0
   counterattackdamage: 11
+  counterattackRange: 0
   playerattack1: 3
   playerpowerattack: 9
   playersuperpowerattack: 30
+  keepDistance: 2.2
   moveSpeed: 2.12
   runspeed: 2.7
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
   attackFrequency: 1.23
-  attackRange: 2.24
+  attackRange: 2.4
   defenseTendency: 82
   reactionTime: 0.28
   dodgeTendency: 0
@@ -35,7 +40,7 @@ MonoBehaviour:
   counterAttackTendency: 100
   HasSuperPower: 0
   SuperReactionTime: 0.18
-  SwapnaGoodGirl: 20
+  ExtraTendency: 0
   enemyattackdata:
   - animationTrigger: Attack1
     damage: 4
