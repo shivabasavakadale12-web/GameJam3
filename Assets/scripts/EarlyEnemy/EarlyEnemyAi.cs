@@ -52,6 +52,17 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
         lockAction = false;
     }
 
+
+    public void StopFighting()
+    {
+        rb.linearVelocity = Vector2.zero;
+        animator.SetBool("Iswalking", false);
+        animator.SetBool("Isrunning", false);
+        lockAction = true;
+        StopAllCoroutines();
+        Debug.Log("StopFighting called on " + name);
+
+    }
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;

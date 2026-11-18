@@ -527,6 +527,7 @@ MonoBehaviour:
   EnemySpawn: {fileID: 39146338}
   defaultEnemy: {fileID: 11400000, guid: ba5499cdaa09889478a8e6dee62c447e, type: 2}
   player: {fileID: 7487420857119569653}
+  playerHealth: {fileID: 380430623}
 --- !u!1 &1131912797
 GameObject:
   m_ObjectHideFlags: 0

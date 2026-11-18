@@ -5,6 +5,8 @@ public class MatchManager : MonoBehaviour
     [SerializeField] Transform EnemySpawn; 
     [SerializeField]  CharacterData defaultEnemy;
     [SerializeField] PlayerCombat player;
+    [SerializeField] playerHealth playerHealth;
+    IEnemy ai;
     CharacterData chosen;
 
     void Awake()
@@ -21,7 +23,7 @@ public class MatchManager : MonoBehaviour
         }
 
         GameObject enemy = Instantiate(chosen.Character, EnemySpawn.position, Quaternion.identity);
-        IEnemy ai = enemy.GetComponent<IEnemy>();
+        ai = enemy.GetComponent<IEnemy>();
 
         if(ai == null)
         {
@@ -29,5 +31,13 @@ public class MatchManager : MonoBehaviour
             return;
         }
         player.SetEnemy(ai);
+        playerHealth.onDead += PlayerLost;
+    }
+
+
+    void PlayerLost()
+    {
+        Debug.Log("you lost");
+        ai?.StopFighting();
     }
 }

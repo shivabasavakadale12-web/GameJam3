@@ -43,7 +43,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public AdvancedEnemyAiHealth Health => health;
     public Transform PlayerTransform => playerTransform;
     public float Distance => distance;
-
+    bool stopAction = false;
     public bool IsAttacking => isAttacking;
     public bool IsStrikeActive
     {
@@ -64,8 +64,16 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
        
         StartCoroutine(LockActionRoutine(duration));
     }
+    public void StopFighting()
+    {
+        stopAction = true;
+        rb.linearVelocity = Vector2.zero;
+        animator.SetBool(walk, false);
+        animator.SetBool(run, false);
+        Debug.Log("StopFighting called on " + name);
+    }
 
-    IEnumerator LockActionRoutine(float duration)
+        IEnumerator LockActionRoutine(float duration)
     {
         lockAction = true;
         yield return new WaitForSeconds(duration);
@@ -111,6 +119,8 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
 
     void FixedUpdate()
     {
+        if (stopAction) return;
+
         Vector2 direction =
          (playerTransform.position - transform.position).normalized;
 
@@ -190,18 +200,21 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
 
     public void AttackingDone()
     {
+        if (stopAction) return;
         isAttacking = false;
     }
 
 
     public void DefendingDone()
     {
+        if (stopAction) return;
         isDefending = false;
         ChangeToAttack();
     }
 
     public void CounterDone()
     {
+        if (stopAction) return;
         ChangeToAttack();
     }
 
@@ -226,14 +239,12 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
         if (!wasPlayerAttacking && isPlayerAttacking && !isDefending && hasDefendParam)
         {
             ChangeToDefense();
-            // player JUST started attacking
         }
 
 
         if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking)
         {
             ChangeToCounter();
-            // player JUST stopped attacking
         }
 
         wasPlayerAttacking = isPlayerAttacking;

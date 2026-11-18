@@ -22,6 +22,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool powerAttackStarted = false;
     bool lockaction = false;
     bool isattack = false;
+    bool stopAction = false;
     public bool isAttack => isattack;
     int counterattack = 0;
     float WindowTimer = 0f;
@@ -72,6 +73,14 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             animator.ResetTrigger("Attack4");
             animator.ResetTrigger("defend");
         }
+    }
+
+    public void StopFighting()
+    {
+        stopAction = true;
+        InterruptAction();
+        Debug.Log("StopFighting called on " + name);
+
     }
 
     void Start()
@@ -211,7 +220,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
     void Update()
     {
-        if (lockaction)
+        if (lockaction || stopAction)
         {
             return;
         }
