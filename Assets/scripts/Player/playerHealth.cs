@@ -12,7 +12,6 @@ public class playerHealth : MonoBehaviour
     public PlayerCombat playerCombat;
     public PlayerMovement playerMovement;
     CapsuleCollider2D playercollider;
-    bool isdead = false;
     public event System.Action onDead;
     void Start()
     {
@@ -76,7 +75,6 @@ public class playerHealth : MonoBehaviour
         Debug.Log("Player Health: " + health);
         if (health <= 0)
         {
-            isdead = true;
             onDead?.Invoke();
             playercollider.enabled = false;
             playerMovement.enabled = false;
@@ -89,7 +87,6 @@ public class playerHealth : MonoBehaviour
     IEnumerator Deadroutine()
     {
         yield return new WaitForSeconds(2f);
-
-       // Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

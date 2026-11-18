@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AdvancedEnemyAiHealth : MonoBehaviour
+public class AdvancedEnemyAiHealth : MonoBehaviour, IhealthEnemy
 {
     ClashnRecover clashnRecover;
     public AdvancedEnemyAI enemyScript;
@@ -18,6 +18,9 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
     bool hasDeathParam;
 
     Animator animator;
+
+    public event System.Action EnemyOnDead;
+
 
     [SerializeField] EnemyData enemyData;
 
@@ -85,7 +88,7 @@ public class AdvancedEnemyAiHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             enemyScript.enabled = false;
-
+            EnemyOnDead?.Invoke();
             if (hasDeathParam)
             {
                 animator.SetTrigger(death);

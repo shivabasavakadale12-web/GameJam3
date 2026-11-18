@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     IEnemy Enemy;
     bool isDefending = false;
     bool isAttacking = false;
+    bool StopAttack = false;
     public bool IsDefending => isDefending;
     public bool IsAttacking => isAttacking;
     public AttackType CurrentAttack {  get; private set; }
@@ -27,6 +28,10 @@ public class PlayerCombat : MonoBehaviour
         SuperPowerAttack,
     }
 
+    public void StopAction()
+    {
+        StopAttack = true;
+    }
     void Start()
     {
         playerHealth = GetComponent<playerHealth>();
@@ -71,6 +76,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
+        if (StopAttack) return;
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             isAttacking = true;
@@ -94,7 +100,9 @@ public class PlayerCombat : MonoBehaviour
 
     public void PowerAttack(CallbackContext context)
     {
-        
+        if (StopAttack) return;
+
+
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             Debug.Log("OnAttack2 fired at " + Time.time);
@@ -107,7 +115,9 @@ public class PlayerCombat : MonoBehaviour
 
     public void SuperPowerAttack(CallbackContext context)
     {
-        
+        if (StopAttack) return;
+
+
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
             CurrentAttack = AttackType.SuperPowerAttack;
@@ -118,6 +128,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnDefend(CallbackContext context)
     {
+        if (StopAttack) return;
+
         if (context.performed && !isDefending && !playerHealth.IsHurt && !IsActionLocked)
         {
             animator.SetTrigger("OnDefend");

@@ -28,7 +28,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     float WindowTimer = 0f;
     float counterTendencyBonus = 0f;
     int counterattackIndex = 0;
-
     public bool isAttacking = false;
     public bool IsAttacking => isAttacking;
     public bool IsStrikeActive => isattack;

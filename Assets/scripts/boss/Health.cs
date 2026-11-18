@@ -1,22 +1,21 @@
 using System.Collections;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IhealthEnemy
 {
     public BehaviourTree bt;
     public BossEnemyAi bossai;
     public bool isHurt = false;
     public bool isDead = false;
 
-    // Keep this slightly longer than the hurt clip length
     [SerializeField] float hurtDuration = 0.64f;
 
     int CurrentHealth;
     Animator animator;
     Coroutine hurtRoutine;
-
     ClashnRecover clashnRecover;
 
+    public event System.Action EnemyOnDead;
     void Awake()
     {
         clashnRecover = FindFirstObjectByType<ClashnRecover>();
@@ -62,7 +61,6 @@ public class Health : MonoBehaviour
 
         bool lethal = amount >= CurrentHealth;
 
-        // Hurt window protects against follow-up hits, but a killing blow always lands
         if (isHurt && !lethal)
         {
             Debug.Log("Hit ignored (hurt window) at: " + Time.time);
@@ -73,6 +71,7 @@ public class Health : MonoBehaviour
 
         if (CurrentHealth <= 0)
         {
+            EnemyOnDead?.Invoke();
             isDead = true;
             bt.InterruptAction();
             return;

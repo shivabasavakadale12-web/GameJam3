@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IhealthEnemy
 {
     [SerializeField] EnemyData enemyData;
     public EarlyEnemyAi earlyEnemyAi;
@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     const string attack2 = "attack2";
     const string superPowerAttack = "superpowerattack";
     Animator animator;
+    public event System.Action EnemyOnDead;
 
     void Awake()
     {
@@ -89,6 +90,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            EnemyOnDead?.Invoke();
             animator.SetTrigger("IsDead");
             Invoke("Die", 1f);
         }
