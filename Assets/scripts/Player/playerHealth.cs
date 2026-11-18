@@ -27,6 +27,7 @@ public class playerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("collided by = " + collision.name);
         IEnemy enemy = collision.GetComponentInParent<IEnemy>();
         if (enemy == null) return;
 

@@ -65,6 +65,10 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
         SetColliderOff();
 
+        if(!deadDone)
+        {
+           // animator.SetTrigger("hurt");
+        }
         if (animator != null)
         {
             animator.ResetTrigger("Attack2");
@@ -91,11 +95,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         bossEnemy = GetComponent<BossEnemyAi>();
         HitBox = GetComponentsInChildren<BoxCollider2D>();
 
-        foreach (var hitbox in HitBox)
-        {
-            hitbox.enabled = false;
-        }
-
+        
+       
         animator = GetComponent<Animator>();
 
         ActionNode dead = new ActionNode(() =>
@@ -127,6 +128,11 @@ public class BehaviourTree : MonoBehaviour, IEnemy
                 if (randomRoll <= enemyData.defenseTendency)
                 {
                     DefendingStarted = true;
+
+                    foreach (var hitbox in HitBox)
+                    {
+                        hitbox.enabled = false;
+                    }
 
                     if (player.CurrentAttack == PlayerCombat.AttackType.SuperPowerAttack ||
                         player.CurrentAttack == PlayerCombat.AttackType.PowerAttack)

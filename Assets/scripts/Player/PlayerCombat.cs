@@ -65,7 +65,7 @@ public class PlayerCombat : MonoBehaviour
         IsActionLocked = true;
         CancelAttack();
         cancleDefending();
-        animator.Play("Hurt", 0, 0f);
+        //animator.Play("Hurt", 0, 0f);
         yield return new WaitForSeconds(duration);
 
         defendfinished();
