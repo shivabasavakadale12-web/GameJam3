@@ -27,7 +27,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     bool hasDefendParam;
 
     bool lockAction = false;
-
+    bool CounterAttack = false;
     public int CurrentHitboxIndex { get; set; }
 
     AdvancedEnemyAiHealth health;
@@ -77,6 +77,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     {
         lockAction = true;
         yield return new WaitForSeconds(duration);
+        CounterAttack = false;
         lockAction = false;
     }   
 
@@ -190,6 +191,8 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
 
     public void ChangeToCounter()
     {
+        
+        CounterAttack = true;
         ChangeState(CounterAttackState);
     }
 
@@ -242,7 +245,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
         }
 
 
-        if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking)
+        if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking && !CounterAttack)
         {
             ChangeToCounter();
         }

@@ -12,6 +12,8 @@ public class playerHealth : MonoBehaviour
     public PlayerCombat playerCombat;
     public PlayerMovement playerMovement;
     CapsuleCollider2D playercollider;
+    int hitNumber;
+
     public event System.Action onDead;
     void Start()
     {
@@ -27,7 +29,6 @@ public class playerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collided by = " + collision.name);
         IEnemy enemy = collision.GetComponentInParent<IEnemy>();
         if (enemy == null) return;
 
@@ -48,7 +49,10 @@ public class playerHealth : MonoBehaviour
         else if (collision.CompareTag("enemyattack3"))
             HandleHit(enemy.Enemydata.attack3);
         else if (collision.CompareTag("enemyattack4"))
+        {
+            hitNumber++;
             HandleHit(enemy.Enemydata.counterattackdamage);
+        }
     }
 
     void HandleHit(int damage)

@@ -12,8 +12,8 @@ public class AdvancedEnemyAiCounterAttackState : AdvancedEnemyState
 
     public override void Enter()
     {
-        enemy.moveSpeed += 1.7f;
-        enemy.attackfrequency = 0.4f;
+        enemy.moveSpeed += enemy.Enemydata.CounterAttackMovespeed;
+        enemy.attackfrequency = enemy.Enemydata.CounterAttackFrequency;
         AttackFrequency = 0f;
     }
 

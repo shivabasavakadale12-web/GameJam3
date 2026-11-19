@@ -22,6 +22,8 @@ public class EnemyData : ScriptableObject
     public float walkdistance;
     public int attackDamage;
     public float attackFrequency;
+    public float CounterAttackFrequency;
+    public float CounterAttackMovespeed;
     public float attackRange;
     public float defenseTendency;
     public float reactionTime;

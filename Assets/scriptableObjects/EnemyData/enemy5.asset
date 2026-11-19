@@ -13,27 +13,36 @@ MonoBehaviour:
   m_Name: enemy5
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
-  attack1: 4
-  attack2: 6
-  attack3: 9
-  counterattackdamage: 11
+  attack1: 3
+  attack1Range: 0
+  attack2: 5
+  attack2Range: 0
+  attack3: 6
+  attack3Range: 0
+  counterattackdamage: 8
+  counterattackRange: 0
   playerattack1: 3
   playerpowerattack: 9
   playersuperpowerattack: 18
+  keepDistance: 0
   moveSpeed: 2.12
   runspeed: 2.7
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
-  attackFrequency: 1.23
-  attackRange: 2.24
-  defenseTendency: 13.1
+  attackFrequency: 2.1
+  CounterAttackFrequency: 1.7
+  CounterAttackMovespeed: 0.7
+  attackRange: 3
+  defenseTendency: 55
   reactionTime: 0.81
   dodgeTendency: 0
   superAttackTendency: 0
   aggression: 58.3
   counterAttackTendency: 13.4
   HasSuperPower: 0
+  SuperReactionTime: 0
+  ExtraTendency: 0
   enemyattackdata:
   - animationTrigger: Attack1
     damage: 8

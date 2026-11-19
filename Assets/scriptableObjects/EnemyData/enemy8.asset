@@ -13,19 +13,26 @@ MonoBehaviour:
   m_Name: enemy8
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
-  attack1: 12
-  attack2: 15
-  attack3: 18
-  counterattackdamage: 11
+  attack1: 2
+  attack1Range: 0
+  attack2: 4
+  attack2Range: 0
+  attack3: 7
+  attack3Range: 0
+  counterattackdamage: 9
+  counterattackRange: 0
   playerattack1: 3
   playerpowerattack: 9
-  playersuperpowerattack: 18
+  playersuperpowerattack: 25
+  keepDistance: 0
   moveSpeed: 2.96
   runspeed: 5.3
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
   attackFrequency: 1.23
+  CounterAttackFrequency: 0
+  CounterAttackMovespeed: 0
   attackRange: 3.63
   defenseTendency: 13.1
   reactionTime: 0.81
@@ -34,6 +41,8 @@ MonoBehaviour:
   aggression: 58.3
   counterAttackTendency: 13.4
   HasSuperPower: 0
+  SuperReactionTime: 0
+  ExtraTendency: 0
   enemyattackdata:
   - animationTrigger: Attack1
     damage: 12
