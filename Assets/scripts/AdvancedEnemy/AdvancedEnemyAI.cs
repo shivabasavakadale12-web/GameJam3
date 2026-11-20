@@ -218,6 +218,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public void CounterDone()
     {
         if (stopAction) return;
+        CounterAttack = false;
         ChangeToAttack();
     }
 

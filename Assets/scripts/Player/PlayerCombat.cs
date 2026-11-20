@@ -19,6 +19,8 @@ public class PlayerCombat : MonoBehaviour
     const string powerAttack = "PowerAttack";
     const string superPowerAttack = "SuperPowerAttack";
 
+    float coolDown = 1f;
+
     public enum AttackType
     {
         None,
@@ -65,7 +67,6 @@ public class PlayerCombat : MonoBehaviour
         IsActionLocked = true;
         CancelAttack();
         cancleDefending();
-        //animator.Play("Hurt", 0, 0f);
         yield return new WaitForSeconds(duration);
 
         defendfinished();
@@ -76,6 +77,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnAttack1(CallbackContext context)
     {
+        
         if (StopAttack) return;
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
@@ -87,11 +89,13 @@ public class PlayerCombat : MonoBehaviour
             {
                 CurrentAttack = AttackType.Attack1;
                 animator.SetTrigger(attack1);
+                StartCoroutine(AttackDone(0.47f));
             }
             else
             {
                 CurrentAttack = AttackType.Attack2;
                 animator.SetTrigger(attack2);
+                StartCoroutine(AttackDone(0.72f));
             }
 
         }
@@ -105,10 +109,11 @@ public class PlayerCombat : MonoBehaviour
 
         if (context.performed && !isAttacking && !playerHealth.IsHurt && !IsActionLocked && (Enemy == null || !Enemy.IsStrikeActive))
         {
+            isAttacking = true;
             Debug.Log("OnAttack2 fired at " + Time.time);
             CurrentAttack = AttackType.PowerAttack;
-            isAttacking = true;
             animator.SetTrigger(powerAttack);
+            StartCoroutine(AttackDone(0.43f));
         }
     }
     
@@ -123,6 +128,7 @@ public class PlayerCombat : MonoBehaviour
             CurrentAttack = AttackType.SuperPowerAttack;
             isAttacking = true;
             animator.SetTrigger(superPowerAttack);
+            StartCoroutine(AttackDone(0.45f));
         }
     }
 
@@ -136,6 +142,13 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    IEnumerator AttackDone(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        
+        yield return new WaitForSeconds(coolDown);
+        attackfinished();
+    }
     public void EnableAttackHitbox()
     {
         HitBox[0].enabled = true;

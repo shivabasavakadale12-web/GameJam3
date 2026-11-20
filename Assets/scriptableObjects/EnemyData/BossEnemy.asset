@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ecb9a6376e799f429c01fafc4a41f12, type: 3}
-  m_Name: enemy8
+  m_Name: BossEnemy
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
-  attack1: 2
+  attack1: 4
   attack1Range: 0
-  attack2: 4
+  attack2: 5
   attack2Range: 0
   attack3: 7
   attack3Range: 0
@@ -23,39 +23,44 @@ MonoBehaviour:
   counterattackRange: 0
   playerattack1: 3
   playerpowerattack: 9
-  playersuperpowerattack: 25
-  keepDistance: 0
-  moveSpeed: 2.96
-  runspeed: 5.3
+  playersuperpowerattack: 20
+  keepDistance: 2.2
+  moveSpeed: 2.12
+  runspeed: 2.7
   rundistance: 4.78
   walkdistance: 1.1
   attackDamage: 22
   attackFrequency: 1.23
-  CounterAttackFrequency: 0
-  CounterAttackMovespeed: 0
-  attackRange: 3.63
-  defenseTendency: 13.1
-  reactionTime: 0.81
+  CounterAttackFrequency: 1
+  CounterAttackMovespeed: 0.9
+  attackRange: 2.4
+  defenseTendency: 82
+  reactionTime: 0.28
   dodgeTendency: 0
-  superAttackTendency: 0
+  superAttackTendency: 60
   aggression: 58.3
-  counterAttackTendency: 13.4
+  counterAttackTendency: 100
   HasSuperPower: 0
-  SuperReactionTime: 0
+  SuperReactionTime: 0.18
   ExtraTendency: 0
   enemyattackdata:
   - animationTrigger: Attack1
-    damage: 12
+    damage: 4
     attackRange: 2.4
     isRanged: 0
     HitboxIndex: 0
   - animationTrigger: Attack2
-    damage: 15
+    damage: 6
     attackRange: 2.4
     isRanged: 0
     HitboxIndex: 1
   - animationTrigger: Attack3
-    damage: 18
+    damage: 9
     attackRange: 2.4
     isRanged: 0
     HitboxIndex: 2
+  - animationTrigger: Attack4
+    damage: 15
+    attackRange: 2.67
+    isRanged: 0
+    HitboxIndex: 3
