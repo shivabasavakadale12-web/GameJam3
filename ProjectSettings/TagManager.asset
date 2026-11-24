@@ -15,6 +15,7 @@ TagManager:
   - AdvancedEnemy
   - EarlyEnemy
   - BossEnemy
+  - EndCollider
   layers:
   - Default
   - TransparentFX

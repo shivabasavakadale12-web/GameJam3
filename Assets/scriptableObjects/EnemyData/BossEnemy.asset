@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   health: 100
   attack1: 4
-  attack1Range: 0
+  attack1Range: 2.4
   attack2: 5
-  attack2Range: 0
+  attack2Range: 2.4
   attack3: 7
   attack3Range: 0
   counterattackdamage: 9
-  counterattackRange: 0
+  counterattackRange: 2.2
   playerattack1: 3
   playerpowerattack: 9
   playersuperpowerattack: 20
-  keepDistance: 2.2
+  keepDistance: 2.1
   moveSpeed: 2.12
   runspeed: 2.7
   rundistance: 4.78

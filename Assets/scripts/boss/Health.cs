@@ -11,6 +11,7 @@ public class Health : MonoBehaviour, IhealthEnemy
     [SerializeField] float hurtDuration = 0.64f;
 
     int CurrentHealth;
+    public int currentHealth => CurrentHealth;
     Animator animator;
     Coroutine hurtRoutine;
     ClashnRecover clashnRecover;

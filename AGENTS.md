@@ -2,7 +2,7 @@
 - Project name: GameJam3
 - Unity version: Unity 6000.3.10f1
 - Active game object:
-  - Name: Canvas
-  - Tag: Untagged
-  - Layer: UI
+  - Name: bossEnemy
+  - Tag: BossEnemy
+  - Layer: Enemy
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

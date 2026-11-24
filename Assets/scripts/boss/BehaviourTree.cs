@@ -7,6 +7,8 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     public BoxCollider2D[] HitBox;
     public EnemyData enemyData;
     Health Health;
+
+    BossEnemyAi boss;
     PlayerCombat player;
     Node rootNode;
     float coolDown;
@@ -23,6 +25,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     bool lockaction = false;
     bool isattack = false;
     bool stopAction = false;
+    bool Superpowerattack = false;
     public bool isAttack => isattack;
     int counterattack = 0;
     float WindowTimer = 0f;
@@ -89,6 +92,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     void Start()
     {
         coolDown = 0f;
+        boss = GetComponent<BossEnemyAi>();
         rb = GetComponent<Rigidbody2D>();
         Health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
@@ -178,14 +182,17 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         {
             if (powerAttackCoolDown >= enemyData.attackFrequency && !powerAttackStarted && !lockaction)
             {
-                int randomRoll = Random.Range(0, 100);
-                float effectiveTendency = Mathf.Clamp(enemyData.counterAttackTendency + counterTendencyBonus, 0, 100);
-
                 powerAttackStarted = true;
 
-                if (randomRoll <= effectiveTendency)
+                if (Health.currentHealth <= 30 && !Superpowerattack)
                 {
-                    StartCoroutine(Powerattacck());
+                   int randomRoll = Random.Range(0, 100);
+
+                    if(randomRoll <= enemyData.counterAttackTendency)
+                    {
+                        StartCoroutine(Powerattacck());
+                        Superpowerattack = true;
+                    }
                 }
                 else
                 {
@@ -215,7 +222,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         Node attackBranch = new SequenceNode(new List<Node>
         {
             new ConditionNode(() => bossEnemy.InRange && !isAttacking && !isDefending
-                && !DefendingStarted && !Health.isHurt), action1
+                && !DefendingStarted && !Health.isHurt ), action1
         });
 
         List<Node> children = new List<Node> { DeathBranch, PowerAttackBranch, DefendBranch, attackBranch };
@@ -250,8 +257,17 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         }
     }
 
+    IEnumerator repositionForattack(float desiredDistance)
+    {
+        yield break;
+    }
+
+
+
+
     void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.layer != LayerMask.NameToLayer("PlayerAttack"))
             return;
 

@@ -6,7 +6,6 @@ public class BossEnemyAi : MonoBehaviour
     [SerializeField] EnemyData enemyData;
 
     Transform playerPosition;
-
     float runspeed;
     float moveSpeed;
     float distance;
@@ -18,7 +17,7 @@ public class BossEnemyAi : MonoBehaviour
     public float Distance => distance;
     public bool InRange => inRange;
     Vector2 direction;
-
+    public bool IsNearBoundary { get; private set; }
     const string walk = "Walk";
     const string run = "Run";
 
@@ -51,6 +50,7 @@ public class BossEnemyAi : MonoBehaviour
          direction = (playerPosition.position - transform.position).normalized;
         distance = Vector2.Distance(transform.position, playerPosition.position);
 
+      //  Debug.Log( "distance is " + distance);
         if (distance <= enemyData.attackRange)
         {
             KeepDistance();
@@ -79,9 +79,27 @@ public class BossEnemyAi : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("EndCollider"))
+        {
+            Debug.Log("fuck youuu");
+            IsNearBoundary = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("EndCollider"))
+        {
+            IsNearBoundary = false;
+        }
+    }
     void KeepDistance()
     {
-        if(distance < enemyData.keepDistance)
+        if(distance < enemyData.keepDistance && !IsNearBoundary)
         {
             animator.SetBool(walk, true);
             animator.SetBool(run, false);
