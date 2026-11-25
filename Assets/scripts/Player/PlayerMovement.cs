@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
@@ -6,15 +7,27 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float movespeed = 5f;
     [SerializeField] Animator animator;
+    [SerializeField] float minimumEnemyDistance = 2f;
+
     float sprintmultiplier = 1.5f;
     Vector2 movement;
+
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
+
     bool isSprint = false;
     bool isjump = false;
     bool LockAction = false;
+
     float cooldown = 0f;
     float currentspeed;
+
+    IEnemy currentEnemy;
+
+    public void SetEnemy(IEnemy enemy)
+    {
+        currentEnemy = enemy;
+    }
 
     public void LockMovement(float duration)
     {
@@ -38,59 +51,69 @@ public class PlayerMovement : MonoBehaviour
     public void OnPlayermovement(CallbackContext context)
     {
         if (LockAction) return;
+
         movement = context.ReadValue<Vector2>();
     }
 
     public void OnSprint(CallbackContext context)
     {
         if (LockAction) return;
+
         isSprint = context.ReadValueAsButton();
-        
     }
 
     public void OnJump(CallbackContext context)
     {
         if (LockAction) return;
+
         isjump = context.ReadValueAsButton();
     }
 
     void FixedUpdate()
     {
         if (LockAction) return;
-        if (movement.x > 0)
+
+        Vector2 currentPosition = rb.position;
+        float horizontal = movement.x;
+
+        currentspeed = isSprint
+            ? movespeed * sprintmultiplier
+            : movespeed;
+        if (currentEnemy != null &&
+            currentEnemy.EnemyTransform != null &&
+            horizontal != 0)
+        {
+            float enemyX = currentEnemy.EnemyTransform.position.x;
+
+            float currentDistance =
+                Mathf.Abs(currentPosition.x - enemyX);
+
+            float nextX = currentPosition.x +
+                          horizontal * currentspeed * Time.fixedDeltaTime;
+
+            float nextDistance =
+                Mathf.Abs(nextX - enemyX);
+
+            if (nextDistance < minimumEnemyDistance &&
+                nextDistance < currentDistance)
+            {
+                horizontal = 0f;
+            }
+        }
+
+        if (horizontal > 0)
         {
             spriteRenderer.flipX = false;
         }
-        else if (movement.x < 0)
+        else if (horizontal < 0)
         {
             spriteRenderer.flipX = true;
         }
 
-        if (isSprint && movement.x != 0)
-        {
-            animator.SetBool("Run", true);
-            currentspeed = movespeed * sprintmultiplier;
-        }
-        else
-        {
-            animator.SetBool("Run", false);
-            currentspeed = movespeed;
-        }
+    
+        animator.SetBool("Run", isSprint && horizontal != 0);
 
-        if (movement.x != 0 && !isSprint)
-        {
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }
-
-        if (movement.x == 0 && !isSprint)
-        {
-            animator.SetBool("Walk", false);
-            animator.SetBool("Run", false);
-        }
+        animator.SetBool("Walk", !isSprint && horizontal != 0);
 
         if (cooldown > 0f)
         {
@@ -103,9 +126,13 @@ public class PlayerMovement : MonoBehaviour
             cooldown += 1f;
         }
 
-        Vector2 currentposition = rb.position;
-        Vector2 direction = new Vector2(movement.x * currentspeed , 0);
+        Vector2 direction = new Vector2(
+            horizontal * currentspeed,
+            0f
+        );
 
-        rb.MovePosition(currentposition + direction * Time.fixedDeltaTime);
+        rb.MovePosition(
+            currentPosition + direction * Time.fixedDeltaTime
+        );
     }
 }

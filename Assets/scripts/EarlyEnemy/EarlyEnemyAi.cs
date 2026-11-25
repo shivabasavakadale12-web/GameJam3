@@ -17,6 +17,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     bool isMoveing;
     bool isRunning;
     bool isAttacking = false;
+    public Transform EnemyTransform => transform;
     public bool IsDefending => isDefending;
 
     public EnemyData Enemydata => enemyData;

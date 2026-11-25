@@ -13,7 +13,6 @@ public class BossEnemyAi : MonoBehaviour
     Animator animator;
     bool inRange = false;
     bool LockAction = false;
-
     public float Distance => distance;
     public bool InRange => inRange;
     Vector2 direction;

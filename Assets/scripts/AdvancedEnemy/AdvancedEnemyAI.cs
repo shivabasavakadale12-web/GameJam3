@@ -10,6 +10,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     Transform playerTransform;
     Rigidbody2D rb;
     Animator animator;
+    public Transform EnemyTransform => transform;
     bool wasPlayerAttacking;
     bool isPlayerAttacking;
     public bool isAttacking = false;

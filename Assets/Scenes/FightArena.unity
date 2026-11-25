@@ -1055,6 +1055,7 @@ MonoBehaviour:
   EnemySpawn: {fileID: 39146338}
   defaultEnemy: {fileID: 11400000, guid: ba5499cdaa09889478a8e6dee62c447e, type: 2}
   player: {fileID: 7487420857119569653}
+  PlayerMovement: {fileID: 7487420857119569654}
   Pm: {fileID: 7487420857119569654}
   playerHealth: {fileID: 380430623}
   lostpanel: {fileID: 523346614}

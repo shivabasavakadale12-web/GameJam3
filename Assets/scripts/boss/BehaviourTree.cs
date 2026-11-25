@@ -7,7 +7,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     public BoxCollider2D[] HitBox;
     public EnemyData enemyData;
     Health Health;
-
+    public Transform EnemyTransform => transform;
     BossEnemyAi boss;
     PlayerCombat player;
     Node rootNode;

@@ -6,6 +6,7 @@ public class MatchManager : MonoBehaviour
     [SerializeField] Transform EnemySpawn; 
     [SerializeField]  CharacterData defaultEnemy;
     [SerializeField] PlayerCombat player;
+    [SerializeField] PlayerMovement PlayerMovement;
     [SerializeField] PlayerMovement Pm;
     [SerializeField] playerHealth playerHealth;
     [SerializeField] GameObject lostpanel;
@@ -36,6 +37,7 @@ public class MatchManager : MonoBehaviour
             return;
         }
         player.SetEnemy(ai);
+        PlayerMovement.SetEnemy(ai);
         playerHealth.onDead += PlayerLost;
         aiHealth.EnemyOnDead += PlayerWon;
     }
