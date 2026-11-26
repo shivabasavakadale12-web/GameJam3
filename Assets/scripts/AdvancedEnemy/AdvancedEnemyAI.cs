@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -26,13 +27,13 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     const string defend = "Defend";
     bool hasWalkParam;
     bool hasDefendParam;
-
+    public event Action CounterAttack;
     bool lockAction = false;
-    bool CounterAttack = false;
+    bool counterAttack = false;
     public int CurrentHitboxIndex { get; set; }
 
     AdvancedEnemyAiHealth health;
-
+    PowerAttackController powerAttackController;
     AdvancedEnemyState currentstate;
     AdvabcedEnemyAttackStatee attackstate;
     AdvancedEnemyAiDefenseState defenseState;
@@ -78,14 +79,14 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     {
         lockAction = true;
         yield return new WaitForSeconds(duration);
-        CounterAttack = false;
+        counterAttack = false;
         lockAction = false;
     }   
 
 
     void Start()
     {
-        if(lockAction)
+        if(lockAction )
         {
             return;
         }
@@ -98,7 +99,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
         defenseState = new AdvancedEnemyAiDefenseState(this);
         attackstate = new AdvabcedEnemyAttackStatee(this);
 
-
+        powerAttackController = GetComponent<PowerAttackController>();
         health = GetComponent<AdvancedEnemyAiHealth>();
         hitbox = GetComponentsInChildren<BoxCollider2D>();
 
@@ -121,7 +122,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
 
     void FixedUpdate()
     {
-        if (stopAction) return;
+        if (stopAction || powerAttackController.IsCounterAttackRunning) return;
 
         Vector2 direction =
          (playerTransform.position - transform.position).normalized;
@@ -193,7 +194,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public void ChangeToCounter()
     {
         
-        CounterAttack = true;
+        counterAttack = true;
         ChangeState(CounterAttackState);
     }
 
@@ -219,7 +220,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
     public void CounterDone()
     {
         if (stopAction) return;
-        CounterAttack = false;
+        counterAttack = false;
         ChangeToAttack();
     }
 
@@ -247,7 +248,7 @@ public class AdvancedEnemyAI : MonoBehaviour, IEnemy
         }
 
 
-        if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking && !CounterAttack)
+        if (wasPlayerAttacking && !isPlayerAttacking && !isAttacking && !counterAttack)
         {
             ChangeToCounter();
         }

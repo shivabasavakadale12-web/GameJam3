@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class BehaviourTree : MonoBehaviour, IEnemy
 {
     public BoxCollider2D[] HitBox;
+    PowerAttackController powerAttackController;
     public EnemyData enemyData;
     Health Health;
     public Transform EnemyTransform => transform;
@@ -13,6 +15,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     Node rootNode;
     float coolDown;
     float powerAttackCoolDown;
+    public event Action CounterAttack;
     Animator animator;
     BossEnemyAi bossEnemy;
     Rigidbody2D rb;
@@ -67,11 +70,6 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         isattack = false;
 
         SetColliderOff();
-
-        if(!deadDone)
-        {
-           // animator.SetTrigger("hurt");
-        }
         if (animator != null)
         {
             animator.ResetTrigger("Attack2");
@@ -93,6 +91,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
     {
         coolDown = 0f;
         boss = GetComponent<BossEnemyAi>();
+        powerAttackController = GetComponent<PowerAttackController>();
         rb = GetComponent<Rigidbody2D>();
         Health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
@@ -126,7 +125,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
             {
                 HasCheckedCurrentSwing = true;
 
-                int randomRoll = Random.Range(0, 100);
+                int randomRoll = UnityEngine.Random.Range(0, 100);
                 Debug.Log("ROll: " + randomRoll + " Vs Defense Tendency: " + enemyData.defenseTendency);
 
                 if (randomRoll <= enemyData.defenseTendency)
@@ -158,7 +157,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
         {
             if (coolDown >= enemyData.attackFrequency && !lockaction)
             {
-                int randomRoll = Random.Range(0, 100);
+                int randomRoll = UnityEngine.Random.Range(0, 100);
 
                 if (randomRoll <= 50)
                 {
@@ -186,12 +185,14 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
                 if (Health.currentHealth <= 30 && !Superpowerattack)
                 {
-                   int randomRoll = Random.Range(0, 100);
+                   int randomRoll = UnityEngine.Random.Range(0, 100);
 
                     if(randomRoll <= enemyData.counterAttackTendency)
                     {
-                        StartCoroutine(Powerattacck());
+                        CounterAttack?.Invoke();
                         Superpowerattack = true;
+                        powerAttackCoolDown = 0f;
+                        powerAttackStarted = false;
                     }
                 }
                 else
@@ -232,7 +233,7 @@ public class BehaviourTree : MonoBehaviour, IEnemy
 
     void Update()
     {
-        if (lockaction || stopAction)
+        if (lockaction || stopAction || powerAttackController.IsCounterAttackRunning)
         {
             return;
         }

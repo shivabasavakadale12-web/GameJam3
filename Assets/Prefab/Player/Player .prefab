@@ -563,6 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   movespeed: 5
   animator: {fileID: 1702298068554285653}
+  minimumEnemyDistance: 2
 --- !u!114 &4876830473720069995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,8 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   clashnRecover: {fileID: 0}
-  playerCombat: {fileID: 0}
-  playerMovement: {fileID: 0}
+  playerCombat: {fileID: 4876830473720069995}
+  playerMovement: {fileID: 5895783746202611043}
 --- !u!1 &6338864984694266029
 GameObject:
   m_ObjectHideFlags: 0

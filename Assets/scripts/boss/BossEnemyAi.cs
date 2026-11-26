@@ -4,7 +4,7 @@ using System.Collections;
 public class BossEnemyAi : MonoBehaviour
 {
     [SerializeField] EnemyData enemyData;
-
+    PowerAttackController PowerAttackController;
     Transform playerPosition;
     float runspeed;
     float moveSpeed;
@@ -37,19 +37,19 @@ public class BossEnemyAi : MonoBehaviour
         runspeed = enemyData.runspeed;
         moveSpeed = enemyData.moveSpeed;
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
+        PowerAttackController = GetComponent<PowerAttackController>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (LockAction) return;
+        if (LockAction || PowerAttackController.IsCounterAttackRunning) return;
 
         if (playerPosition == null) return;
          direction = (playerPosition.position - transform.position).normalized;
         distance = Vector2.Distance(transform.position, playerPosition.position);
 
-      //  Debug.Log( "distance is " + distance);
         if (distance <= enemyData.attackRange)
         {
             KeepDistance();

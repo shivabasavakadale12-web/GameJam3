@@ -2571,17 +2571,9 @@ PrefabInstance:
       value: 'Player '
       objectReference: {fileID: 0}
     - target: {fileID: 7976226972690968107, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
-      propertyPath: playerCombat
-      value: 
-      objectReference: {fileID: 7487420857119569653}
-    - target: {fileID: 7976226972690968107, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
       propertyPath: clashnRecover
       value: 
       objectReference: {fileID: 1575474243}
-    - target: {fileID: 7976226972690968107, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 7487420857119569654}
     - target: {fileID: 8685633946052172349, guid: c53ca85a97e0cae4a860de1e13a53c8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.35

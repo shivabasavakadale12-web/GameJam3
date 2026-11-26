@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 1592750301609561407}
   - component: {fileID: 1793009093365774251}
   - component: {fileID: 6521392309323824860}
+  - component: {fileID: 1053770462596076613}
   m_Layer: 0
   m_Name: enemy5
   m_TagString: AdvancedEnemy
@@ -545,3 +546,15 @@ MonoBehaviour:
   runspeed: 0
   attackfrequency: 0
   hitbox: []
+--- !u!114 &1053770462596076613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222538097970140317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e51d515cc8e10498aa16379661913c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerAttackController

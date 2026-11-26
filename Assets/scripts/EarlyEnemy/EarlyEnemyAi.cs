@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 public class EarlyEnemyAi : MonoBehaviour, IEnemy
 {
     [SerializeField] EnemyData enemyData;
@@ -10,7 +11,9 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     bool isDefending = false;
     bool iscounterattack = false;
     public bool IScounterattack => iscounterattack;
+    public event Action CounterAttack;
     Vector2 currentposition;
+    PowerAttackController powerAttackController;
     Animator animator;
     Rigidbody2D rb;
     bool lockAction = false;
@@ -67,6 +70,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        powerAttackController = GetComponent<PowerAttackController>();
         playerCombat = playerTransform.GetComponent<PlayerCombat>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -79,7 +83,16 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
 
     void FixedUpdate()
     {
-        if (lockAction) return;
+        if (lockAction)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        if (powerAttackController.IsCounterAttackRunning)
+        {
+            return;
+        }
 
         currentposition = rb.position;
         Vector2 direction = (playerTransform.position - transform.position).normalized;
@@ -145,7 +158,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
 
     void NormalAttack()
     {
-        int randomAttack = Random.Range(0, 100);
+        int randomAttack = UnityEngine.Random.Range(0, 100);
 
         isAttacking = true;
 
@@ -206,7 +219,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
             yield break;
         }
 
-        float defenseRoll = Random.Range(0f, 100f);
+        float defenseRoll = UnityEngine.Random.Range(0f, 100f);
 
         if (defenseRoll <= enemyData.defenseTendency)
         {
@@ -215,7 +228,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
             yield break;
         }
 
-        float counterRoll = Random.Range(0f, 100f);
+        float counterRoll = UnityEngine.Random.Range(0f, 100f);
 
         if (counterRoll <= enemyData.counterAttackTendency)
         {
@@ -225,7 +238,7 @@ public class EarlyEnemyAi : MonoBehaviour, IEnemy
             yield break;
         }
 
-        float aggressionRoll = Random.Range(0f, 100f);
+        float aggressionRoll = UnityEngine.Random.Range(0f, 100f);
 
         if (aggressionRoll <= enemyData.aggression)
         {

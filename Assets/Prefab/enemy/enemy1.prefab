@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 346025292148027406}
   - component: {fileID: 2918211232854100073}
   - component: {fileID: 5174844282051243328}
+  - component: {fileID: 6943712947694092112}
   m_Layer: 6
   m_Name: enemy1
   m_TagString: EarlyEnemy
@@ -368,6 +369,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarlyEnemyAi
   enemyData: {fileID: 11400000, guid: 4b784f5ae433bc1438b7e3369f546516, type: 2}
+--- !u!114 &6943712947694092112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810833282555321930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e51d515cc8e10498aa16379661913c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerAttackController
 --- !u!1 &4279478740882355917
 GameObject:
   m_ObjectHideFlags: 0

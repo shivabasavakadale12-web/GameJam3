@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1230985226434143951}
   - component: {fileID: 9022759800061430590}
   - component: {fileID: 7883499595981760272}
+  - component: {fileID: 4668405953092452547}
   m_Layer: 6
   m_Name: bossEnemy
   m_TagString: BossEnemy
@@ -308,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2277673a05112de41ac38de081281b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  bt: {fileID: 0}
-  bossai: {fileID: 0}
+  bt: {fileID: 1230985226434143951}
+  bossai: {fileID: 170251048153595963}
   isHurt: 0
   isDead: 0
   hurtDuration: 0.64
@@ -325,6 +326,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30010fa0c0fe7241bca099297fcaba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitBoxController
+--- !u!114 &4668405953092452547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318676476983318999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e51d515cc8e10498aa16379661913c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerAttackController
 --- !u!1 &7541330457959243408
 GameObject:
   m_ObjectHideFlags: 0
